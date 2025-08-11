@@ -58,8 +58,8 @@
 
             "org/gnome/desktop/background" = {
               picture-options = "scaled";
-              picture-uri = "/home/jel/Downloads/GxFGat_bUAIlDB_.jpg";
-              picture-uri-dark = "/home/jel/Downloads/GxFGat_bUAIlDB_.jpg";
+              picture-uri = "/etc/nixos/assets/GxFGat_bUAIlDB_.jpg";
+              picture-uri-dark = "/etc/nixos/assets/GxFGat_bUAIlDB_.jpg";
             };
 
             "org/gnome/desktop/calendar".show-weekdate = true;
