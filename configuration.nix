@@ -58,8 +58,8 @@
 
             "org/gnome/desktop/background" = {
               picture-options = "scaled";
-              picture-uri = "/etc/nixos/assets/GxFGat_bUAIlDB_.jpg";
-              picture-uri-dark = "/etc/nixos/assets/GxFGat_bUAIlDB_.jpg";
+              picture-uri = "/etc/nixos/assets/TAPETA.png";
+              picture-uri-dark = "/etc/nixos/assets/TAPETA.png";
             };
 
             "org/gnome/desktop/calendar".show-weekdate = true;
