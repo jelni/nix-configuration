@@ -175,12 +175,14 @@
       # bambu-studio
       bibata-cursors
       binwalk
-      # davinci-resolve-studio
+      davinci-resolve-studio
       dig
+      doas-sudo-shim
       espeak
       ffmpeg-full
       file
       fira-code
+      gcc
       ghostty
       gimp3
       git
@@ -192,6 +194,7 @@
       inter
       iosevka-bin
       jujutsu
+      libreoffice-fresh
       loupe
       mpv
       nautilus
@@ -204,6 +207,7 @@
       prismlauncher
       pv
       ripgrep
+      rustup
       safe-rm
       snapshot
       telegram-desktop
@@ -214,6 +218,7 @@
       uutils-coreutils-noprefix
       vesktop
       vscode
+      wget2
       yt-dlp
 
       nvtopPackages.amd
@@ -230,7 +235,7 @@
     shellAliases = {
       cat = "bat";
       rm = "safe-rm";
-      sudo = "doas";
+      wget = "wget2";
     };
 
     gnome.excludePackages = [ pkgs.gnome-tour ];
@@ -247,17 +252,21 @@
   services = {
     desktopManager.gnome.enable = true;
     displayManager.gdm.enable = true;
+    fwupd.enable = true;
     gnome.core-apps.enable = false;
     gvfs.enable = true;
+    openssh.enable = true;
+    printing.enable = true;
+    tlp.enable = false;
+    tuned.enable = true;
     udisks2.enable = true;
     upower.enable = true;
     xserver.excludePackages = [ pkgs.xterm ];
     udev.packages = [ pkgs.gnome-settings-daemon ];
 
-    ollama = {
+    pipewire = {
       enable = true;
-      acceleration = "rocm";
-      rocmOverrideGfx = "11.0.0";
+      pulse.enable = true;
     };
 
     xserver.xkb = {
@@ -271,6 +280,12 @@
       dnsovertls = "true";
       dnssec = "allow-downgrade";
       fallbackDns = [ ];
+    };
+
+    ollama = {
+      enable = true;
+      acceleration = "rocm";
+      rocmOverrideGfx = "11.0.0";
     };
   };
 
@@ -305,8 +320,9 @@
       shell = pkgs.fish;
 
       extraGroups = [
-        "wheel"
+        "docker"
         "networkmanager"
+        "wheel"
       ];
     };
   };
@@ -318,6 +334,13 @@
       "194.242.2.4#base.dns.mullvad.net"
       "2a07:e340::4#base.dns.mullvad.net"
     ];
+
+    firewall = {
+      allowedTCPPorts = [
+        80
+        443
+      ];
+    };
   };
 
   time.timeZone = "Europe/Warsaw";
@@ -344,16 +367,7 @@
     style = "adwaita-dark";
   };
 
-  services = {
-    fwupd.enable = true;
-    openssh.enable = true;
-    printing.enable = true;
-
-    pipewire = {
-      enable = true;
-      pulse.enable = true;
-    };
-  };
+  virtualisation.docker.enable = true;
 
   system.stateVersion = "25.05";
 }
