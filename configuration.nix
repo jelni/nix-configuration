@@ -58,8 +58,8 @@
 
             "org/gnome/desktop/background" = {
               picture-options = "scaled";
-              picture-uri = "/etc/nixos/assets/TAPETA.png";
-              picture-uri-dark = "/etc/nixos/assets/TAPETA.png";
+              picture-uri = "/etc/nixos/assets/GzdRar9WkAAPld6.jpeg";
+              picture-uri-dark = "/etc/nixos/assets/GzdRar9WkAAPld6.jpeg";
             };
 
             "org/gnome/desktop/calendar".show-weekdate = true;
