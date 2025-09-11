@@ -196,6 +196,7 @@
       jujutsu
       libreoffice-fresh
       loupe
+      lucida-downloader
       mpv
       nautilus
       nil
@@ -257,6 +258,7 @@
     gvfs.enable = true;
     openssh.enable = true;
     printing.enable = true;
+    timesyncd.enable = false;
     tlp.enable = false;
     tuned.enable = true;
     udisks2.enable = true;
@@ -280,6 +282,16 @@
       dnsovertls = "true";
       dnssec = "allow-downgrade";
       fallbackDns = [ ];
+    };
+
+    chrony = {
+      enable = true;
+      enableNTS = true;
+
+      extraConfig = ''
+        minsources 3
+        rtconutc
+      '';
     };
 
     ollama = {
@@ -333,6 +345,13 @@
     nameservers = [
       "194.242.2.4#base.dns.mullvad.net"
       "2a07:e340::4#base.dns.mullvad.net"
+    ];
+
+    timeServers = [
+      "0.pool.ntp.org"
+      "1.pool.ntp.org"
+      "2.pool.ntp.org"
+      "3.pool.ntp.org"
     ];
 
     firewall = {
