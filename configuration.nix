@@ -9,10 +9,16 @@
   imports = [ ./hardware-configuration.nix ];
   age.secrets.jel-password.file = "/etc/nixos/secrets/jel-password.age";
 
-  boot.loader.limine = {
-    enable = true;
-    efiSupport = true;
-    extraConfig = "timeout: 1";
+  boot = {
+    supportedFilesystems = [ "zfs" ];
+    zfs.forceImportRoot = false;
+
+    loader.limine = {
+      enable = true;
+      efiSupport = true;
+      extraConfig = "timeout: 1";
+    };
+
   };
 
   system.autoUpgrade = {
@@ -263,6 +269,7 @@
     tuned.enable = true;
     udisks2.enable = true;
     upower.enable = true;
+    zfs.autoScrub.enable = true;
     xserver.excludePackages = [ pkgs.xterm ];
     udev.packages = [ pkgs.gnome-settings-daemon ];
 
@@ -341,6 +348,7 @@
 
   networking = {
     hostName = "hydromechanizator";
+    hostId = "d0eca1a0";
 
     nameservers = [
       "194.242.2.4#base.dns.mullvad.net"

@@ -22,8 +22,27 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-label/NIXROOT";
-      fsType = "ext4";
+      device = "zpool/root";
+      fsType = "zfs";
+      options = [ "zfsutil" ];
+    };
+
+    "/nix" = {
+      device = "zpool/nix";
+      fsType = "zfs";
+      options = [ "zfsutil" ];
+    };
+
+    "/var" = {
+      device = "zpool/var";
+      fsType = "zfs";
+      options = [ "zfsutil" ];
+    };
+
+    "/home" = {
+      device = "zpool/home";
+      fsType = "zfs";
+      options = [ "zfsutil" ];
     };
 
     "/boot" = {
