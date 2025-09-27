@@ -103,6 +103,11 @@
               event-sounds = false;
             };
 
+            "org/gnome/desktop/wm/keybindings" = {
+              switch-windows = "['<Alt>Tab']";
+              switch-windows-backward = "['<Alt><Shift>Tab']";
+            };
+
             "org/gnome/login-screen".enable-fingerprint-authentication = false;
 
             "org/gnome/mutter" = {
@@ -121,6 +126,8 @@
               sleep-inactive-ac-type = "nothing";
               sleep-inactive-battery-timeout = lib.gvariant.mkUint16 1800;
             };
+
+            "org/gnome/SessionManager".logout-prompt = false;
 
             "org/gnome/shell" = {
               enabled-extensions = [
