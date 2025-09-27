@@ -275,9 +275,18 @@
     tuned.enable = true;
     udisks2.enable = true;
     upower.enable = true;
-    zfs.autoScrub.enable = true;
     xserver.excludePackages = [ pkgs.xterm ];
     udev.packages = [ pkgs.gnome-settings-daemon ];
+
+    zfs = {
+      autoScrub.enable = true;
+
+      autoSnapshot = {
+        enable = true;
+        flags = "-pu";
+        monthly = 0;
+      };
+    };
 
     displayManager = {
       gdm.enable = true;
