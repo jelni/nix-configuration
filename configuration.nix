@@ -297,7 +297,7 @@
 
     resolved = {
       enable = true;
-      dnsovertls = "true";
+      dnsovertls = "opportunistic";
       dnssec = "allow-downgrade";
       fallbackDns = [ ];
     };
