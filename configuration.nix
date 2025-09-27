@@ -258,7 +258,6 @@
 
   services = {
     desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
     fwupd.enable = true;
     gnome.core-apps.enable = false;
     gvfs.enable = true;
@@ -272,6 +271,11 @@
     zfs.autoScrub.enable = true;
     xserver.excludePackages = [ pkgs.xterm ];
     udev.packages = [ pkgs.gnome-settings-daemon ];
+
+    displayManager = {
+      gdm.enable = true;
+      autoLogin.user = "jel";
+    };
 
     pipewire = {
       enable = true;
