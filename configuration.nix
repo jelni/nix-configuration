@@ -210,6 +210,7 @@
       libreoffice-fresh
       loupe
       lucida-downloader
+      magic-wormhole-rs
       mpv
       nautilus
       nil
