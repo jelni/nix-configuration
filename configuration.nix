@@ -64,7 +64,21 @@
             };
 
             "org/gnome/desktop/calendar".show-weekdate = true;
-            "org/gnome/desktop/input-sources".show-all-sources = true;
+
+            "org/gnome/desktop/input-sources" = {
+              show-all-sources = true;
+
+              sources = [
+                (lib.gvariant.mkTuple [
+                  "xkb"
+                  "pl-workman"
+                ])
+                (lib.gvariant.mkTuple [
+                  "xkb"
+                  "pl"
+                ])
+              ];
+            };
 
             "org/gnome/desktop/interface" = {
               clock-show-seconds = true;
@@ -334,9 +348,14 @@
     };
 
     xserver.xkb = {
-      layout = "us";
-      variant = "workman";
-      options = "caps:shift";
+      layout = "pl-workman";
+      options = "shift:breaks_caps";
+
+      extraLayouts.pl-workman = {
+        description = "Polish (Workman)";
+        languages = [ "pol" ];
+        symbolsFile = ./symbols/pl-workman;
+      };
     };
 
     resolved = {

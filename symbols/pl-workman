@@ -1,0 +1,18 @@
+xkb_symbols "pl-workman"
+{
+    include "us(workman)"
+    include "level3(ralt_switch)"
+
+    name[Group1] = "Polish (Workman)";
+
+    key <AC01> { [ a, A, aogonek, Aogonek ] };
+    key <AC02> { [ s, S, sacute, Sacute ] };
+    key <AC07> { [ n, N, nacute, Nacute ] };
+    key <AC08> { [ e, E, eogonek, Eogonek ] };
+    key <AC09> { [ o, O, oacute, Oacute ] };
+    key <AB01> { [ z, Z, zabovedot, Zabovedot ] };
+    key <AB04> { [ c, C, cacute, Cacute ] };
+    key <AB02> { [ x, X, zacute, Zacute ] };
+    key <AB07> { [ l, L, lstroke, Lstroke ] };
+    key <CAPS> { [ Caps_Lock ] };
+};
