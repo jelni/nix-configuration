@@ -57,11 +57,15 @@
           settings = {
             "org/gnome/desktop/a11y/interface".show-status-shapes = true;
 
-            "org/gnome/desktop/background" = {
-              picture-options = "scaled";
-              picture-uri = "/etc/nixos/assets/TAPETA.png";
-              picture-uri-dark = "/etc/nixos/assets/TAPETA.png";
-            };
+            "org/gnome/desktop/background" =
+              let
+                wallpaper = "${./assets/TAPETA.png}";
+              in
+              {
+                picture-options = "scaled";
+                picture-uri = wallpaper;
+                picture-uri-dark = wallpaper;
+              };
 
             "org/gnome/desktop/calendar".show-weekdate = true;
 
