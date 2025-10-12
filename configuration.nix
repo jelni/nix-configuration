@@ -21,11 +21,6 @@
 
   };
 
-  system.autoUpgrade = {
-    enable = true;
-    channel = "https://channels.nixos.org/nixos-unstable";
-  };
-
   programs = {
     _1password-gui.enable = true;
     _1password.enable = true;
