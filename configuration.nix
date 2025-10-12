@@ -3,11 +3,14 @@
   pkgs,
   config,
   agenix,
+  nix-vscode-extensions,
   ...
 }:
 {
   imports = [ ./hardware-configuration.nix ];
   age.secrets.jel-password.file = "/etc/nixos/secrets/jel-password.age";
+
+  nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
 
   boot = {
     supportedFilesystems = [ "zfs" ];
@@ -47,6 +50,39 @@
     vscode = {
       enable = true;
       defaultEditor = true;
+
+      extensions = (
+        with pkgs.vscode-marketplace;
+        [
+          pkgs.vscode-marketplace."1password".op-vscode
+          adpyke.vscode-sql-formatter
+          anthropic.claude-code
+          bradlc.vscode-tailwindcss
+          charliermarsh.ruff
+          dbaeumer.vscode-eslint
+          esbenp.prettier-vscode
+          fill-labs.dependi
+          geequlim.godot-tools
+          github.vscode-pull-request-github
+          jnoortheen.nix-ide
+          ms-azuretools.vscode-containers
+          ms-python.python
+          ms-python.vscode-pylance
+          ms-vscode.hexeditor
+          mtdmali.daybreak-theme
+          pkief.material-icon-theme
+          prisma.prisma-insider
+          rust-lang.rust-analyzer
+          supabase.postgrestools
+          svelte.svelte-vscode
+          tamasfe.even-better-toml
+          thenuprojectcontributors.vscode-nushell-lang
+          usernamehw.errorlens
+          watware.soyfu
+          wmaurer.change-case
+          yzhang.markdown-all-in-one
+        ]
+      );
     };
 
     dconf.profiles =
@@ -281,7 +317,6 @@
       uv
       vesktop
       vmware-workstation
-      vscode
       wget2
       yt-dlp
       yubikey-manager

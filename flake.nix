@@ -27,6 +27,11 @@
       url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -37,6 +42,7 @@
       home-manager,
       agenix,
       firefox,
+      nix-vscode-extensions,
       ...
     }:
     {
@@ -59,7 +65,10 @@
           { programs.firefox.package = firefox.packages.x86_64-linux.firefox-nightly-bin; }
         ];
 
-        specialArgs = { inherit agenix; };
+        specialArgs = {
+          inherit agenix;
+          inherit nix-vscode-extensions;
+        };
       };
     };
 }
