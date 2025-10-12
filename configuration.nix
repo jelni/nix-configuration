@@ -185,17 +185,27 @@
 
       agenix-cli
       aria2
+      audacity
       # bambu-studio
+      baobab
       bibata-cursors
       binwalk
+      bottom
+      claude-code
       davinci-resolve-studio
+      deno
       dig
       doas-sudo-shim
+      electrum-ltc
       espeak
+      exiftool
+      famistudio
+      feather
       ffmpeg-full
       file
       fira-code
       gcc
+      gh
       ghostty
       gimp3
       git
@@ -203,38 +213,65 @@
       gnome-characters
       gnome-logs
       gnome-system-monitor
+      google-cloud-sdk
       gparted
+      halloy
+      handbrake
+      heroic
+      httptoolkit
+      imagemagick
+      inkscape
+      insomnia
       inter
       iosevka-bin
       jujutsu
+      keybase-gui
+      languagetool
       libreoffice-fresh
       loupe
       lucida-downloader
       magic-wormhole-rs
       mpv
+      mullvad-vpn
       nautilus
       nil
       nixfmt
+      nodejs
       nushell
+      olympus
       p7zip
+      parsec-bin
       parted
       pinta
       prismlauncher
+      prusa-slicer
       pv
+      qbittorrent
+      reaper
       ripgrep
+      rquickshare
       rustup
       safe-rm
+      slack
       snapshot
+      sparrow
+      sqlitebrowser
+      stripe-cli
       telegram-desktop
       tlrc
+      tor
+      tor-browser
       tutanota-desktop
       udiskie
       usbutils
       uutils-coreutils-noprefix
+      uv
       vesktop
+      vmware-workstation
       vscode
       wget2
       yt-dlp
+      yubikey-manager
 
       nvtopPackages.amd
 
@@ -269,7 +306,9 @@
     fwupd.enable = true;
     gnome.core-apps.enable = false;
     gvfs.enable = true;
+    kubo.enable = true;
     openssh.enable = true;
+    postgresql.enable = true;
     printing.enable = true;
     timesyncd.enable = false;
     tlp.enable = false;
