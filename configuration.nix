@@ -353,7 +353,6 @@
     fwupd.enable = true;
     gnome.core-apps.enable = false;
     gvfs.enable = true;
-    kubo.enable = true;
     openssh.enable = true;
     postgresql.enable = true;
     printing.enable = true;
@@ -418,6 +417,12 @@
       acceleration = "rocm";
       rocmOverrideGfx = "11.0.0";
     };
+
+    kubo = {
+      enable = true;
+      enableGC = true;
+      startWhenNeeded = true;
+    };
   };
 
   documentation.nixos.enable = false;
@@ -452,6 +457,7 @@
 
       extraGroups = [
         "docker"
+        "ipfs"
         "networkmanager"
         "wheel"
       ];
