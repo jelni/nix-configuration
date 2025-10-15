@@ -254,6 +254,7 @@
       p7zip
       parsec-bin
       parted
+      python314
       pinta
       prismlauncher
       prusa-slicer
