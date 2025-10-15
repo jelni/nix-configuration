@@ -115,8 +115,10 @@
             };
 
             "org/gnome/desktop/wm/keybindings" = {
-              switch-windows = "['<Alt>Tab']";
-              switch-windows-backward = "['<Alt><Shift>Tab']";
+              switch-to-workspace-down = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+              switch-to-workspace-up = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+              switch-windows = [ "<Alt>Tab" ];
+              switch-windows-backward = [ "<Shift><Alt>Tab" ];
             };
 
             "org/gnome/gnome-session".logout-prompt = false;
