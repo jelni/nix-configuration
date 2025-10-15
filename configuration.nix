@@ -366,7 +366,6 @@
 
     chrony = {
       enable = true;
-      enableNTS = true;
 
       extraConfig = ''
         minsources 3
