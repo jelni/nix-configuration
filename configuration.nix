@@ -208,7 +208,6 @@
       deno
       dig
       doas-sudo-shim
-      electrum-ltc
       espeak
       exiftool
       famistudio
@@ -254,12 +253,13 @@
       p7zip
       parsec-bin
       parted
-      python314
       pinta
       prismlauncher
       prusa-slicer
       pv
+      python314
       qbittorrent
+      quodlibet-full
       reaper
       ripgrep
       rquickshare
@@ -274,6 +274,7 @@
       tlrc
       tor
       tor-browser
+      trezor-suite
       tutanota-desktop
       udiskie
       usbutils
