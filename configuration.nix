@@ -15,6 +15,7 @@
   boot = {
     supportedFilesystems = [ "zfs" ];
     zfs.forceImportRoot = false;
+    initrd.systemd.enable = true;
 
     loader.limine = {
       enable = true;
