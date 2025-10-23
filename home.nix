@@ -673,6 +673,7 @@
           "markdown.preview.scrollEditorWithPreview" = false;
           "markdown.preview.scrollPreviewWithEditor" = false;
           "material-icon-theme.folders.theme" = "classic";
+          "nix.enableLanguageServer" = true;
           "php.suggest.basic" = false;
           "prettier.proseWrap" = "always";
           "prettier.trailingComma" = "all";
