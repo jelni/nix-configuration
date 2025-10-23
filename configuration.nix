@@ -123,11 +123,7 @@
 
             "org/gnome/gnome-session".logout-prompt = false;
             "org/gnome/login-screen".enable-fingerprint-authentication = false;
-
-            "org/gnome/mutter" = {
-              experimental-features = [ "variable-refresh-rate" ];
-              workspaces-only-on-primary = false;
-            };
+            "org/gnome/mutter".experimental-features = [ "variable-refresh-rate" ];
 
             "org/gnome/settings-daemon/plugins/color" = {
               night-light-enabled = true;
