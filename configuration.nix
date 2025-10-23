@@ -471,12 +471,6 @@
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita-dark";
-  };
-
   virtualisation.docker.enable = true;
 
   system.stateVersion = "25.05";
