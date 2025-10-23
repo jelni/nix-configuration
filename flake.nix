@@ -61,11 +61,11 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.jel = ./home.nix;
+              extraSpecialArgs = { inherit firefox; };
             };
           }
 
           agenix.nixosModules.default
-          { programs.firefox.package = firefox.packages.x86_64-linux.firefox-nightly-bin; }
         ];
 
         specialArgs = {

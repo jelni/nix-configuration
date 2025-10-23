@@ -1,4 +1,10 @@
-{ pkgs, config, ... }:
+{
+  lib,
+  pkgs,
+  config,
+  firefox,
+  ...
+}:
 {
   home = {
     username = "jel";
@@ -7,6 +13,258 @@
   };
 
   programs = {
+    firefox = {
+      enable = true;
+      package = firefox.packages.x86_64-linux.firefox-nightly-bin;
+
+      policies = {
+        AutofillAddressEnabled = false;
+        AutofillCreditCardEnabled = false;
+
+        AutoLaunchProtocolsFromOrigins = [
+          {
+            protocol = "tg";
+
+            allowed_origins = [
+              "https://t.me"
+            ];
+          }
+        ];
+
+        Containers.Default = [
+          {
+            name = "Work";
+            icon = "briefcase";
+            color = "orange";
+          }
+        ];
+
+        DisableProfileRefresh = true;
+        DisableSetDesktopBackground = true;
+        DisplayMenuBar = "never";
+
+        # this is kinda messy, but i don't know a better way.
+        # `nur.repos.rycee.firefox-addons` is missing too many extensions
+        ExtensionSettings =
+          let
+            default-config = extra: id: {
+              ${id} = {
+                installation_mode = "normal_installed";
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/${lib.strings.escapeURL id}/latest.xpi";
+              }
+              // extra;
+            };
+
+            private-browsing = {
+              private_browsing = true;
+            };
+
+            install = default-config { };
+            install-private-browsing = default-config private-browsing;
+          in
+          default-config (
+            {
+              install_url = "https://c.1password.com/dist/1P/b5x/firefox/nightly/latest.xpi";
+            }
+            // private-browsing
+          ) "{0a75d802-9aed-41e7-8daa-24c067386e82}" # 1Password
+          // install "chrome-mask@overengineer.dev"
+          // install "languagetool-webextension@languagetool.org"
+          // install "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
+          // install "bluelitefilter@malwaretech.com"
+          // install "{74145f27-f039-47ce-a470-a662b129930a}" # ClearURLs
+          // install "gdpr@cavi.au.dk"
+          // install "{c3c10168-4186-445c-9c5b-63f12b8e2c87}" # Cookie-Editor
+          // install "deArrow@ajay.app"
+          // install "jid1-BoFifL9Vbdl2zQ@jetpack" # Decentraleyes
+          // install "{cb31ec5d-c49a-4e5a-b240-16c767444f62}" # Indie Wiki Buddy
+          // install-private-browsing "search@kagi.com"
+          // install-private-browsing "@mute-sites-by-default"
+          // install "octolinker@stefanbuck.com"
+          // install "{af838dcd-be8a-4237-8835-69fca92171d3}" # Permanent Progress Bar for YouTube
+          // install-private-browsing "jid1-MnnxcxisBPnSXQ@jetpack" # Privacy Badger
+          // install "firefox-addon@pronoundb.org"
+          // install "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
+          // install "{762f9885-5a13-4abd-9c77-433dcd38b8fd}" # Return YouTube Dislike
+          // install "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}" # Search by Image
+          // install "jesse@adhdjesse.com" # SkyLink
+          // install "smart-upscale@tanalin.com"
+          // install "{b11bea1f-a888-4332-8d8a-cec2be7d24b9}" # Snowflake
+          // install "sponsorBlocker@ajay.app"
+          // install-private-browsing "uBlock0@raymondhill.net"
+          // install "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" # Violentmonkey
+          // install "wayback_machine@mozilla.org"
+          // install "{799c0914-748b-41df-a25c-22d008f9e83f}" # Web Scrobbler
+          // install "{169e0f20-b4d6-4670-a852-e78a56f68264}" # Youtube MrBeastify
+          // install "{d8b32864-153d-47fb-93ea-c273c4d1ef17}" # YouTube Screenshot Button
+          // install-private-browsing "{cf485034-0bda-470d-a027-794f3214359c}"; # YouTube Shorts Redirect
+
+        HttpsOnlyMode = "enabled";
+        NewTabPage = false;
+
+        Permissions = {
+          Notifications.BlockNewRequests = true;
+          Autoplay.Default = "block-audio-video";
+        };
+
+        PictureInPicture.Enabled = false;
+        PopupBlocking.Default = true;
+
+        # only preferences listed on https://mozilla.github.io/policy-templates/#preferences can be set here
+        Preferences = {
+          "accessibility.typeaheadfind.enablesound".Value = false;
+          "accessibility.typeaheadfind.flashBar".Value = 0;
+          "browser.aboutConfig.showWarning".Value = false;
+          "browser.download.autohideButton".Value = false;
+          "browser.search.suggest.enabled.private".Value = true;
+          "browser.toolbars.bookmarks.visibility".Value = "always";
+
+          "browser.uiCustomization.state".Value = builtins.toJSON {
+            placements = {
+              nav-bar = [
+                "sidebar-button"
+                "back-button"
+                "forward-button"
+                "stop-reload-button"
+                "vertical-spacer"
+                "home-button"
+                "urlbar-container"
+                "downloads-button"
+                "unified-extensions-button"
+                "fxa-toolbar-menu-button"
+                "reset-pbm-toolbar-button"
+                "customizableui-special-spring5"
+              ];
+
+              PersonalToolbar = [
+                "personal-bookmarks"
+                "_799c0914-748b-41df-a25c-22d008f9e83f_-browser-action"
+                "jesse_adhdjesse_com-browser-action"
+                "_b11bea1f-a888-4332-8d8a-cec2be7d24b9_-browser-action"
+                "ublock0_raymondhill_net-browser-action"
+                "jid1-mnnxcxisbpnsxq_jetpack-browser-action"
+                "sponsorblocker_ajay_app-browser-action"
+                "wayback_machine_mozilla_org-browser-action"
+                "_0a75d802-9aed-41e7-8daa-24c067386e82_-browser-action"
+                "developer-button"
+              ];
+            };
+
+            currentVersion = 23;
+          };
+
+          "browser.urlbar.trimURLs".Value = false;
+          "general.smoothScroll.currentVelocityWeighting".Value = 0;
+          "general.smoothScroll.mouseWheel.durationMaxMS".Value = 250;
+          "general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS".Value = 250;
+          "general.smoothScroll.msdPhysics.regularSpringConstant".Value = 400;
+          "general.smoothScroll.msdPhysics.slowdownMinDeltaMS".Value = 120;
+          "general.smoothScroll.msdPhysics.slowdownMinDeltaRatio".Value = 0.4;
+          "general.smoothScroll.msdPhysics.slowdownSpringConstant".Value = 5000;
+          "general.smoothScroll.stopDecelerationWeighting".Value = 0.75;
+          "print.more-settings.open".Value = true;
+          "privacy.globalprivacycontrol.enabled".Value = true;
+          "ui.textHighlightBackground".Value = "#fffc47";
+          "ui.textHighlightForeground".Value = "#000000";
+          "ui.textSelectAttentionBackground".Value = "#fd8e41";
+          "ui.textSelectAttentionForeground".Value = "#000000";
+        };
+      };
+
+      profiles.default = {
+        bookmarks = {
+          force = true;
+
+          settings = [
+            {
+              name = "";
+
+              bookmarks =
+                let
+                  bookmark = url: {
+                    name = "";
+                    inherit url;
+                  };
+                in
+                [
+                  (bookmark "https://jel.gay/password-generator")
+                  "separator"
+                  (bookmark "https://www.youtube.com/feed/history")
+                  (bookmark "https://photos.google.com/")
+                  (bookmark "https://mail.google.com/mail/")
+                  (bookmark "https://translate.google.com/?sl=auto&tl=en&op=translate")
+                  (bookmark "https://maps.google.pl/maps")
+                  (bookmark "https://earth.google.com/web/")
+                  (bookmark "https://drive.google.com/drive/my-drive")
+                  (bookmark "https://docs.google.com/document/")
+                  (bookmark "https://docs.google.com/spreadsheets/")
+                  (bookmark "https://docs.google.com/presentation/")
+                  (bookmark "https://docs.google.com/forms/")
+                  (bookmark "https://docs.google.com/videos/")
+                  (bookmark "https://docs.google.com/drawings/")
+                  (bookmark "https://keep.google.com/")
+                  (bookmark "https://fonts.google.com/")
+                  "separator"
+                  (bookmark "https://github.com/jelni?tab=repositories")
+                  (bookmark "https://gchq.github.io/CyberChef/")
+                  (bookmark "https://translations.telegram.org/pl/")
+                  (bookmark "https://languagetool.org/editor/new")
+                  (bookmark "https://www.notion.so/")
+                  (bookmark "https://kagi.com/assistant")
+                  (bookmark "https://claude.ai/new?incognito")
+                  (bookmark "https://console.anthropic.com/workbench")
+                  (bookmark "https://chatgpt.com/?temporary-chat=true")
+                  (bookmark "https://track.toggl.com/")
+                  "separator"
+                  (bookmark "https://beta.nebula.tv/")
+                  (bookmark "https://www.last.fm/user/JelNiSlaw_")
+                  (bookmark "https://bsky.app/")
+                  (bookmark "https://tech.lgbt/")
+                  (bookmark "https://twitter.com/")
+                  (bookmark "https://www.reddit.com/")
+                  (bookmark "https://www.twitch.tv/")
+                  "separator"
+                  (bookmark "https://console.cloud.google.com/")
+                  (bookmark "https://dash.cloudflare.com/")
+                  (bookmark "https://cloud.oracle.com/compute/instances")
+                  "separator"
+
+                  {
+                    name = "";
+
+                    bookmarks = [
+                      (bookmark "https://discordpy.readthedocs.io/en/latest/genindex.html")
+                      (bookmark "https://core.telegram.org/bots/api")
+                      (bookmark "https://github.com/tdlib/td/blob/master/td/generate/scheme/td_api.tl")
+                      (bookmark "https://github.com/tdlib/td/blob/master/td/telegram/cli.cpp")
+                      (bookmark "https://docs.docker.com/reference/compose-file/")
+                      (bookmark "https://ai.google.dev/api/all-methods")
+                      (bookmark "https://platform.openai.com/docs/api-reference")
+                      (bookmark "https://docs.stripe.com/api")
+                    ];
+                  }
+
+                  (bookmark "about:config")
+                ];
+
+              toolbar = true;
+            }
+          ];
+        };
+
+        settings = {
+          "devtools.netmonitor.persistlog" = true;
+          "devtools.toolbox.selectedTool" = "netmonitor";
+          "devtools.webconsole.persistlog" = true;
+          "devtools.webconsole.timestampMessages" = true;
+          "findbar.highlightAll" = true;
+          "image.jxl.enabled" = true;
+          "privacy.donottrackheader.enabled" = true;
+          "sidebar.verticalTabs" = true;
+        };
+      };
+    };
+
     htop = {
       enable = true;
 

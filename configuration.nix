@@ -29,7 +29,6 @@
     _1password-gui.enable = true;
     _1password.enable = true;
     bat.enable = true;
-    firefox.enable = true;
     fish.enable = true;
     steam.enable = true;
     less.envVariables.LESS = "-R --mouse";
