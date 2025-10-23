@@ -296,45 +296,20 @@
         ];
 
         userSettings = {
-          "[css]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[html]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[javascript]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[javascriptreact]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[json]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[jsonc]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[markdown]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[prisma]" = {
-            "editor.defaultFormatter" = "Prisma.prisma-insider";
-          };
-          "[python]" = {
-            "editor.defaultFormatter" = "charliermarsh.ruff";
-          };
-          "[rust]" = {
-            "editor.defaultFormatter" = "rust-lang.rust-analyzer";
-          };
-          "[svelte]" = {
-            "editor.defaultFormatter" = "svelte.svelte-vscode";
-          };
-          "[toml]" = {
-            "editor.defaultFormatter" = "tamasfe.even-better-toml";
-          };
-          "[typescript]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
+          "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "[javascriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "[json]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "[jsonc]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "[markdown]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
+          "[prisma]"."editor.defaultFormatter" = "Prisma.prisma-insider";
+          "[python]"."editor.defaultFormatter" = "charliermarsh.ruff";
+          "[rust]"."editor.defaultFormatter" = "rust-lang.rust-analyzer";
+          "[svelte]"."editor.defaultFormatter" = "svelte.svelte-vscode";
+          "[toml]"."editor.defaultFormatter" = "tamasfe.even-better-toml";
+          "[typescript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
           "breadcrumbs.icons" = false;
           "breadcrumbs.symbolPath" = "off";
           "chat.commandCenter.enabled" = false;
@@ -356,9 +331,7 @@
           "editor.autoClosingDelete" = "always";
           "editor.autoClosingQuotes" = "beforeWhitespace";
           "editor.bracketPairColorization.enabled" = false;
-          "editor.codeActionsOnSave" = {
-            "source.organizeImports" = "explicit";
-          };
+          "editor.codeActionsOnSave"."source.organizeImports" = "explicit";
           "editor.colorDecorators" = false;
           "editor.colorDecoratorsActivatedOn" = "click";
           "editor.copyWithSyntaxHighlighting" = false;
@@ -388,9 +361,7 @@
           "editor.stickyScroll.enabled" = false;
           "editor.stickyTabStops" = true;
           "editor.tabCompletion" = "on";
-          "editor.unicodeHighlight.allowedLocales" = {
-            pl = true;
-          };
+          "editor.unicodeHighlight.allowedLocales".pl = true;
           "editor.unicodeHighlight.includeComments" = true;
           "editor.unicodeHighlight.invisibleCharacters" = false;
           "editor.unicodeHighlight.nonBasicASCII" = false;
