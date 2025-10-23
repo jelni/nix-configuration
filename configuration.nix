@@ -215,6 +215,7 @@
       ffmpeg-full
       file
       fira-code
+      framework-tool-tui
       gcc
       gh
       ghostty
