@@ -753,4 +753,26 @@
       };
     };
   };
+
+  xdg = {
+    autostart = {
+      enable = true;
+
+      entries = [
+        "${pkgs.telegram-desktop}/share/applications/org.telegram.desktop.desktop"
+        "${pkgs.vesktop}/share/applications/vesktop.desktop"
+      ];
+    };
+
+    configFile."autostart/1password.desktop" = {
+      enable = true;
+
+      text = ''
+        [Desktop Entry]
+        Type=Application
+        Name=1Password
+        Exec=1password --silent %U
+      '';
+    };
+  };
 }
