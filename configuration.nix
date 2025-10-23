@@ -26,12 +26,16 @@
   };
 
   programs = {
-    _1password-gui.enable = true;
     _1password.enable = true;
     bat.enable = true;
     fish.enable = true;
     steam.enable = true;
     less.envVariables.LESS = "-R --mouse";
+
+    _1password-gui = {
+      enable = true;
+      package = pkgs._1password-gui-beta;
+    };
 
     obs-studio = {
       enable = true;
