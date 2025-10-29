@@ -8,8 +8,7 @@
 }:
 {
   imports = [ ./hardware-configuration.nix ];
-  age.secrets.jel-password.file = "/etc/nixos/secrets/jel-password.age";
-
+  age.secrets.jel-password.file = ./secrets/jel-password.age;
   nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
 
   boot = {
