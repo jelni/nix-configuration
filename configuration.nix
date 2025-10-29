@@ -194,7 +194,6 @@
     systemPackages = with pkgs; [
       agenix.packages.x86_64-linux.default
 
-      agenix-cli
       aria2
       audacity
       # bambu-studio
