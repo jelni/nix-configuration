@@ -460,14 +460,14 @@
           };
 
           "browser.urlbar.trimURLs".Value = false;
-          "general.smoothScroll.currentVelocityWeighting".Value = 0;
+          "general.smoothScroll.currentVelocityWeighting".Value = builtins.toJSON 0;
           "general.smoothScroll.mouseWheel.durationMaxMS".Value = 250;
           "general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS".Value = 250;
           "general.smoothScroll.msdPhysics.regularSpringConstant".Value = 400;
           "general.smoothScroll.msdPhysics.slowdownMinDeltaMS".Value = 120;
-          "general.smoothScroll.msdPhysics.slowdownMinDeltaRatio".Value = 0.4;
+          "general.smoothScroll.msdPhysics.slowdownMinDeltaRatio".Value = builtins.toJSON 0.4;
           "general.smoothScroll.msdPhysics.slowdownSpringConstant".Value = 5000;
-          "general.smoothScroll.stopDecelerationWeighting".Value = 0.75;
+          "general.smoothScroll.stopDecelerationWeighting".Value = builtins.toJSON 0.75;
           "print.more-settings.open".Value = true;
           "privacy.globalprivacycontrol.enabled".Value = true;
           "ui.textHighlightBackground".Value = "#fffc47";
