@@ -1006,6 +1006,8 @@
           "rust-analyzer.lens.enable" = false;
           "rust-analyzer.rustfmt.rangeFormatting.enable" = true;
           "search.exclude" = {
+            "**/.git" = true;
+            "**/.jj" = true;
             "**/.svelte-kit" = true;
             "**/.venv" = true;
             "**/build" = true;
