@@ -594,10 +594,8 @@
 
     ssh = {
       enable = true;
-      extraConfig = ''
-        Host *
-            IdentityAgent ~/.1password/agent.sock
-      '';
+      enableDefaultConfig = false; # remove once this is the default
+      matchBlocks."*".identityAgent = "~/.1password/agent.sock";
     };
 
     vscode = {
