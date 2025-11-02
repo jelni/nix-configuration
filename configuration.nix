@@ -187,6 +187,7 @@
               cache-only-favorites = true;
               confirm-clear = false;
               history-size = lib.gvariant.mkUint16 100;
+              toggle-menu = [ "<Super>v" ];
             };
 
             "org/gnome/shell/extensions/system-monitor" = {
@@ -195,6 +196,8 @@
               show-upload = false;
             };
 
+            "org/gnome/shell/keybindings".toggle-message-tray =
+              lib.gvariant.mkEmptyArray lib.gvariant.type.string;
             "org/gtk/settings/file-chooser".show-hidden = true;
           };
         };
