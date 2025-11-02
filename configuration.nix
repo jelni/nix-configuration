@@ -259,6 +259,7 @@
       loupe
       lucida-downloader
       magic-wormhole-rs
+      moor
       mpv
       mullvad-vpn
       nautilus
@@ -321,6 +322,7 @@
     };
 
     gnome.excludePackages = [ pkgs.gnome-tour ];
+    variables.PAGER = "moor";
   };
 
   services = {
