@@ -575,6 +575,11 @@
       };
     };
 
+    helix = {
+      enable = true;
+      defaultEditor = true;
+    };
+
     htop = {
       enable = true;
 
