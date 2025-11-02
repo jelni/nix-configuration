@@ -1089,6 +1089,11 @@
     };
   };
 
+  services.home-manager.autoExpire = {
+    enable = true;
+    frequency = "weekly";
+  };
+
   xdg = {
     autostart = {
       enable = true;
