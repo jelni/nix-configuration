@@ -27,6 +27,7 @@
         "3rdparty".Extensions."uBlock0@raymondhill.net".adminSettings = builtins.toJSON {
           userSettings = {
             advancedUserEnabled = true;
+            cnameUncloakEnabled = false;
             contextMenuEnabled = false;
             popupPanelSections = 31;
             prefetchingDisabled = false;
@@ -125,7 +126,7 @@
             aws.amazon.com awsstatic.com * noop
             console.anthropic.com accounts.google.com * noop
             music.apple.com appleid.cdn-apple.com * noop
-            jobs.ashbyhq.com cdn.ashbyprd.com * noop
+            ashbyhq.com cdn.ashbyprd.com * noop
             id.atlassian.com atl-paas.net * noop
             start.atlassian.com atl-paas.net * noop
             shop.aurora-music.com cdn.shopify.com * noop
@@ -178,7 +179,7 @@
             facebook.com meta-api.arkoselabs.com * noop
             facebook.com static.xx.fbcdn.net * noop
             facebook.com www.fbsbx.com * noop
-            jel.fakturownia.pl assets2.firmlet.com * noop
+            fakturownia.pl assets2.firmlet.com * noop
             secure.fastcloudpay.com cardinalcommerce.com * noop
             frame.work js.stripe.com * noop
             genius.com filepicker.io * noop
@@ -188,6 +189,7 @@
             github.com viewscreen.githubusercontent.com * noop
             github.com zuora.com * noop
             support.github.com support-assets.githubassets.com * noop
+            gnosispay.com framerusercontent.com * noop
             goofish.com g.alicdn.com * noop
             google.com maps.googleapis.com * noop
             ads.google.com tpc.googlesyndication.com * noop
@@ -228,6 +230,7 @@
             magiceden.io next.cdn.magiceden.dev * noop
             manus.im files.manuscdn.com * noop
             messenger.com static.xx.fbcdn.net * noop
+            mexc.com static.mocortech.com * noop
             microsoft.com mem.gfx.ms * noop
             copilot.microsoft.com studiostaticassetsprod.azureedge.net * noop
             teams.microsoft.com login.microsoftonline.com * noop
@@ -326,7 +329,7 @@
           userFilters = ''
             ||karachan.org/js/htmlshiv.js
             karachan.org###jesli-zablokujesz-tego-diva-ukraina-odniesie-zwyciestwo
-            www.notion.so##.notion-ai-button
+            notion.so##.notion-ai-button
           '';
         };
 
