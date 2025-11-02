@@ -420,19 +420,25 @@
 
   users = {
     mutableUsers = false;
+    defaultUserShell = pkgs.fish;
 
-    users.jel = {
-      isNormalUser = true;
-      home = "/home/jel";
-      hashedPasswordFile = config.age.secrets.jel-password.path;
-      shell = pkgs.fish;
+    users = {
+      jel = {
+        isNormalUser = true;
+        hashedPasswordFile = config.age.secrets.jel-password.path;
 
-      extraGroups = [
-        "docker"
-        "ipfs"
-        "networkmanager"
-        "wheel"
-      ];
+        extraGroups = [
+          "docker"
+          "ipfs"
+          "networkmanager"
+          "wheel"
+        ];
+      };
+
+      guest = {
+        isNormalUser = true;
+        hashedPassword = "";
+      };
     };
   };
 
