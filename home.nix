@@ -395,7 +395,6 @@
           // install "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}" # Search by Image
           // install "jesse@adhdjesse.com" # SkyLink
           // install "smart-upscale@tanalin.com"
-          // install "{b11bea1f-a888-4332-8d8a-cec2be7d24b9}" # Snowflake
           // install "sponsorBlocker@ajay.app"
           // install-private-browsing "uBlock0@raymondhill.net"
           // install "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" # Violentmonkey
@@ -446,7 +445,6 @@
                 "personal-bookmarks"
                 "_799c0914-748b-41df-a25c-22d008f9e83f_-browser-action"
                 "jesse_adhdjesse_com-browser-action"
-                "_b11bea1f-a888-4332-8d8a-cec2be7d24b9_-browser-action"
                 "ublock0_raymondhill_net-browser-action"
                 "jid1-mnnxcxisbpnsxq_jetpack-browser-action"
                 "sponsorblocker_ajay_app-browser-action"

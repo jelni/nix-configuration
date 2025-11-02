@@ -329,6 +329,7 @@
     openssh.enable = true;
     postgresql.enable = true;
     printing.enable = true;
+    snowflake-proxy.enable = true;
     timesyncd.enable = false;
     tlp.enable = false;
     tuned.enable = true;
