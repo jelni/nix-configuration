@@ -9,7 +9,11 @@
 {
   imports = [ ./hardware-configuration.nix ];
   age.secrets.jel-password.file = ./secrets/jel-password.age;
-  nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
+
+  nixpkgs = {
+    overlays = [ nix-vscode-extensions.overlays.default ];
+    config.allowUnfree = true;
+  };
 
   nix.package = pkgs.lixPackageSets.git.lix;
 
@@ -207,7 +211,7 @@
 
       aria2
       audacity
-      # bambu-studio
+      bambu-studio
       baobab
       bibata-cursors
       binwalk
@@ -314,14 +318,6 @@
     };
 
     gnome.excludePackages = [ pkgs.gnome-tour ];
-  };
-
-  nixpkgs.config = {
-    allowUnfree = true;
-
-    # permittedInsecurePackages = lib.warn "insecure libsoup is required for bambu-studio" [
-    #   "libsoup-2.74.3"
-    # ];
   };
 
   services = {
