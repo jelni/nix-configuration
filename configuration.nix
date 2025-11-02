@@ -11,6 +11,8 @@
   age.secrets.jel-password.file = ./secrets/jel-password.age;
   nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
 
+  nix.package = pkgs.lixPackageSets.git.lix;
+
   boot = {
     supportedFilesystems = [ "zfs" ];
     zfs.forceImportRoot = false;
