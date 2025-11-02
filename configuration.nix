@@ -34,6 +34,7 @@
     _1password.enable = true;
     bat.enable = true;
     fish.enable = true;
+    git.enable = true;
     steam.enable = true;
     less.envVariables.LESS = "-R --mouse";
 
@@ -237,7 +238,6 @@
       gh
       ghostty
       gimp3
-      git
       gnome-calculator
       gnome-characters
       gnome-logs
