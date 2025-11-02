@@ -592,6 +592,26 @@
 
     home-manager.enable = true;
 
+    jujutsu = {
+      enable = true;
+
+      settings = {
+        user = {
+          name = "jel";
+          email = "25802745+jelni@users.noreply.github.com";
+        };
+
+        signing = {
+          behavior = "own";
+          backend = "ssh";
+          key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIeyqBh/je0A8dMXB0m9jxZ0nBWHc5Hj+dFmFBiT5Mdw";
+          backends.ssh.program = "op-ssh-sign";
+        };
+
+        git.sign-on-push = true;
+      };
+    };
+
     ssh = {
       enable = true;
       enableDefaultConfig = false; # remove once this is the default

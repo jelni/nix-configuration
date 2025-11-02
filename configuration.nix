@@ -253,7 +253,6 @@
       insomnia
       inter
       iosevka-bin
-      jujutsu
       keybase-gui
       languagetool
       libreoffice-fresh
