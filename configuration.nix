@@ -217,6 +217,7 @@
       binwalk
       bottom
       claude-code
+      comaps
       davinci-resolve-studio
       deno
       dig
@@ -460,6 +461,7 @@
   };
 
   time.timeZone = "Europe/Warsaw";
+  location.provider = "geoclue2";
 
   security = {
     sudo.enable = false;
