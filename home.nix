@@ -13,6 +13,12 @@
   };
 
   programs = {
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
+      enableJujutsuIntegration = true;
+    };
+
     firefox = {
       enable = true;
       package = firefox.packages.x86_64-linux.firefox-nightly-bin;
