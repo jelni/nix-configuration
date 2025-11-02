@@ -128,6 +128,15 @@
             "org/gnome/login-screen".enable-fingerprint-authentication = false;
             "org/gnome/mutter".experimental-features = [ "variable-refresh-rate" ];
 
+            "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
+              "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+            ];
+
+            "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+              binding = "<Shift><Control>space";
+              command = "1password --quick-access";
+            };
+
             "org/gnome/settings-daemon/plugins/color" = {
               night-light-enabled = true;
               night-light-schedule-from = 22.0;
