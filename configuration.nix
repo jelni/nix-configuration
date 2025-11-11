@@ -179,6 +179,7 @@
             "org/gnome/shell/app-switcher".current-workspace-only = true;
 
             "org/gnome/shell/extensions/auto-move-windows".application-list = [
+              "code.desktop:1"
               "firefox-nightly.desktop:1"
               "org.telegram.desktop.desktop:2"
               "vesktop.desktop:3"
