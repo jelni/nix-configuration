@@ -156,25 +156,13 @@
               sleep-inactive-battery-timeout = lib.gvariant.mkUint16 1800;
             };
 
-            "org/gnome/shell" = {
-              enabled-extensions = [
-                "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
-                "clipboard-history@alexsaveau.dev"
-                "drive-menu@gnome-shell-extensions.gcampax.github.com"
-                "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
-                "status-icons@gnome-shell-extensions.gcampax.github.com"
-                "steal-my-focus-window@steal-my-focus-window"
-                "system-monitor@gnome-shell-extensions.gcampax.github.com"
-              ];
-
-              favorite-apps = [
-                "firefox-nightly.desktop"
-                "org.gnome.Nautilus.desktop"
-                "com.mitchellh.ghostty.desktop"
-                "org.telegram.desktop.desktop"
-                "vesktop.desktop"
-              ];
-            };
+            "org/gnome/shell".favorite-apps = [
+              "firefox-nightly.desktop"
+              "org.gnome.Nautilus.desktop"
+              "com.mitchellh.ghostty.desktop"
+              "org.telegram.desktop.desktop"
+              "vesktop.desktop"
+            ];
 
             "org/gnome/shell/app-switcher".current-workspace-only = true;
 
@@ -268,6 +256,7 @@
       nixfmt
       nodejs
       nushell
+      nvtopPackages.amd
       olympus
       p7zip
       parsec-bin
@@ -304,16 +293,6 @@
       wget2
       yt-dlp
       yubikey-manager
-
-      nvtopPackages.amd
-
-      gnomeExtensions.auto-move-windows
-      gnomeExtensions.clipboard-history
-      gnomeExtensions.launch-new-instance
-      gnomeExtensions.removable-drive-menu
-      gnomeExtensions.status-icons
-      gnomeExtensions.steal-my-focus-window
-      gnomeExtensions.system-monitor
     ];
 
     shellAliases = {

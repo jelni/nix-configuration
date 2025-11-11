@@ -578,6 +578,20 @@
       };
     };
 
+    gnome-shell = {
+      enable = true;
+
+      extensions = with pkgs.gnomeExtensions; [
+        { package = auto-move-windows; }
+        { package = clipboard-history; }
+        { package = launch-new-instance; }
+        { package = removable-drive-menu; }
+        { package = status-icons; }
+        { package = steal-my-focus-window; }
+        { package = system-monitor; }
+      ];
+    };
+
     helix = {
       enable = true;
       defaultEditor = true;
