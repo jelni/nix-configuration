@@ -8,7 +8,11 @@
 }:
 {
   imports = [ ./hardware-configuration.nix ];
-  age.secrets.jel-password.file = ./secrets/jel-password.age;
+
+  age.secrets = {
+    jel-password.file = ./secrets/jel-password.age;
+    wireless-networks.file = ./secrets/wireless-networks.age;
+  };
 
   nixpkgs = {
     overlays = [ nix-vscode-extensions.overlays.default ];
@@ -448,6 +452,47 @@
         80
         443
       ];
+    };
+
+    networkmanager.ensureProfiles = {
+      environmentFiles = [ config.age.secrets.wireless-networks.path ];
+
+      profiles =
+        let
+          profile = name: {
+            connection = {
+              id = "\$${name}_SSID";
+              type = "wifi";
+            };
+
+            wifi.ssid = "\$${name}_SSID";
+
+            wifi-security = {
+              key-mgmt = "\$${name}_SECURITY";
+              psk = "\$${name}_PASS";
+            };
+          };
+        in
+        builtins.listToAttrs (
+          builtins.map
+            (name: {
+              inherit name;
+              value = profile (lib.toUpper name);
+            })
+            # thank you https://t.me/totalnie_zmyslone_slowa
+            [
+              "grawideon"
+              "gidflugh"
+              "kataplaster"
+              "alfabetyzator"
+              "genetication"
+              "adoment"
+              "abstrulich"
+              "wpajpowac"
+              "siekieralt"
+              "technokokarda"
+            ]
+        );
     };
   };
 
