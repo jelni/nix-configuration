@@ -41,14 +41,21 @@
           nixos-hardware.nixosModules.framework-16-7040-amd
           home-manager.nixosModules.home-manager
 
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.jel = ./home.nix;
-              extraSpecialArgs = { inherit firefox; };
-            };
-          }
+          (
+            { config, ... }:
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.jel = ./home.nix;
+
+                extraSpecialArgs = {
+                  inherit firefox;
+                  nixosConfig = config;
+                };
+              };
+            }
+          )
 
           agenix.nixosModules.default
         ];

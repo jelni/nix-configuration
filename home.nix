@@ -3,6 +3,7 @@
   pkgs,
   config,
   firefox,
+  nixosConfig,
   ...
 }:
 {
@@ -609,6 +610,35 @@
         { package = steal-my-focus-window; }
         { package = system-monitor; }
       ];
+    };
+
+    halloy = {
+      enable = true;
+
+      settings = {
+        theme = [
+          "ferra"
+          "booberry"
+        ];
+
+        buffer.buffer_separator.hide_when_all_read = true;
+        buffer.text_input.auto_format = "all";
+
+        notifications.direct_message = {
+          sound = "peck";
+          show_toast = true;
+          show_content = true;
+        };
+
+        notifications.highlight.sound = "dong";
+
+        servers.freenode = {
+          nickname = "je";
+          username = "jel";
+          server = "irc.freenode.net";
+          nick_password_file = nixosConfig.age.secrets.freenode-je-password.path;
+        };
+      };
     };
 
     helix = {

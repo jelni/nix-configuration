@@ -10,6 +10,7 @@
   imports = [ ./hardware-configuration.nix ];
 
   age.secrets = {
+    freenode-je-password.file = ./secrets/freenode-je-password.age;
     jel-password.file = ./secrets/jel-password.age;
     wireless-networks.file = ./secrets/wireless-networks.age;
   };
@@ -232,7 +233,6 @@
       gnome-system-monitor
       google-cloud-sdk
       gparted
-      halloy
       handbrake
       heroic
       httptoolkit

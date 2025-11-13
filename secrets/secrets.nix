@@ -10,6 +10,7 @@ let
   };
 in
 {
+  "freenode-je-password.age" = all;
   "jel-password.age" = all;
   "wireless-networks.age" = all;
 }
