@@ -14,5 +14,5 @@ xkb_symbols "pl-workman"
     key <AB04> { [ c, C, cacute, Cacute ] };
     key <AB02> { [ x, X, zacute, Zacute ] };
     key <AB07> { [ l, L, lstroke, Lstroke ] };
-    key <CAPS> { [ Caps_Lock ] };
+    key <CAPS> { [ Caps_Lock, VoidSymbol ] };
 };
