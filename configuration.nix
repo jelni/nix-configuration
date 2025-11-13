@@ -31,7 +31,6 @@
       efiSupport = true;
       extraConfig = "timeout: 1";
     };
-
   };
 
   programs = {
@@ -516,6 +515,5 @@
   };
 
   virtualisation.docker.enable = true;
-
   system.stateVersion = "25.05";
 }
