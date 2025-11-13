@@ -205,6 +205,7 @@
     systemPackages = with pkgs; [
       agenix.packages.x86_64-linux.default
 
+      _7zz
       aria2
       audacity
       bambu-studio
@@ -261,7 +262,6 @@
       nushell
       nvtopPackages.amd
       olympus
-      p7zip
       parsec-bin
       parted
       pinta
