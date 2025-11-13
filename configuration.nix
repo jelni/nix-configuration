@@ -36,7 +36,6 @@
 
   programs = {
     _1password.enable = true;
-    less.envVariables.LESS = "-R --mouse";
 
     _1password-gui = {
       enable = true;
