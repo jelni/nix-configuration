@@ -280,7 +280,6 @@
       tutanota-desktop
       usbutils
       uutils-coreutils-noprefix
-      vesktop
       vmware-workstation
       wget2
       yubikey-manager
