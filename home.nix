@@ -9,10 +9,25 @@
   home = {
     username = "jel";
     homeDirectory = "/home/jel";
+
+    shellAliases = {
+      cat = "bat";
+    };
+
     stateVersion = "25.05";
   };
 
   programs = {
+    aria2.enable = true;
+
+    bat = {
+      enable = true;
+      config.pager = "moor -no-linenumbers";
+    };
+
+    bottom.enable = true;
+    claude-code.enable = true;
+
     delta = {
       enable = true;
       enableGitIntegration = true;
@@ -578,6 +593,10 @@
       };
     };
 
+    gcc.enable = true;
+    gh.enable = true;
+    ghostty.enable = true;
+
     gnome-shell = {
       enable = true;
 
@@ -640,11 +659,27 @@
       };
     };
 
+    mpv.enable = true;
+
+    mullvad-vpn = {
+      enable = true;
+      settings.monochromaticIcon = true;
+    };
+
+    nushell = {
+      enable = true;
+      settings.show_banner = false;
+    };
+
+    ripgrep.enable = true;
+
     ssh = {
       enable = true;
       enableDefaultConfig = false; # remove once this is the default
       matchBlocks."*".identityAgent = "~/.1password/agent.sock";
     };
+
+    uv.enable = true;
 
     vscode = {
       enable = true;
@@ -1104,11 +1139,17 @@
         };
       };
     };
+
+    yt-dlp.enable = true;
   };
 
-  services.home-manager.autoExpire = {
-    enable = true;
-    frequency = "weekly";
+  services = {
+    home-manager.autoExpire = {
+      enable = true;
+      frequency = "weekly";
+    };
+
+    udiskie.enable = true;
   };
 
   xdg = {

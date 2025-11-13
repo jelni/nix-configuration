@@ -35,29 +35,11 @@
 
   programs = {
     _1password.enable = true;
-    bat.enable = true;
-    fish.enable = true;
-    git.enable = true;
-    steam.enable = true;
     less.envVariables.LESS = "-R --mouse";
 
     _1password-gui = {
       enable = true;
       package = pkgs._1password-gui-beta;
-    };
-
-    obs-studio = {
-      enable = true;
-      enableVirtualCamera = true;
-
-      plugins = with pkgs.obs-studio-plugins; [
-        obs-backgroundremoval
-        obs-gstreamer
-        obs-pipewire-audio-capture
-        obs-vaapi
-        obs-vkcapture
-        wlrobs
-      ];
     };
 
     dconf.profiles =
@@ -199,6 +181,25 @@
         user.databases = [ database ];
         gdm.databases = [ database ];
       };
+
+    fish.enable = true;
+    git.enable = true;
+
+    obs-studio = {
+      enable = true;
+      enableVirtualCamera = true;
+
+      plugins = with pkgs.obs-studio-plugins; [
+        obs-backgroundremoval
+        obs-gstreamer
+        obs-pipewire-audio-capture
+        obs-vaapi
+        obs-vkcapture
+        wlrobs
+      ];
+    };
+
+    steam.enable = true;
   };
 
   environment = {
@@ -206,14 +207,11 @@
       agenix.packages.x86_64-linux.default
 
       _7zz
-      aria2
       audacity
       bambu-studio
       baobab
       bibata-cursors
       binwalk
-      bottom
-      claude-code
       comaps
       davinci-resolve-studio
       deno
@@ -227,9 +225,6 @@
       file
       fira-code
       framework-tool-tui
-      gcc
-      gh
-      ghostty
       gimp3
       gnome-calculator
       gnome-characters
@@ -253,13 +248,10 @@
       lucida-downloader
       magic-wormhole-rs
       moor
-      mpv
-      mullvad-vpn
       nautilus
       nil
       nixfmt
       nodejs
-      nushell
       nvtopPackages.amd
       olympus
       parsec-bin
@@ -272,7 +264,6 @@
       qbittorrent
       quodlibet-full
       reaper
-      ripgrep
       rquickshare
       rustup
       safe-rm
@@ -287,19 +278,15 @@
       tor-browser
       trezor-suite
       tutanota-desktop
-      udiskie
       usbutils
       uutils-coreutils-noprefix
-      uv
       vesktop
       vmware-workstation
       wget2
-      yt-dlp
       yubikey-manager
     ];
 
     shellAliases = {
-      cat = "bat";
       rm = "safe-rm";
       wget = "wget2";
     };
