@@ -13,6 +13,7 @@
 
     shellAliases = {
       cat = "bat";
+      ls = "eza";
     };
 
     stateVersion = "25.05";
@@ -34,6 +35,8 @@
       enableGitIntegration = true;
       enableJujutsuIntegration = true;
     };
+
+    eza.enable = true;
 
     firefox = {
       enable = true;
