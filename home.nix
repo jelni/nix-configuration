@@ -1316,6 +1316,7 @@
           "terminal.integrated.shellIntegration.history" = 0;
           "terminal.integrated.smoothScrolling" = true;
           "terminal.integrated.stickyScroll.enabled" = false;
+          "terminal.integrated.suggest.enabled" = false;
           "terminal.integrated.tabs.location" = "left";
           "testing.gutterEnabled" = false;
           "typescript.inlayHints.enumMemberValues.enabled" = true;
