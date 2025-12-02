@@ -1,22 +1,27 @@
 {
-  lib,
-  pkgs,
   config,
-  agenix,
-  nix-vscode-extensions,
+  hostName,
+  inputs,
+  lib,
+  perSystem,
+  pkgs,
   ...
 }:
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ../../hardware-configuration.nix
+    inputs.agenix.nixosModules.default
+    inputs.stylix.nixosModules.stylix
+  ];
 
   age.secrets = {
-    freenode-je-password.file = ./secrets/freenode-je-password.age;
-    jel-password.file = ./secrets/jel-password.age;
-    wireless-networks.file = ./secrets/wireless-networks.age;
+    freenode-je-password.file = ../../secrets/freenode-je-password.age;
+    jel-password.file = ../../secrets/jel-password.age;
+    wireless-networks.file = ../../secrets/wireless-networks.age;
   };
 
   nixpkgs = {
-    overlays = [ nix-vscode-extensions.overlays.default ];
+    overlays = [ inputs.nix-vscode-extensions.overlays.default ];
     config.allowUnfree = true;
   };
 
@@ -35,7 +40,7 @@
 
     plymouth = {
       enable = true;
-      logo = ./assets/hackerspace-zyrardow.png;
+      logo = ../../assets/hackerspace-zyrardow.png;
     };
   };
 
@@ -149,7 +154,7 @@
             ];
 
             "org/gnome/shell/extensions/azwallpaper" = {
-              slideshow-directory = "${./wallpapers}";
+              slideshow-directory = "${../../wallpapers}";
 
               slideshow-slide-duration = lib.gvariant.mkTuple (
                 map lib.gvariant.mkInt32 [
@@ -220,7 +225,7 @@
 
   environment = {
     systemPackages = with pkgs; [
-      agenix.packages.x86_64-linux.default
+      perSystem.agenix.default
 
       _7zz
       audacity
@@ -362,7 +367,7 @@
       extraLayouts.pl-workman = {
         description = "Polish (Workman)";
         languages = [ "pol" ];
-        symbolsFile = ./symbols/pl-workman;
+        symbolsFile = ../../symbols/pl-workman;
       };
     };
 
@@ -441,7 +446,7 @@
   };
 
   networking = {
-    hostName = "hydromechanizator";
+    inherit hostName;
     hostId = "d0eca1a0";
     nftables.enable = true;
 

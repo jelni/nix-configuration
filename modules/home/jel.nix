@@ -1,16 +1,13 @@
 {
-  lib,
-  pkgs,
   config,
-  firefox,
-  nixosConfig,
+  lib,
+  osConfig,
+  perSystem,
+  pkgs,
   ...
 }:
 {
   home = {
-    username = "jel";
-    homeDirectory = "/home/jel";
-
     shellAliases = {
       cat = lib.getExe pkgs.bat;
       zed = lib.getExe pkgs.zed-editor;
@@ -46,7 +43,7 @@
 
     firefox = {
       enable = true;
-      package = firefox.packages.x86_64-linux.firefox-nightly-bin;
+      package = perSystem.firefox.firefox-nightly-bin;
 
       policies = {
         "3rdparty".Extensions."uBlock0@raymondhill.net".adminSettings = builtins.toJSON {
@@ -647,7 +644,7 @@
           nickname = "je";
           username = "jel";
           server = "irc.freenode.net";
-          nick_password_file = nixosConfig.age.secrets.freenode-je-password.path;
+          nick_password_file = osConfig.age.secrets.freenode-je-password.path;
         };
       };
     };
@@ -1514,7 +1511,7 @@
         zed-editor
         telegram-desktop
         tutanota-desktop
-        firefox.packages.x86_64-linux.firefox-nightly-bin
+        perSystem.firefox.firefox-nightly-bin
         onlyoffice-desktopeditors
         loupe
         mpv
