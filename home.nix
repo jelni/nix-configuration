@@ -412,6 +412,7 @@
           // install "languagetool-webextension@languagetool.org"
           // install "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
           // install "bluelitefilter@malwaretech.com"
+          // install "{5b78178f-135d-4df2-821f-1f289be7f348}" # Catppuccin Mocha - Rosewater
           // install "{74145f27-f039-47ce-a470-a662b129930a}" # ClearURLs
           // install "gdpr@cavi.au.dk"
           // install "{c3c10168-4186-445c-9c5b-63f12b8e2c87}" # Cookie-Editor
@@ -631,11 +632,6 @@
       enable = true;
 
       settings = {
-        theme = [
-          "ferra"
-          "booberry"
-        ];
-
         buffer.buffer_separator.hide_when_all_read = true;
         buffer.text_input.auto_format = "all";
 
@@ -1482,6 +1478,12 @@
     };
 
     udiskie.enable = true;
+  };
+
+  stylix.targets = {
+    firefox.profileNames = [ "default" ];
+    vscode.enable = false;
+    zed.enable = false;
   };
 
   xdg = {

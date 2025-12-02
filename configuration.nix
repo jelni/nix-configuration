@@ -74,14 +74,10 @@
             "org/gnome/desktop/interface" = {
               clock-show-seconds = true;
               clock-show-weekday = true;
-              color-scheme = "prefer-dark";
               cursor-theme = "Bibata-Modern-Ice";
-              document-font-name = "Inter 11";
               enable-hot-corners = false;
               font-hinting = "none";
-              font-name = "Inter 11";
               gtk-enable-primary-paste = false;
-              monospace-font-name = "Fira Code 11 @wght=400";
               show-battery-percentage = true;
             };
 
@@ -214,6 +210,12 @@
     };
 
     steam.enable = true;
+  };
+
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    imageScalingMode = "fit";
   };
 
   environment = {

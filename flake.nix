@@ -13,6 +13,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:nix-community/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     firefox = {
       url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +35,7 @@
       nixos-hardware,
       home-manager,
       agenix,
+      stylix,
       firefox,
       nix-vscode-extensions,
       ...
@@ -40,6 +46,7 @@
           ./configuration.nix
           nixos-hardware.nixosModules.framework-16-7040-amd
           home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
 
           (
             { config, ... }:
