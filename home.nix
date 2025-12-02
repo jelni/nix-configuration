@@ -1494,5 +1494,20 @@
         Exec=1password --silent %U
       '';
     };
+
+    mimeApps = {
+      enable = true;
+
+      defaultApplicationPackages = with pkgs; [
+        zed-editor
+        telegram-desktop
+        tutanota-desktop
+        firefox.packages.x86_64-linux.firefox-nightly-bin
+        onlyoffice-desktopeditors
+        loupe
+        mpv
+        qbittorrent
+      ];
+    };
   };
 }
