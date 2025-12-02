@@ -1251,17 +1251,10 @@
           "files.eol" = "\n";
           "files.insertFinalNewline" = true;
           "files.trimFinalNewlines" = true;
-          "git.autoRepositoryDetection" = "openEditors";
-          "git.autoStash" = true;
-          "git.autofetch" = true;
-          "git.autofetchPeriod" = 300;
           "git.confirmEmptyCommits" = false;
           "git.confirmSync" = false;
-          "git.countBadge" = "tracked";
           "git.enableCommitSigning" = true;
           "git.enableSmartCommit" = true;
-          "git.ignoreMissingGitWarning" = true;
-          "git.openRepositoryInParentFolders" = "never";
           "html.format.indentHandlebars" = true;
           "html.format.indentInnerHtml" = true;
           "html.format.preserveNewLines" = false;
