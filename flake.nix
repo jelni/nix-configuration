@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    utils.url = "github:numtide/flake-utils";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     home-manager = {
@@ -32,6 +33,7 @@
   outputs =
     {
       nixpkgs,
+      utils,
       nixos-hardware,
       home-manager,
       agenix,
@@ -72,5 +74,18 @@
           inherit nix-vscode-extensions;
         };
       };
-    };
+    }
+    // utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = import nixpkgs { inherit system; };
+      in
+      {
+        devShell = pkgs.mkShell {
+          packages = [ pkgs.qt6.qtdeclarative ];
+          QML_IMPORT_PATH = "${pkgs.qt6.qtdeclarative}/lib/qt-6/qml:${pkgs.quickshell}/lib/qt-6/qml";
+          QML2_IMPORT_PATH = "";
+        };
+      }
+    );
 }

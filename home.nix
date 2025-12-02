@@ -707,9 +707,18 @@
       settings.monochromaticIcon = true;
     };
 
+    niri.settings.spawn-at-startup = [ { argv = [ "quickshell" ]; } ];
+
     nushell = {
       enable = true;
       settings.show_banner = false;
+    };
+
+    quickshell = {
+      enable = true;
+      activeConfig = "default";
+      configs.default = ./quickshell;
+      systemd.enable = true;
     };
 
     ripgrep.enable = true;
