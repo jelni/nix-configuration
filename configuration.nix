@@ -254,6 +254,7 @@
       moor
       nautilus
       nil
+      nixd
       nixfmt
       nodejs
       nvtopPackages.amd
