@@ -44,7 +44,7 @@
 
     _1password-gui = {
       enable = true;
-      package = pkgs._1password-gui-beta;
+      polkitPolicyOwners = [ "jel" ];
     };
 
     dconf.profiles =
@@ -308,6 +308,11 @@
 
     gnome.excludePackages = [ pkgs.gnome-tour ];
     variables.PAGER = "moor";
+
+    etc."1password/custom_allowed_browsers" = {
+      text = "firefox-nightly-bin";
+      mode = "0755";
+    };
   };
 
   services = {
