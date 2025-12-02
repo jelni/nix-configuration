@@ -49,17 +49,6 @@
 
           settings = {
             "org/gnome/desktop/a11y/interface".show-status-shapes = true;
-
-            "org/gnome/desktop/background" =
-              let
-                wallpaper = "${./assets/TAPETA.png}";
-              in
-              {
-                picture-options = "scaled";
-                picture-uri = wallpaper;
-                picture-uri-dark = wallpaper;
-              };
-
             "org/gnome/desktop/calendar".show-weekdate = true;
 
             "org/gnome/desktop/input-sources" = {
@@ -157,6 +146,20 @@
               "org.telegram.desktop.desktop:2"
               "vesktop.desktop:3"
             ];
+
+            "org/gnome/shell/extensions/azwallpaper" = {
+              slideshow-directory = "${./wallpapers}";
+
+              slideshow-slide-duration = lib.gvariant.mkTuple (
+                map lib.gvariant.mkInt32 [
+                  1
+                  0
+                  0
+                ]
+              );
+
+              slideshow-use-absolute-time-for-duration = true;
+            };
 
             "org/gnome/shell/extensions/clipboard-indicator" = {
               cache-only-favorites = true;

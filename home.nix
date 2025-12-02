@@ -608,6 +608,7 @@
         { package = status-icons; }
         { package = steal-my-focus-window; }
         { package = system-monitor; }
+        { package = wallpaper-slideshow; }
       ];
     };
 
