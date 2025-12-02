@@ -10,12 +10,7 @@
   home = {
     username = "jel";
     homeDirectory = "/home/jel";
-
-    shellAliases = {
-      cat = "bat";
-      ls = "eza";
-    };
-
+    shellAliases.cat = "bat";
     stateVersion = "25.05";
   };
 
@@ -597,6 +592,7 @@
       };
     };
 
+    fish.enable = true;
     gcc.enable = true;
     gh.enable = true;
     ghostty.enable = true;
