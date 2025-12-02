@@ -281,7 +281,6 @@
       quodlibet-full
       reaper
       rquickshare
-      rustup
       safe-rm
       slack
       snapshot
