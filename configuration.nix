@@ -32,6 +32,11 @@
       efiSupport = true;
       extraConfig = "timeout: 1";
     };
+
+    plymouth = {
+      enable = true;
+      logo = ./assets/hackerspace-zyrardow.png;
+    };
   };
 
   programs = {
