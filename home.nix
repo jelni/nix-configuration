@@ -1327,6 +1327,7 @@
           "update.showReleaseNotes" = false;
           "window.autoDetectHighContrast" = false;
           "window.commandCenter" = false;
+          "window.confirmBeforeClose" = "always";
           "window.customMenuBarAltFocus" = false;
           "window.dialogStyle" = "custom";
           "window.enableMenuBarMnemonics" = false;
