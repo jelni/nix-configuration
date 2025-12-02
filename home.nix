@@ -694,7 +694,7 @@
         };
 
         signing = {
-          behavior = "own";
+          behavior = "force";
           backend = "ssh";
           key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIeyqBh/je0A8dMXB0m9jxZ0nBWHc5Hj+dFmFBiT5Mdw";
           backends.ssh.program = "op-ssh-sign";
