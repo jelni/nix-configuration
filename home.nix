@@ -12,8 +12,8 @@
     homeDirectory = "/home/jel";
 
     shellAliases = {
-      cat = "bat";
-      zed = "${pkgs.zed-editor}/bin/zeditor";
+      cat = lib.getExe pkgs.bat;
+      zed = lib.getExe pkgs.zed-editor;
     };
 
     stateVersion = "25.05";
