@@ -218,6 +218,7 @@
       deno
       dig
       doas-sudo-shim
+      dust
       espeak
       exiftool
       famistudio
@@ -257,6 +258,7 @@
       parsec-bin
       parted
       pinta
+      prettier
       prismlauncher
       prusa-slicer
       pv
@@ -419,6 +421,7 @@
   networking = {
     hostName = "hydromechanizator";
     hostId = "d0eca1a0";
+    nftables.enable = true;
 
     nameservers = [
       "194.242.2.4#base.dns.mullvad.net"
