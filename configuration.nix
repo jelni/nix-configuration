@@ -158,10 +158,11 @@
               "vesktop.desktop:3"
             ];
 
-            "org/gnome/shell/extensions/clipboard-history" = {
+            "org/gnome/shell/extensions/clipboard-indicator" = {
               cache-only-favorites = true;
               confirm-clear = false;
               history-size = lib.gvariant.mkUint16 100;
+              preview-size = lib.gvariant.mkUint16 64;
               toggle-menu = [ "<Super>v" ];
             };
 

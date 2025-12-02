@@ -606,7 +606,7 @@
 
       extensions = with pkgs.gnomeExtensions; [
         { package = auto-move-windows; }
-        { package = clipboard-history; }
+        { package = clipboard-indicator; }
         { package = launch-new-instance; }
         { package = removable-drive-menu; }
         { package = status-icons; }
