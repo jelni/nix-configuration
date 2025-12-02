@@ -10,7 +10,12 @@
   home = {
     username = "jel";
     homeDirectory = "/home/jel";
-    shellAliases.cat = "bat";
+
+    shellAliases = {
+      cat = "bat";
+      zed = "${pkgs.zed-editor}/bin/zeditor";
+    };
+
     stateVersion = "25.05";
   };
 
