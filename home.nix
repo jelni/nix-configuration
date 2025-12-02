@@ -910,7 +910,6 @@
         extensions = (
           with pkgs.vscode-marketplace;
           [
-            pkgs.vscode-marketplace."1password".op-vscode
             adpyke.vscode-sql-formatter
             anthropic.claude-code
             bradlc.vscode-tailwindcss
