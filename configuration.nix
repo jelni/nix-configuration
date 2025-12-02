@@ -318,6 +318,7 @@
 
   services = {
     desktopManager.gnome.enable = true;
+    flatpak.enable = true;
     fwupd.enable = true;
     gnome.core-apps.enable = false;
     gvfs.enable = true;
