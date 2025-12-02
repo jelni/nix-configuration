@@ -197,6 +197,7 @@
 
     fish.enable = true;
     git.enable = true;
+    nix-ld.enable = true;
 
     obs-studio = {
       enable = true;
