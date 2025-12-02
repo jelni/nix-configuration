@@ -603,7 +603,11 @@
       };
     };
 
-    fish.enable = true;
+    fish = {
+      enable = true;
+      shellInit = "set fish_greeting";
+    };
+
     gcc.enable = true;
     gh.enable = true;
     ghostty.enable = true;
