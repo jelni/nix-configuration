@@ -282,6 +282,7 @@
       sparrow
       sqlitebrowser
       stripe-cli
+      superTuxKart
       telegram-desktop
       tlrc
       tor
