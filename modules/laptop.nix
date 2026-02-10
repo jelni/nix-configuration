@@ -9,23 +9,9 @@
 {
   imports = [ ./hardware-configuration.nix ];
 
-  age.secrets = {
-    freenode-je-password.file = ./secrets/freenode-je-password.age;
-    jel-password.file = ./secrets/jel-password.age;
-    wireless-networks.file = ./secrets/wireless-networks.age;
-  };
-
-  nixpkgs = {
-    overlays = [ nix-vscode-extensions.overlays.default ];
-    config.allowUnfree = true;
-  };
-
-  nix.package = pkgs.lixPackageSets.git.lix;
-
   boot = {
     supportedFilesystems = [ "zfs" ];
     zfs.forceImportRoot = false;
-    initrd.systemd.enable = true;
 
     loader.limine = {
       enable = true;
@@ -195,9 +181,6 @@
         gdm.databases = [ database ];
       };
 
-    fish.enable = true;
-    git.enable = true;
-    nix-ld.enable = true;
 
     obs-studio = {
       enable = true;
@@ -217,9 +200,7 @@
   };
 
   environment = {
-    systemPackages = with pkgs; [
-      agenix.packages.x86_64-linux.default
-
+        systemPackages = with pkgs; [
       _7zz
       audacity
       bambu-studio
@@ -301,13 +282,7 @@
       yubikey-manager
     ];
 
-    shellAliases = {
-      rm = "safe-rm";
-      wget = "wget2";
-    };
-
     gnome.excludePackages = [ pkgs.gnome-tour ];
-    variables.PAGER = "moor";
 
     etc."1password/custom_allowed_browsers" = {
       text = "firefox-nightly-bin";
@@ -321,11 +296,8 @@
     fwupd.enable = true;
     gnome.core-apps.enable = false;
     gvfs.enable = true;
-    openssh.enable = true;
-    postgresql.enable = true;
     printing.enable = true;
     snowflake-proxy.enable = true;
-    timesyncd.enable = false;
     tlp.enable = false;
     tuned.enable = true;
     udisks2.enable = true;
@@ -353,31 +325,11 @@
       pulse.enable = true;
     };
 
-    xserver.xkb = {
-      layout = "pl-workman";
-      options = "shift:breaks_caps";
-
-      extraLayouts.pl-workman = {
-        description = "Polish (Workman)";
-        languages = [ "pol" ];
-        symbolsFile = ./symbols/pl-workman;
-      };
-    };
-
     resolved = {
       enable = true;
       dnsovertls = "opportunistic";
       dnssec = "allow-downgrade";
       fallbackDns = [ ];
-    };
-
-    chrony = {
-      enable = true;
-
-      extraConfig = ''
-        minsources 3
-        rtconutc
-      '';
     };
 
     ollama = {
@@ -391,27 +343,6 @@
       enableGC = true;
       startWhenNeeded = true;
     };
-  };
-
-  documentation.nixos.enable = false;
-
-  nix = {
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 7d";
-    };
-
-    settings.trusted-substituters = [
-      "https://nix-community.cachix.org"
-      "https://numtide.cachix.org"
-      "https://cache.garnix.io"
-    ];
   };
 
   users = {
@@ -441,18 +372,10 @@
   networking = {
     hostName = "hydromechanizator";
     hostId = "d0eca1a0";
-    nftables.enable = true;
 
     nameservers = [
       "194.242.2.4#base.dns.mullvad.net"
       "2a07:e340::4#base.dns.mullvad.net"
-    ];
-
-    timeServers = [
-      "0.pool.ntp.org"
-      "1.pool.ntp.org"
-      "2.pool.ntp.org"
-      "3.pool.ntp.org"
     ];
 
     firewall = {
@@ -509,7 +432,6 @@
     };
   };
 
-  time.timeZone = "Europe/Warsaw";
   location.provider = "geoclue2";
 
   security = {
