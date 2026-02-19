@@ -7,6 +7,7 @@
     docker
     etherpad
     gonic
+    gotosocial
     home-assistant
     i2pd
     initrd-ssh
