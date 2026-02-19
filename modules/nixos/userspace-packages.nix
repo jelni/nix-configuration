@@ -54,12 +54,12 @@
     sparrow
     sqlitebrowser
     superTuxKart
-    telegram-desktop
     tlrc
     tor
     tor-browser
     trezor-suite
     tutanota-desktop
+    unstable.telegram-desktop
     usbutils
     yubikey-manager
   ];

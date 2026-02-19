@@ -16,5 +16,11 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+
+    overlays = [
+      (_: prev: { unstable = import inputs.nixpkgs-unstable { inherit (prev) system; }; })
+    ];
+  };
 }

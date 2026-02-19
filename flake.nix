@@ -48,6 +48,7 @@
     };
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     srvos = {
       url = "github:nix-community/srvos";
