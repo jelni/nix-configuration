@@ -40,6 +40,7 @@
           };
 
           "org/gnome/desktop/peripherals/keyboard".delay = lib.gvariant.mkUint16 200;
+          "org/gnome/desktop/peripherals/touchpad".disable-while-typing = false;
 
           "org/gnome/desktop/privacy" = {
             old-files-age = lib.gvariant.mkUint16 7;
