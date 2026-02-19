@@ -1,6 +1,7 @@
 { flake, ... }:
 {
   imports = with flake.nixosModules; [
+    caddy
     cloudflared
     copyparty
     cron
