@@ -15,8 +15,14 @@
     kernelModules = [ "kvm-amd" ];
   };
 
-  environment.systemPackages = with pkgs; [
-    framework-tool-tui
-    nvtopPackages.amd
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      framework-tool-tui
+      nvtopPackages.amd
+    ];
+
+    variables.RUSTICL_ENABLE = "radeonsi";
+  };
+
+  hardware.graphics.extraPackages = [ pkgs.mesa.opencl ];
 }
