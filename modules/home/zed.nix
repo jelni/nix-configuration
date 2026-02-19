@@ -32,6 +32,7 @@
           alt-right = "editor::MoveToNextSubwordEnd";
           alt-shift-left = "editor::SelectToPreviousSubwordStart";
           alt-shift-right = "editor::SelectToNextSubwordEnd";
+          "ctrl-;" = null;
           ctrl-alt-down = "editor::SelectSmallerSyntaxNode";
           ctrl-alt-up = "editor::SelectLargerSyntaxNode";
           ctrl-enter = "editor::NewlineBelow";
