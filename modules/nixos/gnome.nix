@@ -29,6 +29,7 @@
           };
 
           "org/gnome/desktop/interface" = {
+            accent-color = "purple";
             clock-show-seconds = true;
             clock-show-weekday = true;
             cursor-theme = "Bibata-Modern-Ice";
