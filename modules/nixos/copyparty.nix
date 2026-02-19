@@ -20,10 +20,19 @@
       accounts.admin.passwordFile = config.age.secrets.copyparty-admin.path;
 
       settings = {
+        au-vol = 100;
         e2dsa = true;
         e2ts = true;
+        localtime = true;
+        qdel = 1;
         rproxy = 1;
+        ui-filesz = "4c";
+        vc-age = 1;
+        vc-exit = true;
+        vc-url = "https://api.copyparty.eu/advisories";
+        ver = true;
         xff-hdr = "CF-Connecting-IP";
+        zip-who = 2;
       };
 
       volumes =
@@ -55,6 +64,15 @@
             };
 
             path = "/srv/copyparty/public";
+          };
+
+          "/public/unlisted" = {
+            access = {
+              inherit (access) A;
+              g = "*";
+            };
+
+            path = "/srv/copyparty/public/unlisted";
           };
         };
     };
