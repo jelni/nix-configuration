@@ -100,6 +100,12 @@
 
           "org/gnome/shell/app-switcher".current-workspace-only = true;
 
+          "org/gnome/shell".app-picker-layout = lib.gvariant.mkEmptyArray (
+            lib.gvariant.type.arrayOf (
+              lib.gvariant.type.dictionaryEntryOf lib.gvariant.type.string lib.gvariant.type.variant
+            )
+          );
+
           "org/gnome/shell/extensions/auto-move-windows".application-list = [
             "code.desktop:1"
             "firefox-nightly.desktop:1"
