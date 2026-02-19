@@ -9,4 +9,6 @@
       fish_config theme choose "Catppuccin Mocha"
     '';
   };
+
+  xdg.configFile."fish/themes".source = "${inputs.catppuccin-fish}/themes";
 }

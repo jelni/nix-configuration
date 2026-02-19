@@ -112,6 +112,22 @@
         "type": "github"
       }
     },
+    "catppuccin-fish": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1771367516,
+        "narHash": "sha256-jn2YoybaDY2gQgqmVGi9GPeRWn/H6IHnzxi/VcihIYM=",
+        "owner": "catppuccin",
+        "repo": "fish",
+        "rev": "bc201afe737fa0c8884ffcef206217f8aac88866",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "fish",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -455,6 +471,7 @@
       "inputs": {
         "agenix": "agenix",
         "blueprint": "blueprint",
+        "catppuccin-fish": "catppuccin-fish",
         "firefox": "firefox",
         "home-manager": "home-manager_2",
         "nix-vscode-extensions": "nix-vscode-extensions",
