@@ -7,6 +7,7 @@
     firewall
     fwupd
     hardware
+    kmscon
     limine
     networkmanager
     ntp

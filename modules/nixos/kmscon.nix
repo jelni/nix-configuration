@@ -1,0 +1,4 @@
+{ ... }:
+{
+  services.kmscon.enable = true;
+}
