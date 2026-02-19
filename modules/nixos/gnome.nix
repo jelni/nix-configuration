@@ -130,14 +130,16 @@
 
           "org/gnome/shell/extensions/clipboard-indicator" = {
             cache-only-favorites = true;
+            clear-history = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+            clear-on-boot = false;
             confirm-clear = false;
             history-size = lib.gvariant.mkUint16 100;
-            preview-size = lib.gvariant.mkUint16 64;
-            toggle-menu = [ "<Super>v" ];
-            private-mode-binding = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
-            clear-history = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
-            prev-entry = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
             next-entry = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+            paste-on-select = true;
+            prev-entry = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+            preview-size = lib.gvariant.mkUint16 64;
+            private-mode-binding = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+            toggle-menu = [ "<Super>v" ];
           };
 
           "org/gnome/shell/extensions/system-monitor" = {
