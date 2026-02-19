@@ -6,6 +6,11 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     imageScalingMode = "fit";
-    targets.fish.enable = false;
+    polarity = "dark";
+
+    targets = {
+      fish.enable = false;
+      plymouth.enable = false;
+    };
   };
 }
