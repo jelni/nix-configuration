@@ -5,6 +5,7 @@
     copyparty
     cron
     docker
+    etherpad
     gonic
     home-assistant
     initrd-ssh
