@@ -108,6 +108,7 @@
 
           "org/gnome/shell/extensions/auto-move-windows".application-list = [
             "code.desktop:1"
+            "dev.zed.Zed.desktop:1"
             "firefox-nightly.desktop:1"
             "org.telegram.desktop.desktop:2"
             "vesktop.desktop:3"
