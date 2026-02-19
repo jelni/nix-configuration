@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    android-tools
     audacity
     bambu-studio
     baobab
@@ -9,7 +10,6 @@
     comaps
     davinci-resolve-studio
     deno
-    dig
     espeak
     exiftool
     famistudio
@@ -25,13 +25,13 @@
     gparted
     handbrake
     heroic
-    httptoolkit
     imagemagick
     inkscape
     insomnia
     inter
     iosevka-bin
     keybase-gui
+    krita
     languagetool
     libreoffice-fresh
     loupe
@@ -39,7 +39,9 @@
     magic-wormhole-rs
     nautilus
     nodejs
+    ocr-a
     olympus
+    onlyoffice-desktopeditors
     parsec-bin
     parted
     pinta
@@ -49,6 +51,7 @@
     python314
     quodlibet-full
     reaper
+    signal-desktop-bin
     slack
     snapshot
     sparrow
@@ -59,6 +62,7 @@
     tor-browser
     trezor-suite
     tutanota-desktop
+    ungoogled-chromium
     unstable.telegram-desktop
     usbutils
     yubikey-manager
