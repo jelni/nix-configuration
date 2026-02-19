@@ -4,6 +4,10 @@
 
   services.music-assistant = {
     enable = true;
-    providers = [ "filesystem_local" ];
+
+    providers = [
+      "filesystem_local"
+      "lastfm_scrobble"
+    ];
   };
 }
