@@ -6,6 +6,7 @@
     flatpak
     gnome
     gvfs
+    halloy
     ipfs
     location
     obs-studio
