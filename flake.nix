@@ -26,6 +26,12 @@
     };
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
+
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     stylix = {
