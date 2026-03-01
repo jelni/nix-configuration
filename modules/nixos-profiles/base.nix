@@ -12,7 +12,6 @@
     nix-ld
     openssh
     safe-rm
-    system-packages
     users
     wget2
   ];

@@ -11,7 +11,6 @@
     davinci-resolve-studio
     deno
     dig
-    doas-sudo-shim
     dust
     espeak
     exiftool
@@ -42,7 +41,6 @@
     loupe
     lucida-downloader
     magic-wormhole-rs
-    moor
     nautilus
     nil
     nixd

@@ -1,5 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  environment.systemPackages = [ pkgs.doas-sudo-shim ];
+
   security = {
     sudo.enable = false;
 

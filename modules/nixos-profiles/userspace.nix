@@ -15,6 +15,7 @@
     steam
     stylix
     udisks2
+    userspace-packages
     vscode
   ];
 }

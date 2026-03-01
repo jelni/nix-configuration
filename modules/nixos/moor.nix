@@ -1,4 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  environment.variables.PAGER = "moor";
+  environment = {
+    systemPackages = [ pkgs.moor ];
+    variables.PAGER = "moor";
+  };
 }
