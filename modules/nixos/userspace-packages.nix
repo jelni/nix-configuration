@@ -19,7 +19,6 @@
     ffmpeg-full
     file
     fira-code
-    framework-tool-tui
     gimp3
     gnome-calculator
     gnome-characters
@@ -46,7 +45,6 @@
     nixd
     nixfmt
     nodejs
-    nvtopPackages.amd
     olympus
     parsec-bin
     parted

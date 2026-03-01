@@ -1,7 +1,4 @@
 { ... }:
 {
-  hardware = {
-    enableAllFirmware = true;
-    cpu.amd.updateMicrocode = true;
-  };
+  hardware.enableAllFirmware = true;
 }
