@@ -1,6 +1,7 @@
 { flake, ... }:
 {
   imports = with flake.homeModules; [
+    _1password
     claude-code
     firefox
     ghostty
