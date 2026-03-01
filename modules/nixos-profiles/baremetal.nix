@@ -1,6 +1,7 @@
 { flake, ... }:
 {
   imports = with flake.nixosModules; [
+    baremetal-users
     boot
     dns
     firewall

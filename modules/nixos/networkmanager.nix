@@ -1,5 +1,7 @@
 { config, lib, ... }:
 {
+  age.secrets.wireless-networks.file = ../../secrets/wireless-networks.age;
+
   networking.networkmanager = {
     wifi.macAddress = "stable-ssid";
     ethernet.macAddress = "stable";

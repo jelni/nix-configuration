@@ -1,4 +1,7 @@
 { flake, ... }:
 {
-  imports = [ flake.nixosModules.wsl ];
+  imports = with flake.nixosModules; [
+    wsl
+    wsl-users
+  ];
 }

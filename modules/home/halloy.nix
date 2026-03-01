@@ -1,5 +1,7 @@
 { osConfig, ... }:
 {
+  age.secrets.freenode-je-password.file = ../../secrets/freenode-je-password.age;
+
   programs.halloy = {
     enable = true;
 
