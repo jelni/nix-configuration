@@ -1,5 +1,9 @@
 { flake, ... }:
 {
-  imports = [ flake.modules.home-profiles.base ];
+  imports = with flake.modules.home-profiles; [
+    base
+    wsl
+  ];
+
   home.stateVersion = "25.11";
 }

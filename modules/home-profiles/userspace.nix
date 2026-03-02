@@ -8,6 +8,7 @@
     gnome
     halloy
     helix
+    jujutsu-signing
     mpv
     mullvad-vpn
     nushell
