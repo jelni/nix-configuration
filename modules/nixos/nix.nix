@@ -1,5 +1,6 @@
-{ ... }:
+{ inputs, ... }:
 {
+  imports = [ inputs.srvos.nixosModules.mixins-trusted-nix-caches ];
   documentation.nixos.enable = false;
 
   nix = {
@@ -13,12 +14,6 @@
       dates = "daily";
       options = "--delete-older-than 7d";
     };
-
-    settings.trusted-substituters = [
-      "https://nix-community.cachix.org"
-      "https://numtide.cachix.org"
-      "https://cache.garnix.io"
-    ];
   };
 
   nixpkgs.config.allowUnfree = true;

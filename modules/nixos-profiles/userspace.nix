@@ -13,6 +13,7 @@
     ollama
     pipewire
     printing
+    srvos-userspace
     steam
     stylix
     udisks2

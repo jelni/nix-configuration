@@ -39,6 +39,11 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
+    srvos = {
+      url = "github:nix-community/srvos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";

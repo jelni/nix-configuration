@@ -13,6 +13,5 @@
     jujutsu
     ripgrep
     uv
-    wsl-git
   ];
 }
