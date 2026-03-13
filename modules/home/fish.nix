@@ -3,10 +3,10 @@
   programs.fish = {
     enable = true;
 
-    shellInit = ''
+    interactiveShellInit = ''
       set fish_greeting
       fish_config prompt choose informative_vcs
-      fish_config theme choose "Catppuccin Mocha"
+      fish_config theme choose catppuccin-mocha
     '';
   };
 

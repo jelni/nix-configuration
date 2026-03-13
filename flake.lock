@@ -115,11 +115,11 @@
     "catppuccin-fish": {
       "flake": false,
       "locked": {
-        "lastModified": 1771367516,
-        "narHash": "sha256-jn2YoybaDY2gQgqmVGi9GPeRWn/H6IHnzxi/VcihIYM=",
+        "lastModified": 1773410042,
+        "narHash": "sha256-3KNWYXfOMzZovdjwjBpjSH8cVlD4CO2QmQcCyQE4Dac=",
         "owner": "catppuccin",
         "repo": "fish",
-        "rev": "bc201afe737fa0c8884ffcef206217f8aac88866",
+        "rev": "5fc5ae9c2ec22eb376cb03ce76f0d262a38960f3",
         "type": "github"
       },
       "original": {
