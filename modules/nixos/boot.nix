@@ -1,17 +1,6 @@
 { ... }:
 {
-  boot.initrd = {
-    availableKernelModules = [
-      "nvme"
-      "xhci_pci"
-      "thunderbolt"
-      "usb_storage"
-      "usbhid"
-      "sd_mod"
-    ];
-
-    systemd.enable = true;
-  };
+  boot.initrd.systemd.enable = true;
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-label/NIXBOOT";
