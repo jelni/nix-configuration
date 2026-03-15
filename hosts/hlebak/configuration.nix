@@ -3,6 +3,7 @@
   imports = with flake.modules.nixos-profiles; [
     baremetal
     base
+    nvidia
     userspace
   ];
 
