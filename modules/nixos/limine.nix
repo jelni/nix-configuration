@@ -1,8 +1,11 @@
 { ... }:
 {
-  boot.loader.limine = {
-    enable = true;
-    efiSupport = true;
-    extraConfig = "timeout: 1";
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+
+    limine = {
+      enable = true;
+      extraConfig = "timeout: 1";
+    };
   };
 }
