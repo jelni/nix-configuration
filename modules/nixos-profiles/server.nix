@@ -2,6 +2,7 @@
 {
   imports = with flake.nixosModules; [
     cloudflared
+    cron
     docker
     gonic
     initrd-ssh
