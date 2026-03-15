@@ -24,6 +24,8 @@
                 "pl"
               ])
             ];
+
+            xkb-options = [ "shift:breaks_caps" ];
           };
 
           "org/gnome/desktop/interface" = {
