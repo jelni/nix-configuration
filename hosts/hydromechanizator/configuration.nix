@@ -4,6 +4,7 @@
     baremetal
     base
     framework-16-7040-amd
+    latest-zfs-kernel
     userspace
   ];
 
