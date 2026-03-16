@@ -1,4 +1,7 @@
 { flake, ... }:
 {
-  imports = [ flake.nixosModules.srvos-server ];
+  imports = with flake.nixosModules; [
+    srvos-server
+    user-rib
+  ];
 }

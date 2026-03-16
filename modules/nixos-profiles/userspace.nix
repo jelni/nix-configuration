@@ -17,6 +17,7 @@
     steam
     stylix
     udisks2
+    user-guest
     userspace-packages
     vscode
   ];

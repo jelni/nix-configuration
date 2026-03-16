@@ -1,7 +1,6 @@
 { flake, ... }:
 {
   imports = with flake.nixosModules; [
-    baremetal-users
     boot
     dns
     firewall
@@ -15,6 +14,7 @@
     postgresql
     power-management
     snowflake-proxy
+    user-jel
     xserver
     zfs
   ];
