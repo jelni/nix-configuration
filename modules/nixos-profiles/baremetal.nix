@@ -15,6 +15,7 @@
     power-management
     snowflake-proxy
     stylix
+    tailscale
     user-jel
     xserver
     zfs
