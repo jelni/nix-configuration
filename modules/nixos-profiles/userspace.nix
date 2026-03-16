@@ -15,7 +15,6 @@
     printing
     srvos-userspace
     steam
-    stylix
     udisks2
     user-guest
     userspace-packages

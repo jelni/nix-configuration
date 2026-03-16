@@ -12,7 +12,6 @@
     mpv
     mullvad-vpn
     nushell
-    stylix
     udiskie
     vesktop
     vscode

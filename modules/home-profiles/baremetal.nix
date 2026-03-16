@@ -4,5 +4,6 @@
     bottom
     htop
     ssh
+    stylix
   ];
 }
