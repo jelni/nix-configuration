@@ -13,7 +13,6 @@
     plymouth
     postgresql
     power-management
-    snowflake-proxy
     stylix
     tailscale
     user-jel
