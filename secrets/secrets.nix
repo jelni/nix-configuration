@@ -31,6 +31,7 @@ in
 {
   "cloudflared-certificate.age".publicKeys = server;
   "cloudflared-tunnel-dreamweaver.age".publicKeys = server;
+  "copyparty-admin.age".publicKeys = server;
   "freenode-je-password.age".publicKeys = userspace;
   "jel-password.age".publicKeys = baremetal;
   "wireless-networks.age".publicKeys = baremetal;

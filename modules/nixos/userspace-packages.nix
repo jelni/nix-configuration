@@ -56,7 +56,7 @@
     python314
     quodlibet-full
     reaper
-    rquickshare
+    # rquickshare
     slack
     snapshot
     sparrow

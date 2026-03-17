@@ -128,6 +128,27 @@
         "type": "github"
       }
     },
+    "copyparty": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774199505,
+        "narHash": "sha256-00oVGad9LNZLwRtymSHsVmDqdBzo+ZjAHt8H+jYlxTA=",
+        "owner": "9001",
+        "repo": "copyparty",
+        "rev": "5f3b76c8f8e5eaca00f974dfed87bc342ae31d3a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "9001",
+        "repo": "copyparty",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -241,6 +262,21 @@
       }
     },
     "flake-utils": {
+      "locked": {
+        "lastModified": 1678901627,
+        "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "93a2b84fc4b70d9e089d029deacc3583435c2ed6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
       "inputs": {
         "systems": "systems_3"
       },
@@ -337,7 +373,7 @@
     },
     "lib-aggregate": {
       "inputs": {
-        "flake-utils": "flake-utils",
+        "flake-utils": "flake-utils_2",
         "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
@@ -472,6 +508,7 @@
         "agenix": "agenix",
         "blueprint": "blueprint",
         "catppuccin-fish": "catppuccin-fish",
+        "copyparty": "copyparty",
         "firefox": "firefox",
         "home-manager": "home-manager_2",
         "nix-vscode-extensions": "nix-vscode-extensions",

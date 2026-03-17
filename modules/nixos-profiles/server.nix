@@ -2,6 +2,7 @@
 {
   imports = with flake.nixosModules; [
     cloudflared
+    copyparty
     cron
     docker
     gonic
