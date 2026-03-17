@@ -12,6 +12,11 @@ let
     host-hydromechanizator
   ];
 
+  server = [
+    user-jel
+    host-dreamweaver
+  ];
+
   userspace = [
     user-jel
     host-hlebak
@@ -24,6 +29,7 @@ let
   ];
 in
 {
+  "cloudflared-tunnel-dreamweaver.age".publicKeys = server;
   "freenode-je-password.age".publicKeys = userspace;
   "jel-password.age".publicKeys = baremetal;
   "wireless-networks.age".publicKeys = baremetal;
