@@ -5,6 +5,7 @@
     docker
     gonic
     initrd-ssh
+    qbittorrent
     snowflake-proxy
     srvos-server
     user-rib

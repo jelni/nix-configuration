@@ -54,7 +54,6 @@
     prusa-slicer
     pv
     python314
-    qbittorrent
     quodlibet-full
     reaper
     rquickshare

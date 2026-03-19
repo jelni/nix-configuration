@@ -30,7 +30,6 @@
         onlyoffice-desktopeditors
         loupe
         mpv
-        qbittorrent
       ];
     };
   };
