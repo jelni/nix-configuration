@@ -15,6 +15,7 @@
     power-management
     stylix
     tailscale
+    terminfo
     user-jel
     xserver
     zfs
