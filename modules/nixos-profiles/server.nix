@@ -6,6 +6,7 @@
     cron
     docker
     gonic
+    home-assistant
     initrd-ssh
     qbittorrent
     snowflake-proxy
