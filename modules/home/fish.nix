@@ -5,7 +5,11 @@
 
     interactiveShellInit = ''
       set fish_greeting
-      fish_config prompt choose informative_vcs
+
+      if not set -q SSH_TTY
+        fish_config prompt choose informative_vcs
+      end
+
       fish_config theme choose catppuccin-mocha
     '';
   };
