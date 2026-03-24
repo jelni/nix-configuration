@@ -8,6 +8,7 @@
     gonic
     home-assistant
     initrd-ssh
+    music-assistant
     qbittorrent
     snowflake-proxy
     srvos-server
