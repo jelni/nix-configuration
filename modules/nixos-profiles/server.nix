@@ -8,6 +8,7 @@
     etherpad
     gonic
     home-assistant
+    i2pd
     initrd-ssh
     music-assistant
     qbittorrent

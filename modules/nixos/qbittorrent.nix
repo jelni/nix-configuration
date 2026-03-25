@@ -16,6 +16,7 @@
           DefaultSavePathChanged = false;
         };
 
+        I2P.MixedMode = true;
         MaxConnections = -1;
         MaxConnectionsPerTorrent = -1;
         MaxUploads = -1;
