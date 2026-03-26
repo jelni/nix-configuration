@@ -1,9 +1,19 @@
-{ ... }:
+{ config, ... }:
 {
+  networking.firewall.allowedTCPPorts = [ config.services.i2pd.proto.http.port ];
+
   services = {
     i2pd = {
       enable = true;
-      proto.sam.enable = true;
+      bandwidth = 1024;
+      enableIPv6 = true;
+
+      proto = {
+        http.enable = true;
+        sam.enable = true;
+      };
+
+      upnp.enable = true;
     };
 
     qbittorrent.serverConfig.BitTorrent.Session.I2P.Enabled = true;
