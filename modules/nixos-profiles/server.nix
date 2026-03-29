@@ -11,6 +11,7 @@
     home-assistant
     i2pd
     initrd-ssh
+    kubo
     music-assistant
     qbittorrent
     snowflake-proxy

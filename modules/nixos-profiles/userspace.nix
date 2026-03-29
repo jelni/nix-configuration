@@ -7,7 +7,6 @@
     gnome
     gvfs
     halloy
-    ipfs
     location
     obs-studio
     ollama
