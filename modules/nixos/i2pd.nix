@@ -9,7 +9,12 @@
       enableIPv6 = true;
 
       proto = {
-        http.enable = true;
+        http = {
+          enable = true;
+          address = "0.0.0.0";
+          strictHeaders = false;
+        };
+
         sam.enable = true;
       };
 
