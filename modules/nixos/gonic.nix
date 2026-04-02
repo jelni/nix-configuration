@@ -1,4 +1,3 @@
-{ ... }:
 {
   services = {
     cloudflared.tunnels."73bc3393-f815-4a60-8f3a-c9d8f6d2e0dc".ingress."gonic.jel.gay".service =

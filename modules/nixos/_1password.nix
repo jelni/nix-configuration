@@ -1,4 +1,3 @@
-{ ... }:
 {
   environment.etc."1password/custom_allowed_browsers" = {
     text = "firefox-nightly-bin";

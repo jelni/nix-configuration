@@ -1,4 +1,3 @@
-{ ... }:
 {
   networking.nameservers = [
     "194.242.2.4#base.dns.mullvad.net"

@@ -1,4 +1,3 @@
-{ ... }:
 let
   ssh-key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKH8usn6T8qF/VxkQ5Qciucwa1E6/Rk563PMzy2fwffc";
 in

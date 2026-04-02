@@ -1,4 +1,3 @@
-{ ... }:
 {
   boot.plymouth = {
     enable = true;

@@ -1,4 +1,3 @@
-{ ... }:
 {
   stylix.targets = {
     bat.enable = false;

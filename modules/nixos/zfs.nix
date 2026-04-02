@@ -1,4 +1,3 @@
-{ ... }:
 {
   boot = {
     supportedFilesystems = [ "zfs" ];

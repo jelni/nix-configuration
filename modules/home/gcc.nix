@@ -1,4 +1,3 @@
-{ ... }:
 {
   programs.gcc.enable = true;
 }

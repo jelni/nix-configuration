@@ -1,4 +1,3 @@
-{ ... }:
 {
   programs.delta = {
     enable = true;

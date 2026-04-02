@@ -1,4 +1,3 @@
-{ ... }:
 {
   programs.jujutsu.settings = {
     signing = {
