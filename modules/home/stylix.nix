@@ -1,6 +1,7 @@
 { ... }:
 {
   stylix.targets = {
+    bat.enable = false;
     firefox.profileNames = [ "default" ];
     fish.enable = false;
     vesktop.enable = false;
