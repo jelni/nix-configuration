@@ -66,6 +66,7 @@
           * discourse-cdn.com * noop
           * disqus.com * noop
           * c.disquscdn.com * noop
+          * geowidget.easypack24.net * noop
           * static-2v.gitbook.com * noop
           * www.google.com * noop
           * googleusercontent.com * noop
@@ -79,10 +80,17 @@
           * recaptcha.net * noop
           * revolut.com * noop
           * cdn.shopify.com * noop
+          * checkout.pci.shopifyinc.com * noop
+          * stripe.com * noop
+          * cdn.tailwindcss.com * noop
           * platform.twitter.com * noop
           * unpkg.com * noop
           * website-files.com * noop
           * cdn.weglot.com * noop
+          * www.youtube-nocookie.com * noop
+          1password.eu billing.1passwordservices.com * noop
+          adobe.com widget.uservoice.com * noop
+          affinity.studio static.canva.com * noop
           aftership.com websites.am-static.com * noop
           ai-maturity-index.com js.hsforms.net * noop
           app.ai-maturity-index.com public.flourish.studio * noop
@@ -97,20 +105,28 @@
           airbnb.pl a0.muscache.com * noop
           aliexpress.com alicdn.com * noop
           aliexpress.com assets.aliexpress-media.com * noop
-          pl.aliexpress.com alicdn.com * noop
-          pl.aliexpress.com assets.aliexpress-media.com * noop
-          iexpfront-sea-global.alipay.com cdn.marmot-cloud.com * noop
+          alipay.com cdn.marmot-cloud.com * noop
           allegro.pl assets.allegrostatic.com * noop
           allegro.pl captcha-delivery.com * noop
           allegrolokalnie.pl lokalnie-prod-assets.storage.googleapis.com * noop
+          amazon.com awsstatic.com * noop
           amazon.com m.media-amazon.com * noop
-          aws.amazon.com awsstatic.com * noop
+          amazon.com images-na.ssl-images-amazon.com * noop
+          amazon.pl m.media-amazon.com * noop
+          anne.health s3.amazonaws.com * noop
           console.anthropic.com accounts.google.com * noop
-          music.apple.com appleid.cdn-apple.com * noop
+          antlii.work static.cargo.site * noop
+          antlii.work files.cargocollective.com * noop
+          antlii.work player.vimeo.com * noop
+          antlii.work f.vimeocdn.com * noop
+          apple.com appleid.cdn-apple.com * noop
           ashbyhq.com cdn.ashbyprd.com * noop
-          id.atlassian.com atl-paas.net * noop
-          start.atlassian.com atl-paas.net * noop
-          shop.aurora-music.com cdn.shopify.com * noop
+          atlassian.com atl-paas.net * noop
+          aurora-music.com umg.theappreciationengine.com * noop
+          auroraincinemas.com cdn.maptiler.com * noop
+          azure.com azure.net * noop
+          azure.com amcdn.msftauth.net * noop
+          azure.com cdn.vsassets.io * noop
           bandcamp.com bcbits.com * noop
           bandcamp.com core.spreedly.com * noop
           behind-the-scene * * noop
@@ -121,17 +137,19 @@
           behind-the-scene * image noop
           behind-the-scene * inline-script noop
           binance.com bnbstatic.com * noop
-          academy.binance.com bnbstatic.com * noop
-          accounts.binance.com bnbstatic.com * noop
           booking.com cf.bstatic.com * noop
+          booking.com maps.googleapis.com * noop
           account.booking.com bstatic.com * noop
-          my.brain.fm js.stripe.com * noop
+          brain.fm js.stripe.com * noop
           buster.so framerusercontent.com * noop
           chatgpt.com cdn.oaistatic.com * noop
           chatgpt.com web-sandbox.oaiusercontent.com * noop
           sora.chatgpt.com sora-cdn.oaistatic.com * noop
+          claude.ai assets-proxy.anthropic.com * noop
           claude.ai www.claudeusercontent.com * noop
           claude.ai accounts.google.com * noop
+          cloud.microsoft res.cdn.office.net * noop
+          cloud.microsoft res.public.onecdn.static.microsoft * noop
           codepen.io cdpn.io * noop
           newsletter.coingecko.com gr-cdn.com * noop
           combot.org telegram.org * noop
@@ -140,21 +158,22 @@
           dagnymusic.com widget-app.songkick.com * noop
           dailymotion.com static1.dmcdn.net * noop
           darntough.eu snapui.searchspring.io * noop
-          darntough.eu cdn.shopify.com * noop
           dbrand.com cdn.db.io * noop
           dbrand.com google.com * noop
-          shop.dbrand.com cdn.shopify.com * noop
+          dbrand.com cdn.shopify.com * noop
+          deezer.com cdn-assets.dzcdn.net * noop
           deezer.com cdn-files.dzcdn.net * noop
-          account.deezer.com cdn-assets.dzcdn.net * noop
           discord.com discordsays.com * noop
           discord.com www.youtube.com * noop
-          app.docker.com dockerstatic.com * noop
-          hub.docker.com dockerstatic.com * noop
-          hub.docker.com dev.visualwebsiteoptimizer.com * noop
+          diskanalyzer.com antibodysoftware-17031.kxcdn.com * noop
+          docker.com dockerstatic.com * noop
+          docker.com dev.visualwebsiteoptimizer.com * noop
           dropbox.com cfl.dropboxstatic.com * noop
           dropbox.com dropboxusercontent.com * noop
-          explorer.duinocoin.com bernii.github.io * noop
+          duinocoin.com bernii.github.io * noop
           dziennikzachodni.pl ppstatic.pl * noop
+          ebay.co.uk ir.ebaystatic.com * noop
+          echosign.com static.echocdn.com * noop
           epicgames.com static-assets-prod.unrealengine.com * noop
           esesja.tv vjs.zencdn.net * noop
           facebook.com meta-api.arkoselabs.com * noop
@@ -162,14 +181,16 @@
           facebook.com www.fbsbx.com * noop
           fakturownia.pl assets2.firmlet.com * noop
           secure.fastcloudpay.com cardinalcommerce.com * noop
+          flixbus.pl flixbus.com * noop
           frame.work js.stripe.com * noop
+          garmin.com product-gallery.cloudinary.com * noop
           genius.com filepicker.io * noop
           genius.com pusher.com * block
           getdrip.com drip.com * noop
           github.com github.githubassets.com * noop
+          github.com support-assets.githubassets.com * noop
           github.com viewscreen.githubusercontent.com * noop
           github.com zuora.com * noop
-          support.github.com support-assets.githubassets.com * noop
           gnosispay.com framerusercontent.com * noop
           goofish.com g.alicdn.com * noop
           google.com maps.googleapis.com * noop
@@ -179,19 +200,31 @@
           developers.google.com maps.googleapis.com * noop
           support.google.com www.youtube.com * noop
           console.groq.com stytch.com * noop
+          hszyr.space www.openstreetmap.org * noop
           app.hubspot.com static.hsappstatic.net * noop
           app.hubspot.com hubspotpreview-na1.com * noop
           app.hubspot.com hubspotusercontent-na1.net * noop
           app.humanornot.ai cdn.amplitude.com * noop
+          hytale.com www.youtube.com * noop
           iamlights.com campaigner.com * noop
+          iamlights.com embed.laylo.com * noop
+          iamlights.com widget.seated.com * noop
           help.imgur.com static.zdassets.com * noop
+          inceptionlabs.ai framerusercontent.com * noop
           dash.infinityfree.com html-load.com * noop
           forum.infinityfree.com forum-cdn.infinityfree.net * noop
           instagram.com static.cdninstagram.com * noop
+          isg-one.com ajax.aspnetcdn.com * noop
           isg-one.com jobs.jobvite.com * noop
-          sebastian.itch.io cloudflarestorage.com * noop
+          itch.io cloudflarestorage.com * noop
+          game-of-life.jel.gay not-fl3.github.io * noop
+          jitsi.net apis.google.com * noop
+          jsfiddle.net fiddle.jshell.net * noop
           jsonformatter.org unpkg.com * noop
           kagi.com api.mapbox.com * noop
+          kimi.com statics.moonshot.cn * noop
+          kimi.com lf3-data.volccdn.com * noop
+          knowyourmeme.com a.kym-cdn.com * noop
           ko-fi.com google.com * noop
           kotaku.com x.kinja-static.com * noop
           latarnikwyborczy.pl stackpath.bootstrapcdn.com * noop
@@ -201,6 +234,7 @@
           teams.live.com statics.teams.cdn.live.net * noop
           llama.com static.xx.fbcdn.net * noop
           web.lmarena.ai e2b-foxtrot.dev * noop
+          lnk.to static.assetlab.io * noop
           aurora.lnk.to static.assetlab.io * noop
           dagny.lnk.to static.assetlab.io * noop
           localhost public.flourish.studio * noop
@@ -213,22 +247,24 @@
           messenger.com static.xx.fbcdn.net * noop
           mexc.com static.mocortech.com * noop
           microsoft.com mem.gfx.ms * noop
-          copilot.microsoft.com studiostaticassetsprod.azureedge.net * noop
-          teams.microsoft.com login.microsoftonline.com * noop
-          teams.microsoft.com statics.teams.cdn.office.net * noop
-          login.microsoftonline.com aadcdn.msauth.net * noop
-          login.microsoftonline.com aadcdn.msftauth.net * noop
+          microsoft.com login.microsoftonline.com * noop
+          microsoft.com aadcdn.msauth.net * noop
+          microsoft.com statics.teams.cdn.office.net * noop
+          microsoft.com studiostaticassetsprod.azureedge.net * noop
+          microsoftonline.com aadcdn.msauth.net * noop
+          microsoftonline.com aadcdn.msftauth.net * noop
           minecraft.net www.microsoft.com * noop
-          account.mongodb.com assets.mongodb-cdn.com * noop
-          cloud.mongodb.com assets.mongodb-cdn.com * noop
+          mongodb.com assets.mongodb-cdn.com * noop
+          moonshot.ai statics.moonshot.cn * noop
           developer.mozilla.org mdnplay.dev * noop
           myorders.co static.cdn.printful.com * noop
           namemc.com fb.content-loader.com * noop
           neal.fun maps.googleapis.com * noop
-          store.nebula.tv cdn.shopify.com * noop
           nintendo.com alps.cdn.nintendo.net * noop
           notion.so gist.github.com * noop
           nvidia.com cdn.cookielaw.org * noop
+          okta.com ok7static.oktacdn.com * noop
+          openai.com chatgpt.com * noop
           auth.openai.com chatgpt.com * noop
           auth.openai.com auth-cdn.oaistatic.com * noop
           ovh.pl auth.eu.ovhcloud.com * noop
@@ -239,6 +275,8 @@
           accounts.pixiv.net s.pximg.net * noop
           playstation.com id.sonyentertainmentnetwork.com * noop
           polymarket.com auth.magic.link * noop
+          porchlighttheband.com embed.laylo.com * noop
+          porchlighttheband.com widget.seated.com * noop
           portainer.io hsforms.com * noop
           portainer.io hsforms.net * noop
           portgdansk.pl stream360.pl * noop
@@ -247,30 +285,42 @@
           quora.com quoracdn.net * noop
           reddit.com redditstatic.com * noop
           remotehow.retool.com retool-edge.com * noop
+          roblox.com js.rbxcdn.com * noop
+          rodzinka.wiki open.spotify.com * noop
           samequizy.pl a.spolecznosci.net * noop
           account.samsung.com apis.google.com * noop
           v3.account.samsung.com apis.google.com * noop
+          screenrec.com play.webvideocore.net * noop
           sendibm3.com sibforms.com * noop
           sentry.io s1.sentry-cdn.com * noop
           sentry.io www.sentry.dev * noop
+          sharepoint.com usc-excel.officeapps.live.com * noop
+          sharepoint.com office.net * noop
           shopify.com shop.app * noop
           slack.com slack-edge.com * noop
           songkick.com assets.sk-static.com * noop
           soundcloud.com sndcdn.com * noop
-          accounts.spotify.com accounts.scdn.co * noop
-          challenge.spotify.com challenge.spotifycdn.com * noop
-          open.spotify.com spotifycdn.com * noop
+          sourceforge.net a.fsdn.com * noop
+          spotify.com accounts.scdn.co * noop
+          spotify.com spotifycdn.com * noop
+          spotify.com challenge.spotifycdn.com * noop
           stackblitz.com staticblitz.com * noop
           js-mbbmgk.stackblitz.io staticblitz.com * noop
           stackexchange.com cdn.sstatic.net * noop
           stackoverflow.com cdn.sstatic.net * noop
+          stackoverflow.com stacksnippets.net * noop
           steamcommunity.com community.fastly.steamstatic.com * noop
-          store.steampowered.com store.fastly.steamstatic.com * noop
+          steampowered.com store.akamai.steamstatic.com * noop
+          steampowered.com store.fastly.steamstatic.com * noop
           stripe.com stripecdn.com * noop
+          substack.com substackcdn.com * noop
           superuser.com cdn.sstatic.net * noop
           t.me telegram.org * noop
+          taobao.com alicdn.com * noop
           taobao.com g.alicdn.com * noop
           taobao.com o.alicdn.com * noop
+          ticketmaster.ca uk.tmconst.com * noop
+          ticketmaster.com uk.tmconst.com * noop
           ticketmaster.pl tmconst.com * noop
           tiktok.com ttwstatic.com * noop
           detail.tmall.com alicdn.com * noop
@@ -278,9 +328,8 @@
           transfemscience.org transfemscience.github.io * noop
           trojmiasto.pl s-trojmiasto.pl * noop
           trojmiasto.pl x-trojmiasto.pl * noop
-          checkout.trustlymerchant.com checkout.trustly.com * noop
+          trustlymerchant.com checkout.trustly.com * noop
           trustpilot.com businessunitprofile-cdn.trustpilot.net * noop
-          eu.ugreen.com cdn.shopify.com * noop
           unrealengine.com talon-website-prod.ecosec.on.epicgames.com * noop
           unrealengine.com static-assets-prod.epicgames.com * noop
           validategnosis.com framerusercontent.com * noop
@@ -297,14 +346,15 @@
           poczta.wp.pl pocztanh.wpcdn.pl * noop
           x-kom.pl appleid.cdn-apple.com * noop
           x.com twimg.com * noop
+          x.com twitter.com * noop
           youtube.com google.com * noop
           ask.zen.com static.zdassets.com * noop
           znanylekarz.pl platform.docplanner.com * noop
-          l.znanylekarz.pl global.frcapi.com * noop
+          znanylekarz.pl global.frcapi.com * noop
           zoho.com accounts.zoho.eu * noop
           zoho.com static.zohocdn.com * noop
           zoho.com www.zohowebstatic.com * noop
-          accounts.zoho.eu static.zohocdn.com * noop
+          zoho.eu static.zohocdn.com * noop
         '';
 
         userFilters = ''
