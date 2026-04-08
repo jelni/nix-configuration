@@ -56,7 +56,6 @@
     python314
     quodlibet-full
     reaper
-    # rquickshare
     slack
     snapshot
     sparrow
@@ -71,7 +70,6 @@
     tutanota-desktop
     usbutils
     uutils-coreutils-noprefix
-    vmware-workstation
     yubikey-manager
   ];
 }
