@@ -4,6 +4,7 @@
     baremetal
     base
     userspace
+    utilities
   ];
 
   home.stateVersion = "25.05";

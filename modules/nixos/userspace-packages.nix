@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    _7zz
     audacity
     bambu-studio
     baobab
@@ -11,7 +10,6 @@
     davinci-resolve-studio
     deno
     dig
-    dust
     espeak
     exiftool
     famistudio
@@ -24,7 +22,6 @@
     gnome-characters
     gnome-logs
     gnome-system-monitor
-    google-cloud-sdk
     gparted
     handbrake
     heroic
@@ -41,9 +38,6 @@
     lucida-downloader
     magic-wormhole-rs
     nautilus
-    nil
-    nixd
-    nixfmt
     nodejs
     olympus
     parsec-bin
@@ -52,7 +46,6 @@
     prettier
     prismlauncher
     prusa-slicer
-    pv
     python314
     quodlibet-full
     reaper
@@ -60,7 +53,6 @@
     snapshot
     sparrow
     sqlitebrowser
-    stripe-cli
     superTuxKart
     telegram-desktop
     tlrc

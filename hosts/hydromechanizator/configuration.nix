@@ -6,6 +6,7 @@
     framework-16-7040-amd
     latest-zfs-kernel
     userspace
+    utilities
   ];
 
   networking.hostId = "d0eca1a0";

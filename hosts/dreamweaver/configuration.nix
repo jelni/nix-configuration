@@ -5,6 +5,7 @@
     base
     latest-zfs-kernel
     server
+    utilities
   ];
 
   boot = {

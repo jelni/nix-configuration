@@ -5,6 +5,7 @@
     base
     nvidia
     userspace
+    utilities
   ];
 
   boot = {
