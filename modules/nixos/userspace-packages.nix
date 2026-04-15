@@ -61,7 +61,6 @@
     trezor-suite
     tutanota-desktop
     usbutils
-    uutils-coreutils-noprefix
     yubikey-manager
   ];
 }

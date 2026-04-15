@@ -2,6 +2,7 @@
 {
   imports = with flake.nixosModules; [
     agenix
+    base-packages
     doas
     fish
     git
