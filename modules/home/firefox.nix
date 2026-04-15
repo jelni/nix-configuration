@@ -499,6 +499,7 @@
         };
 
         "browser.urlbar.trimURLs".Value = false;
+        "general.autoScroll".Value = true;
         "general.smoothScroll.currentVelocityWeighting".Value = builtins.toJSON 0;
         "general.smoothScroll.mouseWheel.durationMaxMS".Value = 250;
         "general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS".Value = 250;
