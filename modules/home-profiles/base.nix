@@ -7,6 +7,7 @@
     direnv
     eza
     fish
+    fzf
     gcc
     github
     home-manager
