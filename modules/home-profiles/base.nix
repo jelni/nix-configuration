@@ -13,5 +13,6 @@
     jujutsu
     ripgrep
     uv
+    zoxide
   ];
 }
