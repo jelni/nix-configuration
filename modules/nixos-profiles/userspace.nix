@@ -8,6 +8,7 @@
     gvfs
     halloy
     location
+    nautilus-open-any-terminal
     obs-studio
     ollama
     pipewire
