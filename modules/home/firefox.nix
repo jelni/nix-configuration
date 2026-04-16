@@ -427,6 +427,7 @@
         // install "{cb31ec5d-c49a-4e5a-b240-16c767444f62}" # Indie Wiki Buddy
         // install-private-browsing "search@kagi.com"
         // install-private-browsing "@mute-sites-by-default"
+        // install "nixpkgs-pr-tracker@tahayassine.me"
         // install "octolinker@stefanbuck.com"
         // install "{af838dcd-be8a-4237-8835-69fca92171d3}" # Permanent Progress Bar for YouTube
         // install-private-browsing "jid1-MnnxcxisBPnSXQ@jetpack" # Privacy Badger
