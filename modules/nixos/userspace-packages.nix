@@ -17,6 +17,7 @@
     ffmpeg-full
     file
     fira-code
+    gcompris
     gimp3
     gnome-calculator
     gnome-characters
