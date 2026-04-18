@@ -49,7 +49,7 @@
     prettier
     prismlauncher
     prusa-slicer
-    python314
+    python314FreeThreading
     quodlibet-full
     reaper
     signal-desktop-bin
