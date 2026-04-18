@@ -2,8 +2,10 @@
 
 my NixOS configuration. it uses Nix flakes,
 [blueprint](https://github.com/numtide/blueprint),
-[Home Manager](https://github.com/nix-community/home-manager), and some woke
-modern software like [uutils](https://github.com/uutils/coreutils) or
+[Home Manager](https://github.com/nix-community/home-manager),
+[agenix](https://github.com/ryantm/agenix),
+[SrvOS](https://github.com/nix-community/srvos), and some woke modern software
+like [uutils](https://github.com/uutils/coreutils) or
 [doas](https://codeberg.org/thejessesmith/doas).
 
 ## Profiles
