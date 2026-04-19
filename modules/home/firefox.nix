@@ -511,6 +511,7 @@
         "general.smoothScroll.stopDecelerationWeighting".Value = builtins.toJSON 0.75;
         "print.more-settings.open".Value = true;
         "privacy.globalprivacycontrol.enabled".Value = true;
+        "signon.firefoxRelay.feature".Value = "disabled";
         "ui.textHighlightBackground".Value = "#fffc47";
         "ui.textHighlightForeground".Value = "#000000";
         "ui.textSelectAttentionBackground".Value = "#fd8e41";
