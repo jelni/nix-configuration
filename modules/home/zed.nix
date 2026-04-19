@@ -7,7 +7,10 @@
 
     extensions = [
       "catppuccin"
+      "dependi"
+      "html"
       "nix"
+      "toml"
     ];
 
     userKeymaps = [
