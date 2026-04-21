@@ -111,7 +111,7 @@
             "dev.zed.Zed.desktop:1"
             "firefox-nightly.desktop:1"
             "org.telegram.desktop.desktop:2"
-            "vesktop.desktop:3"
+            "vesktop.desktop:2"
           ];
 
           "org/gnome/shell/extensions/azwallpaper" = {
