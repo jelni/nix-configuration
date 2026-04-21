@@ -10,6 +10,7 @@
     lix
     nix
     openssh
+    options
     users
   ];
 }

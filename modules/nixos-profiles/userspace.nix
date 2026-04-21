@@ -5,6 +5,7 @@
     docker
     flatpak
     gnome
+    gpu-screen-recorder
     gvfs
     halloy
     location

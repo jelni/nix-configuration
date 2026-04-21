@@ -1,12 +1,21 @@
-{ lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   environment.gnome.excludePackages = [ pkgs.gnome-tour ];
+
+  gnome-keybindings."1password-quick-access" = {
+    binding = "<Shift><Control>space";
+    command = "1password --quick-access";
+  };
 
   programs.dconf.profiles =
     let
       database = {
         lockAll = true;
-
         settings = {
           "org/gnome/desktop/a11y/interface".show-status-shapes = true;
           "org/gnome/desktop/calendar".show-weekdate = true;
@@ -72,13 +81,10 @@
           "org/gnome/nautilus/icon-view".default-zoom-level = "medium";
           "org/gnome/nautilus/list-view".default-zoom-level = "small";
 
-          "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
-            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-          ];
-
-          "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-            binding = "<Shift><Control>space";
-            command = "1password --quick-access";
+          "org/gnome/settings-daemon/plugins/media-keys" = {
+            custom-keybindings = lib.mapAttrsToList (
+              name: _: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/${name}/"
+            ) config.gnome-keybindings;
           };
 
           "org/gnome/settings-daemon/plugins/color" = {
@@ -155,12 +161,18 @@
             lib.gvariant.mkEmptyArray lib.gvariant.type.string;
           "org/gtk/gtk4/settings/file-chooser".show-hidden = true;
           "org/gtk/settings/file-chooser".show-hidden = true;
-        };
+        }
+        // lib.mapAttrs' (
+          name: value:
+          lib.nameValuePair "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/${name}" {
+            inherit (value) binding command;
+          }
+        ) config.gnome-keybindings;
       };
     in
     {
-      user.databases = [ database ];
       gdm.databases = [ database ];
+      user.databases = [ database ];
     };
 
   services = {
