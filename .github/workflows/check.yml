@@ -9,5 +9,10 @@ jobs:
     steps:
       - uses: "actions/checkout@v6"
       - uses: "cachix/install-nix-action@v31"
-      - run:
-          "nix flake show --no-update-lock-file --allow-import-from-derivation"
+
+      - uses: "nix-community/cache-nix-action@v7"
+        with:
+          primary-key: "${{ runner.os }}"
+          gc-max-store-size: "1G"
+
+      - run: "nix flake show --no-update-lock-file --allow-import-from-derivation"
