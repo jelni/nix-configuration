@@ -20,7 +20,9 @@
     config.allowUnfree = true;
 
     overlays = [
-      (_: prev: { unstable = import inputs.nixpkgs-unstable { inherit (prev) system; }; })
+      (_: prev: {
+        unstable = import inputs.nixpkgs-unstable { inherit (prev.stdenv.hostPlatform) system; };
+      })
     ];
   };
 }
