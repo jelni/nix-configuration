@@ -69,6 +69,9 @@
           "org/gnome/login-screen".enable-fingerprint-authentication = false;
           "org/gnome/mutter".experimental-features = [ "variable-refresh-rate" ];
 
+          "org/gnome/nautilus/icon-view".default-zoom-level = "medium";
+          "org/gnome/nautilus/list-view".default-zoom-level = "small";
+
           "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
           ];
@@ -150,6 +153,7 @@
 
           "org/gnome/shell/keybindings".toggle-message-tray =
             lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+          "org/gtk/gtk4/settings/file-chooser".show-hidden = true;
           "org/gtk/settings/file-chooser".show-hidden = true;
         };
       };
