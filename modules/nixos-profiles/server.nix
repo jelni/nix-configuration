@@ -17,6 +17,7 @@
     music-assistant
     qbittorrent
     snowflake-proxy
+    soju
     srvos-server
     user-rib
   ];
