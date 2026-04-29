@@ -15,8 +15,7 @@
 
         settings = {
           landing-page-user = "me";
-          inherit host;
-          inherit account-domain;
+          inherit host account-domain;
           port = 8000;
           db-address = "${data-path}/sqlite.db";
 

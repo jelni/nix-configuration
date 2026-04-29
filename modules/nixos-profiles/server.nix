@@ -19,6 +19,7 @@
     snowflake-proxy
     soju
     srvos-server
+    tangled
     user-rib
   ];
 }
