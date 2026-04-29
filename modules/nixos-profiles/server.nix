@@ -6,6 +6,7 @@
     copyparty
     cron
     docker
+    dynamic-dns
     etherpad
     gonic
     gotosocial
