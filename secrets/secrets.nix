@@ -31,6 +31,8 @@ in
 {
   "cloudflared-certificate.age".publicKeys = server;
   "cloudflared-tunnel-dreamweaver.age".publicKeys = server;
+  "cobalt-api-configuration.age".publicKeys = server;
+  "cobalt-api-keys.age".publicKeys = server;
   "copyparty-admin.age".publicKeys = server;
   "dynamic-dns-url.age".publicKeys = server;
   "jel-password.age".publicKeys = baremetal;
