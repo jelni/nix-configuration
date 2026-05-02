@@ -16,6 +16,7 @@
     kubo
     matrix-tuwunel
     music-assistant
+    podman
     qbittorrent
     snowflake-proxy
     soju
