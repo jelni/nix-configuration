@@ -1,6 +1,7 @@
 { flake, ... }:
 {
   imports = with flake.nixosModules; [
+    acme
     caddy
     cobalt-api
     copyparty
