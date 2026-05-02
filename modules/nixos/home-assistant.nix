@@ -8,6 +8,7 @@
       enable = true;
 
       config = {
+        default_config = { };
         homeassistant.unit_system = "metric";
 
         http = {
@@ -21,10 +22,8 @@
       };
 
       extraComponents = [
-        "default_config"
         "hue"
         "ipp"
-        "mobile_app"
         "music_assistant"
         "qbittorrent"
       ];
