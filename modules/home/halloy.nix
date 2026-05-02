@@ -14,12 +14,11 @@
 
       notifications = {
         direct_message = {
-          sound = "peck";
           show_toast = true;
           show_content = true;
         };
 
-        highlight.sound = "dong";
+        highlight.sound = "zone";
       };
 
       servers.soju = {
