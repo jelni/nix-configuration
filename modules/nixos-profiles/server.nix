@@ -2,7 +2,6 @@
 {
   imports = with flake.nixosModules; [
     caddy
-    cloudflared
     cobalt-api
     copyparty
     cron
