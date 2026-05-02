@@ -24,9 +24,7 @@
 
       servers.soju = {
         nickname = "jel";
-        server = "192.168.1.50";
-        port = 6667;
-        use_tls = false;
+        server = "irc.jel.gay";
 
         sasl.plain = {
           username = "jel";
