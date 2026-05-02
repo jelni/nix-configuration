@@ -29,8 +29,7 @@ let
   ];
 in
 {
-  "cloudflared-certificate.age".publicKeys = server;
-  "cloudflared-tunnel-dreamweaver.age".publicKeys = server;
+  "bluesky-pds-environment.age".publicKeys = server;
   "cobalt-api-configuration.age".publicKeys = server;
   "cobalt-api-keys.age".publicKeys = server;
   "copyparty-admin.age".publicKeys = server;

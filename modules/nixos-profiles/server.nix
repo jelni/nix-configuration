@@ -2,6 +2,7 @@
 {
   imports = with flake.nixosModules; [
     acme
+    bluesky-pds
     caddy
     cobalt-api
     copyparty
