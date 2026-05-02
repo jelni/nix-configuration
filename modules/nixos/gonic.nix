@@ -1,5 +1,6 @@
 {
   services = {
+    caddy.virtualHosts."https://gonic.jel.gay".extraConfig = "reverse_proxy localhost:4747";
     cloudflared.tunnels."73bc3393-f815-4a60-8f3a-c9d8f6d2e0dc".ingress."gonic.jel.gay".service =
       "http://localhost:4747";
 

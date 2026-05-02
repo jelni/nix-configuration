@@ -1,6 +1,8 @@
 { config, ... }:
 {
   services = {
+    caddy.virtualHosts."https://home.jel.gay".extraConfig =
+      "reverse_proxy localhost:${toString config.services.home-assistant.config.http.server_port}";
     cloudflared.tunnels."73bc3393-f815-4a60-8f3a-c9d8f6d2e0dc".ingress."home.jel.gay".service =
       "http://localhost:${toString config.services.home-assistant.config.http.server_port}";
 

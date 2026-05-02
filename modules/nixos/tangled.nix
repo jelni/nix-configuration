@@ -12,6 +12,11 @@
       owner = "did:plc:epnu3w7e72ck3hqeghzjajo3";
     in
     {
+      caddy.virtualHosts = {
+        "https://${knot}".extraConfig = "reverse_proxy localhost:5555";
+        "https://${spindle}".extraConfig = "reverse_proxy localhost:6555";
+      };
+
       cloudflared.tunnels."73bc3393-f815-4a60-8f3a-c9d8f6d2e0dc".ingress = {
         "${knot}".service = "http://localhost:5555";
         "${spindle}".service = "http://localhost:6555";

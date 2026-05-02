@@ -12,6 +12,7 @@
   nixpkgs.overlays = [ inputs.copyparty.overlays.default ];
 
   services = {
+    caddy.virtualHosts."https://files.jel.gay".extraConfig = "reverse_proxy localhost:3923";
     cloudflared.tunnels."73bc3393-f815-4a60-8f3a-c9d8f6d2e0dc".ingress."files.jel.gay".service =
       "http://localhost:3923";
 
