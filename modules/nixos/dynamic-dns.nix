@@ -35,5 +35,6 @@
     '';
 
     wantedBy = [ "multi-user.target" ];
+    wants = [ "network-online.target" ];
   };
 }
