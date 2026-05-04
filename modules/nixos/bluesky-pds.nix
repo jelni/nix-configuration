@@ -19,6 +19,7 @@ in
           PDS_HOSTNAME = domain;
           PDS_DATA_DIRECTORY = directory;
           PDS_BLOBSTORE_DISK_LOCATION = "${directory}/blocks";
+          LOG_ENABLED = "false";
         };
       };
 
