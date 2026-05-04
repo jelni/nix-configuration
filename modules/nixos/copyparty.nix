@@ -29,8 +29,6 @@
         vc-age = 1;
         vc-exit = true;
         vc-url = "https://api.copyparty.eu/advisories";
-        ver = true;
-        xff-hdr = "CF-Connecting-IP";
         zip-who = 2;
       };
 
