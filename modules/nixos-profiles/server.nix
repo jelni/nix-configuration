@@ -17,6 +17,7 @@
     initrd-ssh
     kubo
     matrix-tuwunel
+    mpd
     music-assistant
     podman
     qbittorrent
