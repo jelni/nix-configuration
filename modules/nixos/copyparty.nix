@@ -22,6 +22,7 @@
         au-vol = 100;
         e2dsa = true;
         e2ts = true;
+        hist = "/srv/copyparty/.hist";
         localtime = true;
         qdel = 1;
         rproxy = 1;
