@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
-  nix.package = pkgs.lixPackageSets.git.lix;
+  nixpkgs.overlays = [ (final: prev: { nix = prev.lixPackageSets.git.lix; }) ];
 }
