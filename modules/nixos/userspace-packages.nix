@@ -37,7 +37,6 @@
     libreoffice-fresh
     loupe
     lucida-downloader
-    magic-wormhole-rs
     nautilus
     nodejs
     ocr-a

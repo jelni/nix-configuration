@@ -8,6 +8,7 @@
     dust
     google-cloud-sdk
     hyperfine
+    magic-wormhole-rs
     nil
     nixd
     nixfmt
