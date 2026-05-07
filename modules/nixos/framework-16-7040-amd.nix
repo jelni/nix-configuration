@@ -39,6 +39,7 @@
   environment = {
     systemPackages = with pkgs; [
       framework-tool-tui
+      llama-cpp-rocm
       nvtopPackages.amd
     ];
 
