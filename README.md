@@ -1,6 +1,6 @@
 # nix-configuration
 
-my NixOS configuration. it uses Nix flakes,
+my NixOS configuration. it uses Nix flakes, [Lix](https://lix.systems/),
 [blueprint](https://github.com/numtide/blueprint),
 [Home Manager](https://github.com/nix-community/home-manager),
 [agenix](https://github.com/ryantm/agenix),
