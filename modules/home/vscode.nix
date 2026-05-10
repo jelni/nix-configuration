@@ -356,6 +356,7 @@
         "git.confirmSync" = false;
         "git.enableCommitSigning" = true;
         "git.enableSmartCommit" = true;
+        "git.enabled" = false;
         "html.format.indentHandlebars" = true;
         "html.format.indentInnerHtml" = true;
         "html.format.preserveNewLines" = false;
