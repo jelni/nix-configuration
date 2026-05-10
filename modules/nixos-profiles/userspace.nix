@@ -15,6 +15,7 @@
     printing
     srvos-userspace
     steam
+    udev
     udisks2
     user-guest
     userspace-packages
