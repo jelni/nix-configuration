@@ -5,6 +5,7 @@
     limine = {
       enable = true;
       extraConfig = "timeout: 1";
+      secureBoot.enable = true;
     };
   };
 }
