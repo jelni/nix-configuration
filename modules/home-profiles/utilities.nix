@@ -6,6 +6,7 @@
     delta
     direnv
     eza
+    fastfetch
     fzf
     gcc
     github
