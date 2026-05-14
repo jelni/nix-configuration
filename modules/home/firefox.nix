@@ -426,6 +426,7 @@
         // install "jid1-BoFifL9Vbdl2zQ@jetpack" # Decentraleyes
         // install "{cb31ec5d-c49a-4e5a-b240-16c767444f62}" # Indie Wiki Buddy
         // install-private-browsing "search@kagi.com"
+        // install "{e34868ad-46dc-499c-8235-4f50950986af}" # mdBook Auto Theme
         // install-private-browsing "@mute-sites-by-default"
         // install "nixpkgs-pr-tracker@tahayassine.me"
         // install "octolinker@stefanbuck.com"
