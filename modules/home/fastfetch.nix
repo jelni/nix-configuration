@@ -1,7 +1,8 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 {
   programs.fastfetch = {
     enable = true;
+    package = pkgs.fastfetch.override { zfsSupport = true; };
 
     settings = {
       logo.color =
@@ -29,7 +30,7 @@
         "cpu"
         "gpu"
         "memory"
-        "disk"
+        "zpool"
         "publicip"
         "break"
         "colors"
