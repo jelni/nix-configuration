@@ -1,4 +1,5 @@
 let
+  musicDirectory = "/srv/mpd";
   polslop-port = "6604";
 
   output = name: port: encoder: ''
@@ -13,25 +14,21 @@ let
   '';
 in
 {
-  containers.mpd =
-    let
-      polslop-path = "/srv/music/polslop";
-    in
-    {
-      autoStart = true;
-      bindMounts."${polslop-path}".hostPath = polslop-path;
+  containers.mpd = {
+    autoStart = true;
+    bindMounts."${musicDirectory}".hostPath = musicDirectory;
 
-      config = {
-        services.mpd = {
-          enable = true;
-          extraConfig = output "żyrardio-p0lslop" polslop-port "opus";
-          musicDirectory = polslop-path;
-          network.port = 6001;
-        };
-
-        system.stateVersion = "25.11";
+    config = {
+      services.mpd = {
+        enable = true;
+        extraConfig = output "żyrardio-p0lslop" polslop-port "opus";
+        inherit musicDirectory;
+        network.port = 6001;
       };
+
+      system.stateVersion = "25.11";
     };
+  };
 
   services =
     let
@@ -53,7 +50,7 @@ in
           ${output "żyrardio-opus" opus-port "opus"}
         '';
 
-        musicDirectory = "/srv/qBittorrent/downloads";
+        inherit musicDirectory;
       };
     };
 }
