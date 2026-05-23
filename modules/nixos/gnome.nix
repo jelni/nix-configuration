@@ -178,7 +178,7 @@
   systemd.tmpfiles.rules = [
     "L /var/lib/AccountsService/icons/jel - - - - ${
       pkgs.fetchurl {
-        url = "https://ipfs.io/ipfs/bafkreih2gvyh3igjgxxngd5w4jgab6tbj6mj77bcsoh7nshokbzmr2zdii";
+        url = "https://ipfs.jel.gay/ipfs/bafkreih2gvyh3igjgxxngd5w4jgab6tbj6mj77bcsoh7nshokbzmr2zdii";
         hash = "sha256-+jVwfaDJNe7TD7biTAD6YU+Yn/wik4/2yO5QcsjrI0I=";
       }
     }"
