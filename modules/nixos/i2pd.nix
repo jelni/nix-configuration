@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 {
-  networking.firewall.allowedTCPPorts = [ config.services.i2pd.proto.http.port ];
-
   services = {
     i2pd = {
       enable = true;

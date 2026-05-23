@@ -8,7 +8,6 @@
     owner = config.services.copyparty.group;
   };
 
-  networking.firewall.allowedTCPPorts = [ 3923 ];
   nixpkgs.overlays = [ inputs.copyparty.overlays.default ];
 
   services = {
