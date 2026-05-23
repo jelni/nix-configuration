@@ -21,6 +21,7 @@
     music-assistant
     podman
     qbittorrent
+    slskd
     snowflake-proxy
     soju
     srvos-server
