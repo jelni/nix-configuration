@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 let
   musicDirectory = "/srv/mpd";
   polslop-port = "6604";
@@ -29,6 +30,8 @@ in
       system.stateVersion = "25.11";
     };
   };
+
+  environment.systemPackages = [ pkgs.mpc ];
 
   services =
     let
