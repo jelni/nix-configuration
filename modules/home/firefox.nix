@@ -34,6 +34,7 @@
           "fanboy-social"
           "adguard-social"
           "fanboy-thirdparty_social"
+          "fanboy-ai-suggestions"
           "easylist-chat"
           "easylist-newsletters"
           "easylist-notifications"
