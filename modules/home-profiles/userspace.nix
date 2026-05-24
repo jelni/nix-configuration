@@ -12,6 +12,7 @@
     mpv
     mullvad-vpn
     nushell
+    telegram-desktop
     udiskie
     vesktop
     vscode

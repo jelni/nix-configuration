@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.vesktop = {
     enable = true;
@@ -188,4 +189,6 @@
       '';
     };
   };
+
+  xdg.autostart.entries = [ "${pkgs.vesktop}/share/applications/vesktop.desktop" ];
 }
