@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
 {
   imports = with inputs.tangled.nixosModules; [
     knot
@@ -41,4 +41,9 @@
         };
       };
     };
+
+  virtualisation = {
+    docker.enable = lib.mkForce false;
+    podman.dockerSocket.enable = true;
+  };
 }

@@ -2,7 +2,6 @@
 {
   imports = with flake.nixosModules; [
     _1password
-    docker
     dhcpcd
     flatpak
     gnome
@@ -13,6 +12,7 @@
     obs-studio
     ollama
     pipewire
+    podman
     printing
     srvos-userspace
     steam

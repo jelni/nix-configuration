@@ -8,7 +8,6 @@ in
 
   users.users.jel = {
     extraGroups = [
-      "docker"
       "ipfs"
       "networkmanager"
       "wheel"

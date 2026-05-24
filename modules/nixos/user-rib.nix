@@ -6,7 +6,6 @@ in
 
   users.users.rib = {
     extraGroups = [
-      "docker"
       "networkmanager"
       "wheel"
     ];

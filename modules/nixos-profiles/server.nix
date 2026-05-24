@@ -7,7 +7,6 @@
     cobalt-api
     copyparty
     cron
-    docker
     dynamic-dns
     etherpad
     gonic
