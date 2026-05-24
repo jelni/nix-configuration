@@ -20,5 +20,6 @@
     user-jel
     xserver
     zfs
+    zram-swap
   ];
 }
