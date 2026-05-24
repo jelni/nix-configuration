@@ -30,6 +30,7 @@
         onlyoffice-desktopeditors
         loupe
         mpv
+        file-roller
       ];
     };
   };

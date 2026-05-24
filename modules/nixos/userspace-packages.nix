@@ -16,6 +16,7 @@
     feather
     ffmpeg-full
     file
+    file-roller
     fira-code
     gcompris
     gimp3
