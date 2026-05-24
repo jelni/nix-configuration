@@ -4,6 +4,7 @@
     agenix
     base-packages
     doas
+    documentation
     fish
     git
     host-name

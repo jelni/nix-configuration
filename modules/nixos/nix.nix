@@ -1,7 +1,6 @@
 { inputs, ... }:
 {
   imports = [ inputs.srvos.nixosModules.mixins-trusted-nix-caches ];
-  documentation.nixos.enable = false;
 
   nix = {
     settings.experimental-features = [
