@@ -3,6 +3,7 @@
   imports = with flake.nixosModules; [
     _1password
     docker
+    dhcpcd
     flatpak
     gnome
     gvfs
