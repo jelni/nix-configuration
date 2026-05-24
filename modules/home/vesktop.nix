@@ -183,7 +183,7 @@
       };
 
       themes.hide-nitro-gift = ''
-        div[class*="channelTextArea_"] div[class*="buttons__"] > div:nth-of-type(3) {
+        div[class*="channelTextArea_"] div[class*="buttons__"] > div:first-child {
           display: none;
         }
       '';
