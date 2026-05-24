@@ -1,0 +1,3 @@
+{
+  security.lockKernelModules = true;
+}
