@@ -1,34 +1,15 @@
+{ lib, ... }:
 {
   boot = {
     supportedFilesystems = [ "zfs" ];
     zfs.forceImportRoot = false;
   };
 
-  fileSystems = {
-    "/" = {
-      device = "zpool/root";
-      fsType = "zfs";
-      options = [ "zfsutil" ];
-    };
-
-    "/nix" = {
-      device = "zpool/nix";
-      fsType = "zfs";
-      options = [ "zfsutil" ];
-    };
-
-    "/var" = {
-      device = "zpool/var";
-      fsType = "zfs";
-      options = [ "zfsutil" ];
-    };
-
-    "/home" = {
-      device = "zpool/home";
-      fsType = "zfs";
-      options = [ "zfsutil" ];
-    };
-  };
+  fileSystems = lib.genAttrs [ "/" "/nix" "/var" "/home" ] (mountPoint: {
+    device = "zpool${if mountPoint == "/" then "/root" else mountPoint}";
+    fsType = "zfs";
+    options = [ "zfsutil" ];
+  });
 
   services.zfs = {
     autoScrub.enable = true;
