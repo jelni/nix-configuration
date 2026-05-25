@@ -118,7 +118,38 @@
           ];
 
           "org/gnome/shell/extensions/azwallpaper" = {
-            slideshow-directory = "${../../wallpapers}";
+            slideshow-directory = "${pkgs.symlinkJoin {
+              name = "wallpapers";
+
+              paths = [
+                ../../wallpapers
+
+                (pkgs.linkFarm "downloads" {
+                  "gram-header-wallpaper-5k.png" = pkgs.fetchurl {
+                    url = "https://gram.liten.app/wallpapers/gram-header-wallpaper-5k.png";
+                    hash = "sha256-/i2c3hE/9OcNolY01kH01LGU+RbFHwK9+t9jgyBNmvA=";
+                  };
+
+                  "Hytale-Cursebreaker-Key-Art 8K.jpg" = "${
+                    pkgs.fetchzip {
+                      url = "https://cdn.hytale.com/8ddc303b227dd4a4809eab3be14a9d29_hytaleissaved_keyarts.zip";
+                      hash = "sha256-51ycT/9Nv3KXIexBVkIZjt+uGERoSx9kEoDg/r6V3TA=";
+                      stripRoot = false;
+                    }
+                  }/Hytale-Cursebreaker-Key-Art 8K.jpg";
+
+                  "Niri cut.png" = pkgs.fetchurl {
+                    url = "https://raw.githubusercontent.com/niri-wm/artwork/refs/heads/main/wallpapers/Niri%20cut.png";
+                    hash = "sha256-NADtU49NRd7O9EYQO/80J4r46TPsi1omxm3R59PLtlQ=";
+                  };
+
+                  "Niri pool.png" = pkgs.fetchurl {
+                    url = "https://raw.githubusercontent.com/niri-wm/artwork/refs/heads/main/wallpapers/Niri%20pool.png";
+                    hash = "sha256-DaPoByv9c+70tBs2EeEt7TU5xNs+mXj+y/mfcoPHGD4=";
+                  };
+                })
+              ];
+            }}";
 
             slideshow-slide-duration = lib.gvariant.mkTuple (
               map lib.gvariant.mkInt32 [
