@@ -6,8 +6,11 @@
 
   services.resolved = {
     enable = true;
-    dnsovertls = "opportunistic";
-    dnssec = "allow-downgrade";
-    fallbackDns = [ ];
+
+    settings.Resolve = {
+      DNSOverTLS = "opportunistic";
+      DNSSEC = "allow-downgrade";
+      FallbackDNS = [ ];
+    };
   };
 }

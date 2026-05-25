@@ -1,7 +1,13 @@
-{ lib, perSystem, ... }:
+{
+  config,
+  lib,
+  perSystem,
+  ...
+}:
 {
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     package = perSystem.firefox.firefox-nightly-bin;
 
     policies = {

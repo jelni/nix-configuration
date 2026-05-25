@@ -15,7 +15,7 @@
     telegram-desktop
     udiskie
     vesktop
-    vscode
+    vscodium
     xdg
     yt-dlp
     zed

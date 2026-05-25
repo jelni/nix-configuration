@@ -52,12 +52,12 @@
     python314FreeThreading
     quodlibet-full
     reaper
-    signal-desktop-bin
+    signal-desktop
     slack
     snapshot
     sparrow
     sqlitebrowser
-    superTuxKart
+    supertuxkart
     tlrc
     tor
     tor-browser

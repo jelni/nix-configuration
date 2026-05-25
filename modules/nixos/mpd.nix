@@ -1,30 +1,31 @@
 { pkgs, ... }:
 let
-  musicDirectory = "/srv/mpd";
+  music_directory = "/srv/mpd";
   polslop-port = "6604";
 
-  output = name: port: encoder: ''
-    audio_output {
-      type "httpd"
-      name "${name}"
-      port "${port}"
-      bind_to_address "0.0.0.0"
-      encoder "${encoder}"
-      genre "żyrobeat"
-    }
-  '';
+  audio_output = name: port: encoder: {
+    type = "httpd";
+    name = name;
+    port = port;
+    bind_to_address = "0.0.0.0";
+    encoder = encoder;
+    genre = "żyrobeat";
+  };
 in
 {
   containers.mpd = {
     autoStart = true;
-    bindMounts."${musicDirectory}".hostPath = musicDirectory;
+    bindMounts."${music_directory}".hostPath = music_directory;
 
     config = {
       services.mpd = {
         enable = true;
-        extraConfig = output "żyrardio-p0lslop" polslop-port "opus";
-        inherit musicDirectory;
-        network.port = 6001;
+
+        settings = {
+          audio_output = [ (audio_output "żyrardio-p0lslop" polslop-port "opus") ];
+          inherit music_directory;
+          port = 6001;
+        };
       };
 
       system.stateVersion = "25.11";
@@ -48,12 +49,14 @@ in
       mpd = {
         enable = true;
 
-        extraConfig = ''
-          ${output "żyrardio" flac-port "flac"}
-          ${output "żyrardio-opus" opus-port "opus"}
-        '';
+        settings = {
+          audio_output = [
+            (audio_output "żyrardio" flac-port "flac")
+            (audio_output "żyrardio-opus" opus-port "opus")
+          ];
 
-        inherit musicDirectory;
+          inherit music_directory;
+        };
       };
     };
 }
