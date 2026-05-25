@@ -3,15 +3,20 @@
   imports = [ inputs.srvos.nixosModules.mixins-trusted-nix-caches ];
 
   nix = {
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-
     gc = {
       automatic = true;
       dates = "daily";
       options = "--delete-older-than 7d";
+    };
+
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+
+      trusted-public-keys = [ "cache.jel.gay:B8uhW2bYk/NlZRVagGpPiYO5HzSAe7GoXJVEESf+9cU=" ];
+      trusted-substituters = [ "https://cache.jel.gay?priority=30" ];
     };
   };
 
