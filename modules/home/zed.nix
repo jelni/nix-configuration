@@ -13,6 +13,9 @@
       "toml"
     ];
 
+    mutableUserKeymaps = false;
+    mutableUserSettings = false;
+
     userKeymaps = [
       {
         bindings = {
@@ -110,6 +113,7 @@
       ui_font_size = 16;
       use_smartcase_search = true;
       wrap_guides = [ 100 ];
+      zoomed_padding = false;
     };
   };
 }
