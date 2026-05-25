@@ -18,6 +18,7 @@
     matrix-tuwunel
     mpd
     music-assistant
+    nix-serve
     podman
     qbittorrent
     slskd

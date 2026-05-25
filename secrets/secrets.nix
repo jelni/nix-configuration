@@ -35,6 +35,7 @@ in
   "copyparty-admin.age".publicKeys = server;
   "dynamic-dns-url.age".publicKeys = server;
   "jel-password.age".publicKeys = baremetal;
+  "nix-serve-secret-key.age".publicKeys = server;
   "slskd-environment.age".publicKeys = server;
   "soju-jel-password.age".publicKeys = userspace;
   "wireless-networks.age".publicKeys = baremetal;
