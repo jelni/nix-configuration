@@ -1,4 +1,9 @@
-{ lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   environment.gnome.excludePackages = [ pkgs.gnome-tour ];
 
@@ -9,6 +14,7 @@
 
         settings = {
           "org/gnome/desktop/a11y/interface".show-status-shapes = true;
+          "org/gnome/desktop/background".primary-color = "#${config.lib.stylix.colors.base01}";
           "org/gnome/desktop/calendar".show-weekdate = true;
 
           "org/gnome/desktop/input-sources" = {
