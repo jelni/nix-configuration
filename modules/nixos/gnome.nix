@@ -13,6 +13,7 @@
         lockAll = true;
 
         settings = {
+          "org/gnome/desktop/a11y/applications".screen-magnifier-enabled = true;
           "org/gnome/desktop/a11y/interface".show-status-shapes = true;
           "org/gnome/desktop/background".primary-color = "#${config.lib.stylix.colors.base01}";
           "org/gnome/desktop/calendar".show-weekdate = true;
