@@ -62,14 +62,15 @@
     ];
 
     userSettings = {
-      audio."experimental.rodio_audio" = true;
       auto_signature_help = true;
       close_on_file_delete = true;
+      collaboration_panel.dock = "left";
       completions.lsp_insert_mode = "replace_subsequence";
       current_line_highlight = "gutter";
       diagnostics.inline.enabled = true;
       disable_ai = true;
       git.inline_blame.enabled = false;
+      git_panel.dock = "left";
 
       gutter = {
         folds = false;
@@ -83,8 +84,14 @@
       };
 
       middle_click_paste = false;
+      outline_panel.dock = "left";
       prettier.allowed = true;
-      project_panel.auto_reveal_entries = false;
+
+      project_panel = {
+        auto_reveal_entries = false;
+        dock = "left";
+      };
+
       scroll_beyond_last_line = "vertical_scroll_margin";
 
       search = {
