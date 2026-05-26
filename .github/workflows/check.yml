@@ -12,7 +12,8 @@ jobs:
 
       - uses: "nix-community/cache-nix-action@v7"
         with:
-          primary-key: "${{ runner.os }}"
+          primary-key: "nix-${{ runner.os }}-${{ hashFiles('**/*.nix', 'flake.lock') }}"
+          restore-prefixes-first-match: "nix-${{ runner.os }}-"
           gc-max-store-size: "1G"
 
       - run: "nix flake show --no-update-lock-file --allow-import-from-derivation"
