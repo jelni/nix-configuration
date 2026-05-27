@@ -13,6 +13,7 @@
     ];
 
     kernelModules = [ "kvm-amd" ];
+    kernelParams = [ "amdgpu.dcdebugmask=0x410" ];
   };
 
   environment = {
