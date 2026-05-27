@@ -3,9 +3,6 @@
   age.secrets.wireless-networks.file = ../../secrets/wireless-networks.age;
 
   networking.networkmanager = {
-    wifi.macAddress = "stable-ssid";
-    ethernet.macAddress = "stable";
-
     ensureProfiles = {
       environmentFiles = [ config.age.secrets.wireless-networks.path ];
 
@@ -26,7 +23,7 @@
           };
         in
         builtins.listToAttrs (
-          builtins.map
+          map
             (name: {
               inherit name;
               value = profile (lib.toUpper name);
@@ -45,6 +42,13 @@
               "technokokarda"
             ]
         );
+    };
+
+    ethernet.macAddress = "stable";
+
+    wifi = {
+      backend = "iwd";
+      macAddress = "stable-ssid";
     };
   };
 }
