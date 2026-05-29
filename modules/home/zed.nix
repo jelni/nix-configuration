@@ -22,10 +22,13 @@
           alt-f12 = "zed::OpenKeymap";
           ctrl-d = "editor::DuplicateSelection";
           ctrl-f12 = "zed::OpenSettings";
-          ctrl-n = null;
           ctrl-p = "command_palette::Toggle";
           ctrl-shift-p = "file_finder::Toggle";
-          ctrl-shift-w = null;
+        };
+
+        unbind = {
+          ctrl-n = "menu::SelectNext";
+          ctrl-shift-w = "workspace::CloseWindow";
         };
       }
       {
@@ -38,7 +41,6 @@
           alt-right = "editor::MoveToNextSubwordEnd";
           alt-shift-left = "editor::SelectToPreviousSubwordStart";
           alt-shift-right = "editor::SelectToNextSubwordEnd";
-          "ctrl-;" = null;
           ctrl-alt-down = "editor::SelectSmallerSyntaxNode";
           ctrl-alt-up = "editor::SelectLargerSyntaxNode";
           ctrl-enter = "editor::NewlineBelow";
@@ -46,6 +48,8 @@
           ctrl-shift-v = "editor::Paste";
           ctrl-y = "editor::DeleteLine";
         };
+
+        unbind."ctrl-;" = "editor::ToggleLineNumbers";
       }
       {
         context = "Pane";
@@ -56,8 +60,13 @@
         };
       }
       {
+        context = "ProjectPanel";
+        bindings.delete = "project_panel::Delete";
+      }
+      {
         context = "Workspace";
         bindings.ctrl-shift-s = "workspace::SaveWithoutFormat";
+        unbind.ctrl-w = "workspace::CloseActiveDock";
       }
     ];
 
