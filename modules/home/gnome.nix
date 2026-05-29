@@ -14,20 +14,4 @@
       { package = wallpaper-slideshow; }
     ];
   };
-
-  xdg.cacheFile."clipboard-indicator@tudmotu.com/registry.txt".text = builtins.toJSON (
-    map
-      (contents: {
-        favorite = true;
-        mimetype = "text/plain;charset=utf-8";
-        inherit contents;
-      })
-      [
-        "…"
-        "„”"
-        "–"
-        "—"
-        "»"
-      ]
-  );
 }
