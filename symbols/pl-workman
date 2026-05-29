@@ -5,14 +5,19 @@ xkb_symbols "pl-workman"
 
     name[Group1] = "Polish (Workman)";
 
-    key <AC01> { [ a, A, aogonek, Aogonek ] };
-    key <AC02> { [ s, S, sacute, Sacute ] };
-    key <AC07> { [ n, N, nacute, Nacute ] };
-    key <AC08> { [ e, E, eogonek, Eogonek ] };
-    key <AC09> { [ o, O, oacute, Oacute ] };
-    key <AB01> { [ z, Z, zabovedot, Zabovedot ] };
-    key <AB04> { [ c, C, cacute, Cacute ] };
-    key <AB02> { [ x, X, zacute, Zacute ] };
-    key <AB07> { [ l, L, lstroke, Lstroke ] };
+    key <AB01> { [ NoSymbol, NoSymbol, zabovedot, Zabovedot ] };
+    key <AB02> { [ NoSymbol, NoSymbol, zacute, Zacute ] };
+    key <AB04> { [ NoSymbol, NoSymbol, cacute, Cacute ] };
+    key <AB07> { [ NoSymbol, NoSymbol, lstroke, Lstroke ] };
+    key <AB08> { [ NoSymbol, NoSymbol, NoSymbol, guillemotleft ] };
+    key <AB09> { [ NoSymbol, NoSymbol, ellipsis, guillemotright ] };
+    key <AC01> { [ NoSymbol, NoSymbol, aogonek, Aogonek ] };
+    key <AC02> { [ NoSymbol, NoSymbol, sacute, Sacute ] };
+    key <AC07> { [ NoSymbol, NoSymbol, nacute, Nacute ] };
+    key <AC08> { [ NoSymbol, NoSymbol, eogonek, Eogonek ] };
+    key <AC09> { [ NoSymbol, NoSymbol, oacute, Oacute ] };
+    key <AC11> { [ NoSymbol, NoSymbol, doublelowquotemark, rightdoublequotemark ] };
+    key <AE11> { [ NoSymbol, NoSymbol, endash, emdash ] };
     key <CAPS> { [ Caps_Lock, VoidSymbol ] };
+    key <SPCE> { [ NoSymbol, NoSymbol, U200B ] };
 };
