@@ -26,6 +26,8 @@ documents when each profile should be used for a host.
   interacted with using a graphical interface
 - [`userspace`](modules/nixos-profiles/userspace.nix) &ndash; graphical
   interface hosts that I use
+- [`family`](modules/nixos-profiles/userspace.nix) &ndash; graphical interface
+  hosts that my family uses
 - [`server`](modules/nixos-profiles/server.nix) &ndash; hosts that serve my
   services
 - [`wsl`](modules/nixos-profiles/wsl.nix) &ndash; Windows Subsystem for Linux

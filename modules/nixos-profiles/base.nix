@@ -8,9 +8,9 @@
     fish
     git
     host-name
+    immutable-users
     lix
     nix
     openssh
-    users
   ];
 }
