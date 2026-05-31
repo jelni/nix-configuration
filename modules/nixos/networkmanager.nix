@@ -3,6 +3,8 @@
   age.secrets.wireless-networks.file = ../../secrets/wireless-networks.age;
 
   networking.networkmanager = {
+    enable = true;
+
     ensureProfiles = {
       environmentFiles = [ config.age.secrets.wireless-networks.path ];
 
