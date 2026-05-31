@@ -2,7 +2,7 @@
 {
   imports = with flake.modules.nixos-profiles; [
     base
-    utilities
+    command-line
     wsl
   ];
 

@@ -3,8 +3,8 @@
   imports = with flake.modules.home-profiles; [
     baremetal
     base
+    command-line
     userspace
-    utilities
   ];
 
   home.stateVersion = "25.05";

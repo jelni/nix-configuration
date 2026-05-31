@@ -2,11 +2,13 @@
 {
   imports = with flake.nixosModules; [
     appimage
-    moor
-    nix-ld
-    nix-monitored
-    safe-rm
-    utilities-packages
-    wget2
+    dhcpcd
+    gvfs
+    location
+    pipewire
+    printing
+    srvos-userspace
+    udev
+    udisks2
   ];
 }

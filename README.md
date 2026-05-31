@@ -20,10 +20,12 @@ documents when each profile should be used for a host.
 - [`base`](modules/nixos-profiles/base.nix) &ndash; all hosts
 - [`baremetal`](modules/nixos-profiles/baremetal.nix) &ndash; hosts where the
   boot process should be configured
+- [`command-line`](modules/nixos-profiles/command-line.nix) &ndash; hosts that
+  are interacted with using the command line
 - [`utilities`](modules/nixos-profiles/utilities.nix) &ndash; hosts that are
-  interacted with using the command line
-- [`userspace`](modules/nixos-profiles/userspace.nix) &ndash; hosts that are
   interacted with using a graphical interface
+- [`userspace`](modules/nixos-profiles/userspace.nix) &ndash; graphical
+  interface hosts that I use
 - [`server`](modules/nixos-profiles/server.nix) &ndash; hosts that serve my
   services
 - [`wsl`](modules/nixos-profiles/wsl.nix) &ndash; Windows Subsystem for Linux
@@ -40,10 +42,10 @@ documents when each profile should be used for a host.
 - [`base`](modules/home-profiles/base.nix) &ndash; all hosts
 - [`baremetal`](modules/home-profiles/baremetal.nix) &ndash; hosts where the
   boot process should be configured
-- [`utilities`](modules/home-profiles/utilities.nix) &ndash; hosts that are
-  interacted with using the command line
-- [`userspace`](modules/home-profiles/userspace.nix) &ndash; hosts that are
-  interacted with using a graphical interface
+- [`command-line`](modules/home-profiles/command-line.nix) &ndash; hosts that
+  are interacted with using the command line
+- [`userspace`](modules/home-profiles/userspace.nix) &ndash; graphical interface
+  hosts that I use
 - [`wsl`](modules/home-profiles/wsl.nix) &ndash; Windows Subsystem for Linux
   hosts
 - [`wsl-1password`](modules/home-profiles/wsl-1password.nix) &ndash; Windows

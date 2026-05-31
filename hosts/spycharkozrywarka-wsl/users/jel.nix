@@ -2,7 +2,7 @@
 {
   imports = with flake.modules.home-profiles; [
     base
-    utilities
+    command-line
     wsl
   ];
 

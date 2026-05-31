@@ -3,9 +3,9 @@
   imports = with flake.modules.nixos-profiles; [
     baremetal
     base
+    command-line
     latest-zfs-kernel
     server
-    utilities
   ];
 
   boot = {

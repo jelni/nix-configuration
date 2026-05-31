@@ -3,6 +3,7 @@
   imports = with flake.modules.nixos-profiles; [
     baremetal
     base
+    command-line
     framework-16-7040-amd
     hardening
     latest-zfs-kernel
