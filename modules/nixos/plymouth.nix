@@ -1,6 +1,3 @@
 {
-  boot.plymouth = {
-    enable = true;
-    logo = ../../assets/hackerspace-zyrardow.png;
-  };
+  boot.plymouth.enable = true;
 }

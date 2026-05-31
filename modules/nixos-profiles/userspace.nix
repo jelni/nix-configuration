@@ -8,6 +8,7 @@
     nautilus-open-any-terminal
     obs-studio
     ollama
+    plymouth-hackerspace-zyrardow
     podman
     steam
     user-guest
