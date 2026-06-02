@@ -10,6 +10,7 @@
     fzf
     gcc
     github
+    nix-index-database
     ripgrep
     uv
     zoxide
