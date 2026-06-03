@@ -5,14 +5,35 @@
   boot = {
     initrd.availableKernelModules = [
       "nvme"
-      "xhci_pci"
+      "sd_mod"
       "thunderbolt"
       "usb_storage"
       "usbhid"
-      "sd_mod"
+      "xhci_pci"
     ];
 
-    kernelModules = [ "kvm-amd" ];
+    kernelModules = [
+      "hid_apple"
+      "nf_nat"
+      "nft_chain_nat"
+      "nft_compat"
+      "rfcomm"
+      "scsi_common"
+      "scsi_mod"
+      "sd_mod"
+      "snd_hrtimer"
+      "snd_seq"
+      "snd_seq_dummy"
+      "uas"
+      "usb_storage"
+      "x_tables"
+      "xt_MASQUERADE"
+      "xt_connmark"
+      "xt_conntrack"
+      "xt_mark"
+      "xt_tcpudp"
+    ];
+
     kernelParams = [ "amdgpu.dcdebugmask=0x410" ];
   };
 
