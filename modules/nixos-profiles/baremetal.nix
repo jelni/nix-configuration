@@ -13,7 +13,6 @@
     plymouth
     postgresql
     power-management
-    security
     stylix
     tailscale
     terminfo
