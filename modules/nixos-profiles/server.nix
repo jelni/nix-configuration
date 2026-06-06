@@ -18,6 +18,7 @@
     matrix-tuwunel
     mpd
     music-assistant
+    nepenthes
     nix-serve
     podman
     qbittorrent
