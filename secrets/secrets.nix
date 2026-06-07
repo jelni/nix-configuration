@@ -34,6 +34,7 @@ in
   "cobalt-api-keys.age".publicKeys = server;
   "copyparty-admin.age".publicKeys = server;
   "dynamic-dns-url.age".publicKeys = server;
+  "grafana-secret-key.age".publicKeys = server;
   "jel-password.age".publicKeys = baremetal;
   "nix-serve-secret-key.age".publicKeys = server;
   "slskd-environment.age".publicKeys = server;

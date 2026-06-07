@@ -11,6 +11,7 @@
     etherpad
     gonic
     gotosocial
+    grafana
     home-assistant
     i2pd
     initrd-ssh
@@ -21,6 +22,7 @@
     nepenthes
     nix-serve
     podman
+    prometheus
     qbittorrent
     slskd
     snowflake-proxy
