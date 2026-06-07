@@ -46,8 +46,16 @@ let
 
   corpus = pkgs.concatText "corpus.txt" [
     (pkgs.fetchurl {
+      url = "https://wolnelektury.pl/media/book/txt/brzydkie-kaczatko.txt";
+      hash = "sha256-9zYK6Ho1ctNetejqZilFRxVxr8m9r36fULkDLHqz5Bw=";
+    })
+    (pkgs.fetchurl {
       url = "https://wolnelektury.pl/media/book/txt/dziady-dziady-poema-dziady-czesc-iii.txt";
       hash = "sha256-7sYjYtJ/PWc5n5a5Ofph9cTA2NJppZaqSlGfU691uzM=";
+    })
+    (pkgs.fetchurl {
+      url = "https://wolnelektury.pl/media/book/txt/dziewczynka-z-zapalkami.txt";
+      hash = "sha256-CIGFpAI48EAxefvm0xwSNrQscCcufJ8/8m9o5ZBtksw=";
     })
     (pkgs.fetchurl {
       url = "https://wolnelektury.pl/media/book/txt/orwell-rok-1984.txt";
@@ -56,6 +64,10 @@ let
     (pkgs.fetchurl {
       url = "https://wolnelektury.pl/media/book/txt/pan-tadeusz.txt";
       hash = "sha256-+QOLD5y3DvzlCQkhw6czVlJwZure7hBQwCHWVyCVBXQ=";
+    })
+    (pkgs.fetchurl {
+      url = "https://wolnelektury.pl/media/book/txt/saint-exupery-maly-ksiaze.txt";
+      hash = "sha256-QYxgB+JxjUNBAg+ze3TXuPol20xKpBXnEaEkb5/OfyE=";
     })
   ];
 
