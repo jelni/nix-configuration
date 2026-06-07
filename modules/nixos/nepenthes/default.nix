@@ -96,6 +96,7 @@ in
     path = [ (pkgs.writeShellScriptBin "lua5.4" "exec ${lib.getExe lua} \"$@\"") ];
 
     serviceConfig = {
+      DynamicUser = true;
       ExecStart = "${nepenthes}/nepenthes ${configuration}";
       WorkingDirectory = nepenthes;
     };
