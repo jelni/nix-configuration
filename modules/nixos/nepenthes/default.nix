@@ -74,6 +74,8 @@ let
   configuration = (pkgs.formats.yaml { }).generate "config.yaml" {
     templates = [ ./templates ];
     seed_file = pkgs.writeText "seed.txt" "free data for every scraper :3";
+    header_min_wait = 0;
+    header_max_wait = 1;
 
     silos = [
       {
