@@ -41,6 +41,8 @@ links:
                 margin-inline: 2rem;
                 text-align: justify;
                 font-family: system-ui;
+                color: oklch(14.5% 0.008 326);
+                background: oklch(96% 0.003 325.6);
                 cursor: url("https://openai.com/favicon.ico") 12 12, auto;
             }
 
@@ -56,11 +58,6 @@ links:
                 flex-wrap: wrap;
                 gap: 1rem;
                 text-align: center;
-
-                a {
-                    padding: 1rem;
-                    background: antiquewhite;
-                }
             }
 
             p::first-letter {
@@ -69,9 +66,15 @@ links:
                 initial-letter: 2;
             }
 
-            a:link {
-                color: rebeccapurple;
-                text-decoration: none;
+            a {
+                padding: 1rem;
+                background: oklch(71.1% 0.019 323.02);
+                border-radius: 0.25rem;
+
+                &:link {
+                    color: oklch(21.2% 0.019 322.12);
+                    text-decoration: none;
+                }
             }
         </style>
     </head>
