@@ -60,7 +60,7 @@ let
   ];
 
   configuration = (pkgs.formats.yaml { }).generate "config.yaml" {
-    templates = [ "${nepenthes}/templates" ];
+    templates = [ ./templates ];
     seed_file = pkgs.writeText "seed.txt" "free data for every scraper :3";
 
     silos = [
@@ -69,6 +69,7 @@ let
         inherit corpus;
         wordlist = "${pkgs.scowl}/share/dict/words.txt";
         zero_delay = true;
+        redirect_rate = 5;
       }
     ];
   };

@@ -1,0 +1,96 @@
+---
+markov:
+ - name: title
+   min: 5
+   max: 10
+
+ - name: header
+   min: 5
+   max: 10
+
+markov_array:
+ - name: paragraphs
+   min_count: 4
+   max_count: 8
+   markov_min: 25
+   markov_max: 200
+
+link_array:
+   min_count: 4
+   max_count: 8
+   depth_min: 1
+   depth_max: 5
+
+links:
+ - name: footer_link
+   depth_min: 1
+   depth_max: 5
+...
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        {{#title}}<title>{{title}}</title>{{/title}}
+        <meta charset="UTF-8" />
+        <meta name="title" content="{{{ title }}}" />
+        <meta name="description" content="{{{ header }}}" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg"/>
+
+        <style>
+            html {
+                margin-inline: 2rem;
+                text-align: justify;
+                font-family: system-ui;
+                cursor: url("https://openai.com/favicon.ico") 12 12, auto;
+            }
+
+            body {
+                max-width: 64rem;
+                margin-block: 4rem;
+                margin-inline: auto;
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 1rem;
+                text-align: center;
+
+                a {
+                    padding: 1rem;
+                    background: antiquewhite;
+                }
+            }
+
+            p::first-letter {
+                margin-right: 0.5em;
+                font-family: serif;
+                initial-letter: 2;
+            }
+
+            a:link {
+                color: rebeccapurple;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            {{# links }}
+            <a href="{{{ link }}}">{{ description }}</a>
+            {{/ links }}
+        </nav>
+
+        <h2>{{ header }}</h2>
+
+        {{# paragraphs }}
+        <p>
+       	    {{ . }}
+        </p>
+        {{/ paragraphs }}
+
+        <a href="{{{ footer_link.link }}}">{{ footer_link.description }}</a>
+    </body>
+</html>
