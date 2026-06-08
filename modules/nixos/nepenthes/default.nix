@@ -32,17 +32,10 @@ let
     (lunix ps)
   ]);
 
-  source = fetchTarball {
-    url = "https://zadzmo.org/downloads/nepenthes/file/nepenthes-2.7.tar.gz";
-    sha256 = "sha256-Q8Vl4BdksW76AIMuRCJq4JYU+O6pk+sH6Cth/mQ5Kc4=";
+  nepenthes = fetchTarball {
+    url = "https://zadzmo.org/downloads/nepenthes/file/nepenthes-2.8.tar.gz";
+    sha256 = "sha256-kd3R3dLqA/B2IXfrLaSTaqJFvOGcsH/ZmHWka2X4J2k=";
   };
-
-  # this removes a bug occuring with `zero_delay`
-  nepenthes = pkgs.runCommand "patch-nepenthes" { } ''
-    cp -r ${source} $out
-    chmod -R +w $out
-    sed -i '/logged:record( #page, 0 )/d' $out/core/nepenthes.lua
-  '';
 
   corpus = pkgs.concatText "corpus.txt" [
     (pkgs.fetchurl {
@@ -71,6 +64,14 @@ let
     })
   ];
 
+  wordlist = "${
+    pkgs.fetchzip {
+      url = "https://sjp.pl/sl/growy/sjp-20260901.zip";
+      hash = "sha256-tzZ0E2TYCvYtCJU/iefIpB2FKL4i+QTKLRXmp/4XSRw=";
+      stripRoot = false;
+    }
+  }/slowa.txt";
+
   configuration = (pkgs.formats.yaml { }).generate "config.yaml" {
     templates = [ ./templates ];
     seed_file = pkgs.writeText "seed.txt" "free data for every scraper :3";
@@ -80,8 +81,7 @@ let
     silos = [
       {
         name = "default";
-        inherit corpus;
-        wordlist = "${pkgs.scowl}/share/dict/words.txt";
+        inherit corpus wordlist;
         zero_delay = true;
         redirect_rate = 5;
       }
