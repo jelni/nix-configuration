@@ -15,6 +15,11 @@
       provision.enable = true;
 
       settings = {
+        "auth.anonymous" = {
+          enabled = true;
+          org_name = "Public";
+        };
+
         security.secret_key = "$__file{${config.age.secrets.grafana-secret-key.path}}";
         server.http_port = 3030;
       };
