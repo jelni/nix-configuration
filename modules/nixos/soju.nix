@@ -1,19 +1,20 @@
 { config, ... }:
 let
   domain = "irc.jel.gay";
-  acme-port = "1360";
 in
 {
   networking.firewall.allowedTCPPorts = [ 6697 ];
 
   security.acme.certs.${domain} = {
     group = "soju";
-    listenHTTP = ":${acme-port}";
     postRun = "systemctl restart soju.service";
   };
 
   services = {
-    caddy.virtualHosts."http://${domain}".extraConfig = "reverse_proxy :${acme-port}";
+    caddy.virtualHosts."http://${domain}".extraConfig = ''
+      root ${config.security.acme.certs.${domain}.webroot}
+      file_server
+    '';
 
     soju =
       let

@@ -5,7 +5,6 @@ let
   conference-subdomain = "conference.${subdomain}";
   upload-subdomain = "upload.${subdomain}";
   pubsub-subdomain = "pubsub.${subdomain}";
-  acme-port = "1362";
 in
 {
   networking.firewall.allowedTCPPorts = [
@@ -23,20 +22,15 @@ in
     ];
 
     group = config.services.prosody.group;
-    listenHTTP = ":${acme-port}";
     postRun = "systemctl restart prosody.service";
   };
 
   services = {
     caddy.virtualHosts = {
-      "http://${subdomain}".extraConfig = ''
-        reverse_proxy :${acme-port} {
-          header_up Host ${domain}
-        }
+      "http://${conference-subdomain}, http://${pubsub-subdomain}".extraConfig = ''
+        root ${config.security.acme.certs.${domain}.webroot}
+        file_server
       '';
-
-      "http://${conference-subdomain}, http://${pubsub-subdomain}".extraConfig =
-        "reverse_proxy :${acme-port}";
 
       "${subdomain}, ${upload-subdomain}".extraConfig =
         "reverse_proxy :${toString (builtins.elemAt config.services.prosody.httpPorts 0)}";

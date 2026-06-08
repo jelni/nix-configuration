@@ -7,8 +7,12 @@
     in
     {
       caddy.virtualHosts."jel.gay, ${tor-address}".extraConfig = ''
+        handle /.well-known/acme-challenge/* {
+          root ${config.security.acme.defaults.webroot}
+          file_server
+        }
+
         reverse_proxy /.well-known/matrix/* https://matrix.jel.gay
-        reverse_proxy /.well-known/acme-challenge/* http://prosody.jel.gay
         reverse_proxy /.well-known/* https://gts.jel.gay
 
         root ${inputs.website}/public

@@ -1,7 +1,6 @@
 { config, ... }:
 let
   realm = "turn.jel.gay";
-  acme-port = "1361";
 in
 {
   age.secrets.turn-secret-coturn = {
@@ -32,12 +31,14 @@ in
 
   security.acme.certs.${realm} = {
     group = "turnserver";
-    listenHTTP = ":${acme-port}";
     postRun = "systemctl restart coturn.service";
   };
 
   services = {
-    caddy.virtualHosts."http://${realm}".extraConfig = "reverse_proxy :${acme-port}";
+    caddy.virtualHosts."http://${realm}".extraConfig = ''
+      root ${config.security.acme.certs.${realm}.webroot}
+      file_server
+    '';
 
     coturn =
       let
