@@ -9,6 +9,7 @@ in
   security.acme.certs."${domain}" = {
     group = "soju";
     listenHTTP = ":${acme-port}";
+    postRun = "systemctl restart soju.service";
   };
 
   services = {
