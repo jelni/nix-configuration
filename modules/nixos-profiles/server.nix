@@ -6,6 +6,7 @@
     caddy
     cobalt-api
     copyparty
+    coturn
     cron
     dynamic-dns
     etherpad
