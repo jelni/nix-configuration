@@ -15,7 +15,7 @@ in
 {
   containers.mpd = {
     autoStart = true;
-    bindMounts."${music_directory}".hostPath = music_directory;
+    bindMounts.${music_directory}.hostPath = music_directory;
 
     config = {
       services.mpd = {

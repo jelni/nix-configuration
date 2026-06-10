@@ -6,7 +6,7 @@ in
 {
   networking.firewall.allowedTCPPorts = [ 6697 ];
 
-  security.acme.certs."${domain}" = {
+  security.acme.certs.${domain} = {
     group = "soju";
     listenHTTP = ":${acme-port}";
     postRun = "systemctl restart soju.service";
@@ -17,7 +17,7 @@ in
 
     soju =
       let
-        directory = config.security.acme.certs."${domain}".directory;
+        directory = config.security.acme.certs.${domain}.directory;
       in
       {
         enable = true;
