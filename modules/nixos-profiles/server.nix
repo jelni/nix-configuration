@@ -24,6 +24,7 @@
     nix-serve
     podman
     prometheus
+    prosody
     qbittorrent
     slskd
     snowflake-proxy
