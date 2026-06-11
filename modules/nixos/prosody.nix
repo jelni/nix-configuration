@@ -4,6 +4,7 @@ let
   subdomain = "prosody.${domain}";
   conference-subdomain = "conference.${subdomain}";
   upload-subdomain = "upload.${subdomain}";
+  pubsub-subdomain = "pubsub.${subdomain}";
   acme-port = "1362";
 in
 {
@@ -16,7 +17,11 @@ in
   ];
 
   security.acme.certs.${domain} = {
-    extraDomainNames = [ conference-subdomain ];
+    extraDomainNames = [
+      conference-subdomain
+      pubsub-subdomain
+    ];
+
     group = config.services.prosody.group;
     listenHTTP = ":${acme-port}";
     postRun = "systemctl restart prosody.service";
@@ -30,7 +35,8 @@ in
         }
       '';
 
-      "http://${conference-subdomain}".extraConfig = "reverse_proxy localhost:${acme-port}";
+      "http://${conference-subdomain}, http://${pubsub-subdomain}".extraConfig =
+        "reverse_proxy localhost:${acme-port}";
 
       "https://${subdomain}, https://${upload-subdomain}".extraConfig =
         "reverse_proxy localhost:${toString (builtins.elemAt config.services.prosody.httpPorts 0)}";
@@ -46,6 +52,7 @@ in
         proxy65_ports = { 5050 }
         storage = "sql"
         trusted_proxies = { "127.0.0.1", "::1" }
+        Component "${pubsub-subdomain}" "pubsub"
       '';
 
       extraModules = [
