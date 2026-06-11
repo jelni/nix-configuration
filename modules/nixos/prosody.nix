@@ -2,6 +2,7 @@
 let
   domain = "jel.gay";
   subdomain = "prosody.${domain}";
+  conference-subdomain = "conference.${subdomain}";
   upload-subdomain = "upload.${subdomain}";
   acme-port = "1362";
 in
@@ -15,6 +16,7 @@ in
   ];
 
   security.acme.certs.${domain} = {
+    extraDomainNames = [ conference-subdomain ];
     group = config.services.prosody.group;
     listenHTTP = ":${acme-port}";
     postRun = "systemctl restart prosody.service";
@@ -28,7 +30,9 @@ in
         }
       '';
 
-      "https://${upload-subdomain}".extraConfig =
+      "http://${conference-subdomain}".extraConfig = "reverse_proxy localhost:${acme-port}";
+
+      "https://${subdomain}, https://${upload-subdomain}".extraConfig =
         "reverse_proxy localhost:${toString (builtins.elemAt config.services.prosody.httpPorts 0)}";
     };
 
@@ -37,30 +41,36 @@ in
       admins = [ "me@${domain}" ];
       dataDir = "/srv/prosody";
 
-      disco_items = [
-        {
-          description = "HTTP File Upload";
-          url = upload-subdomain;
-        }
-      ];
-
       extraConfig = ''
+        c2s_direct_tls_ports = { 5223 }
         proxy65_ports = { 5050 }
         storage = "sql"
         trusted_proxies = { "127.0.0.1", "::1" }
-
-        Component "${upload-subdomain}" "http_file_share"
-          http_external_url = "https://${upload-subdomain}/"
-          http_file_share_daily_quota = 1024*1024*1024
-          http_file_share_size_limit = 128*1024*1024
       '';
 
       extraModules = [
+        "cloud_notify"
+        "csi_simple"
         "http_file_share"
         "sasl2"
         "sasl2_bind2"
+        "smacks"
         "turn_external"
+        "websocket"
       ];
+
+      httpFileShare =
+        let
+          megabyte = 1024 * 1024;
+        in
+        {
+          daily_quota = 1024 * megabyte;
+          domain = upload-subdomain;
+          http_external_url = "https://${upload-subdomain}/";
+          size_limit = 128 * megabyte;
+        };
+
+      muc = [ { domain = conference-subdomain; } ];
 
       package = pkgs.prosody.override {
         withCommunityModules = [
@@ -85,12 +95,10 @@ in
         inherit domain;
 
         extraConfig = ''
-          turn_external_host = "turn.jel.gay"
+          turn_external_host = "turn.${domain}"
           turn_external_secret = ""
         '';
       };
-
-      xmppComplianceSuite = false;
     };
   };
 }
