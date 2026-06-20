@@ -72,6 +72,7 @@
 
     userSettings = {
       auto_signature_help = true;
+      cli_default_open_behavior = "existing_window";
       close_on_file_delete = true;
       collaboration_panel.dock = "left";
       completions.lsp_insert_mode = "replace_subsequence";
