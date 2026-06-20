@@ -3,7 +3,6 @@
   environment.systemPackages = with pkgs; [
     android-tools
     audacity
-    bambu-studio
     baobab
     bibata-cursors
     binwalk
