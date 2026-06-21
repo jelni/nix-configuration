@@ -472,6 +472,7 @@
         "browser.aboutConfig.showWarning".Value = false;
         "browser.download.autohideButton".Value = false;
         "browser.search.suggest.enabled.private".Value = true;
+        "browser.startup.page".Value = 3;
         "browser.tabs.groups.enabled".Value = false;
         "browser.toolbars.bookmarks.visibility".Value = "always";
 
