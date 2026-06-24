@@ -19,5 +19,5 @@ xkb_symbols "pl-workman"
     key <AC11> { [ NoSymbol, NoSymbol, doublelowquotemark, rightdoublequotemark ] };
     key <AE11> { [ NoSymbol, NoSymbol, endash, emdash ] };
     key <CAPS> { [ Caps_Lock, VoidSymbol ] };
-    key <SPCE> { [ NoSymbol, NoSymbol, U200B ] };
+    key <SPCE> { [ NoSymbol, space, space, U200B ] };
 };
