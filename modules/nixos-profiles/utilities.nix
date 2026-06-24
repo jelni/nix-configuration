@@ -1,6 +1,7 @@
 { flake, ... }:
 {
   imports = with flake.nixosModules; [
+    appimage
     moor
     nix-ld
     nix-monitored
