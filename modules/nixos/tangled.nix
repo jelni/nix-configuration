@@ -5,6 +5,8 @@
     spindle
   ];
 
+  boot.kernelModules = [ "vhost_vsock" ];
+
   services =
     let
       knot = "knot.jel.gay";
