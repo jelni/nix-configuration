@@ -80,10 +80,10 @@ a few imperative steps are required when installing NixOS on a new device.
   - generate the host SSH key, and encrypt [secrets](secrets/secrets.nix) with
     it
 
-  ```
-  mkdir --parents /mnt/etc/ssh
-  ssh-keygen -f /mnt/etc/ssh/ssh_host_ed25519_key -N "" -t ed25519
-  ```
+    ```
+    mkdir --parents /mnt/etc/ssh
+    ssh-keygen -f /mnt/etc/ssh/ssh_host_ed25519_key -N "" -t ed25519
+    ```
 
 - enroll Secure Boot keys
 
