@@ -13,6 +13,7 @@
     ];
 
     kernelModules = [
+      "af_packet"
       "hid_apple"
       "nft_chain_nat"
       "nft_compat"
