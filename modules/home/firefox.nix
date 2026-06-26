@@ -551,7 +551,7 @@
                 (bookmark "https://photos.google.com/")
                 (bookmark "https://mail.google.com/mail/")
                 (bookmark "https://translate.google.com/?sl=auto&tl=en&op=translate")
-                (bookmark "https://maps.google.pl/maps")
+                (bookmark "https://www.google.pl/maps")
                 (bookmark "https://earth.google.com/web/")
                 (bookmark "https://drive.google.com/drive/my-drive")
                 (bookmark "https://docs.google.com/document/")
@@ -575,10 +575,10 @@
                 (bookmark "https://track.toggl.com/")
                 "separator"
                 (bookmark "https://beta.nebula.tv/")
-                (bookmark "https://www.last.fm/user/JelNiSlaw_")
+                (bookmark "https://www.last.fm/user/jelnisia")
                 (bookmark "https://bsky.app/")
                 (bookmark "https://tech.lgbt/")
-                (bookmark "https://twitter.com/")
+                (bookmark "https://x.com/")
                 (bookmark "https://www.reddit.com/")
                 (bookmark "https://www.twitch.tv/")
                 "separator"
@@ -591,14 +591,34 @@
                   name = "";
 
                   bookmarks = [
-                    (bookmark "https://discordpy.readthedocs.io/en/latest/genindex.html")
-                    (bookmark "https://core.telegram.org/bots/api")
-                    (bookmark "https://github.com/tdlib/td/blob/master/td/generate/scheme/td_api.tl")
-                    (bookmark "https://github.com/tdlib/td/blob/master/td/telegram/cli.cpp")
-                    (bookmark "https://docs.docker.com/reference/compose-file/")
-                    (bookmark "https://ai.google.dev/api/all-methods")
-                    (bookmark "https://platform.openai.com/docs/api-reference")
-                    (bookmark "https://docs.stripe.com/api")
+                    {
+                      name = "discord.py";
+                      url = "https://discordpy.readthedocs.io/en/latest/genindex.html";
+                    }
+                    {
+                      name = "Telegram Bot API";
+                      url = "https://core.telegram.org/bots/api";
+                    }
+                    {
+                      name = "TDLib API";
+                      url = "https://github.com/tdlib/td/blob/master/td/generate/scheme/td_api.tl";
+                    }
+                    {
+                      name = "TDLib CLI";
+                      url = "https://github.com/tdlib/td/blob/master/td/telegram/cli.cpp";
+                    }
+                    {
+                      name = "Docker Compose";
+                      url = "https://docs.docker.com/reference/compose-file/";
+                    }
+                    {
+                      name = "Google AI";
+                      url = "https://ai.google.dev/api/all-methods";
+                    }
+                    {
+                      name = "OpenAI";
+                      url = "https://developers.openai.com/api/reference";
+                    }
                   ];
                 }
 
