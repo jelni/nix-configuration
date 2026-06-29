@@ -32,5 +32,6 @@
     srvos-server
     tangled
     user-rib
+    zfs-server
   ];
 }

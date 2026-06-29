@@ -1,0 +1,3 @@
+{
+  boot.zfs.extraPools = [ "srv" ];
+}
