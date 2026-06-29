@@ -13,6 +13,7 @@
     steam
     user-guest
     userspace-packages
+    vesktop
     vscode
   ];
 }
