@@ -4,7 +4,7 @@ let
 in
 {
   age.secrets.jel-password.file = ../../secrets/jel-password.age;
-  boot.initrd.network.ssh.authorizedKeys = [ ssh-key ];
+  boot.initrd.network.ssh.authorizedKeys = [ "command=\"systemctl default\" ${ssh-key}" ];
 
   users.users.jel = {
     extraGroups = [
