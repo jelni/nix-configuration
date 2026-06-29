@@ -168,6 +168,8 @@
             slideshow-use-absolute-time-for-duration = true;
           };
 
+          "org/gnome/shell/extensions/caffeine".enable-fullscreen = false;
+
           "org/gnome/shell/extensions/clipboard-indicator" = {
             cache-only-favorites = true;
             clear-history = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
