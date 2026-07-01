@@ -10,6 +10,7 @@
     cron
     dynamic-dns
     etherpad
+    garage
     gonic
     gotosocial
     grafana
