@@ -9,6 +9,7 @@
     coturn
     cron
     dynamic-dns
+    ente
     etherpad
     garage
     gonic

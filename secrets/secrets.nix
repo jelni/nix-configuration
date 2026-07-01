@@ -36,6 +36,10 @@ in
   "cobalt-api-keys.age".publicKeys = server;
   "copyparty-admin.age".publicKeys = server;
   "dynamic-dns-url.age".publicKeys = server;
+  "ente-jwt-secret.age".publicKeys = server;
+  "ente-key-encryption.age".publicKeys = server;
+  "ente-key-hash.age".publicKeys = server;
+  "ente-s3-secret.age".publicKeys = server;
   "garage-rpc-secret.age".publicKeys = server;
   "grafana-secret-key.age".publicKeys = server;
   "jel-password.age".publicKeys = baremetal;

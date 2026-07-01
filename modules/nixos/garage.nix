@@ -5,15 +5,27 @@ let
   domain = "s3.jel.gay";
 in
 {
-  age.secrets.garage-rpc-secret =
-    let
-      user = config.users.users.garage;
-    in
-    {
-      file = ../../secrets/garage-rpc-secret.age;
-      inherit (user) group;
-      owner = user.name;
-    };
+  age.secrets = {
+    ente-s3-secret =
+      let
+        ente = config.services.ente.api;
+      in
+      {
+        file = ../../secrets/ente-s3-secret.age;
+        inherit (ente) group;
+        owner = ente.user;
+      };
+
+    garage-rpc-secret =
+      let
+        user = config.users.users.garage;
+      in
+      {
+        file = ../../secrets/garage-rpc-secret.age;
+        inherit (user) group;
+        owner = user.name;
+      };
+  };
 
   services = {
     caddy.virtualHosts."https://${domain}".extraConfig = ''
@@ -29,6 +41,18 @@ in
 
       reverse_proxy ${api_bind_addr}
     '';
+
+    ente.api.settings.s3 = {
+      are_local_buckets = true;
+
+      b2-eu-cen = {
+        bucket = "ente";
+        endpoint = "https://${domain}";
+        key = "GK0ad0d3c713fff67088840d9b";
+        region = config.services.garage.settings.s3_api.s3_region;
+        secret._secret = config.age.secrets.ente-s3-secret.path;
+      };
+    };
 
     garage = {
       enable = true;
