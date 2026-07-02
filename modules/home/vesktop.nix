@@ -79,6 +79,7 @@
           NoDevtoolsWarning.enabled = true;
           NoF1.enabled = true;
           NoMaskedUrlPaste.enabled = true;
+          NoMiddleClickPaste.enabled = true;
           NoRPC.enabled = true;
 
           NotificationVolume = {
