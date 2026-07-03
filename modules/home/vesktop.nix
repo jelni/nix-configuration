@@ -174,6 +174,7 @@
           VolumeBooster.enabled = true;
           WebKeybinds.enabled = true;
           WebScreenShareFixes.enabled = true;
+          WhoReacted.enabled = true;
           YoutubeAdblock.enabled = true;
         };
 
