@@ -5,5 +5,6 @@
     locale-pl
     mutable-users
     plasma
+    sane
   ];
 }
