@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ config, inputs, ... }:
 {
   imports = [ inputs.srvos.nixosModules.mixins-trusted-nix-caches ];
 
@@ -15,6 +15,7 @@
         "flakes"
       ];
 
+      substituters = config.nix.settings.trusted-substituters;
       trusted-public-keys = [ "cache.jel.gay:B8uhW2bYk/NlZRVagGpPiYO5HzSAe7GoXJVEESf+9cU=" ];
       trusted-substituters = [ "https://cache.jel.gay?priority=30" ];
     };
