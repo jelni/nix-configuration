@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
   environment.systemPackages = [ pkgs.aha ];
+  hardware.bluetooth.enable = true;
+  networking.networkmanager.enable = true;
 
   services = {
     desktopManager.plasma6.enable = true;
