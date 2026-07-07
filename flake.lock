@@ -654,6 +654,22 @@
         "type": "github"
       }
     },
+    "monero-banlist": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783389514,
+        "narHash": "sha256-NEBznMKx30eiOOPmqAOP8J6/A/4ttsmIKI5p2+sv7ig=",
+        "owner": "rblaine95",
+        "repo": "monero-banlist",
+        "rev": "06c8b5aa7d9d5e519e5030becc1d16c754008f16",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rblaine95",
+        "repo": "monero-banlist",
+        "type": "github"
+      }
+    },
     "nix-index-database": {
       "inputs": {
         "nixpkgs": [
@@ -847,6 +863,7 @@
         "copyparty": "copyparty",
         "firefox": "firefox",
         "home-manager": "home-manager_2",
+        "monero-banlist": "monero-banlist",
         "nix-index-database": "nix-index-database",
         "nix-monitored": "nix-monitored",
         "nix-vscode-extensions": "nix-vscode-extensions",

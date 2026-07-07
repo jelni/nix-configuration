@@ -20,6 +20,7 @@
     initrd-ssh
     kubo
     matrix-tuwunel
+    monero
     mpd
     music-assistant
     nepenthes
