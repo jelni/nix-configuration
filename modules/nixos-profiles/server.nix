@@ -33,6 +33,7 @@
     snowflake-proxy
     soju
     srvos-server
+    static-client-id
     tangled
     user-rib
     zfs-server
