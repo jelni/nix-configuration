@@ -16,7 +16,11 @@
     vencord = {
       settings = {
         useQuickCss = false;
-        enabledThemes = [ "hide-nitro-gift.css" ];
+
+        enabledThemes = [
+          "hide-nitro-gift.css"
+          "huge-thumbsup.css"
+        ];
 
         themeLinks = [
           "https://croissantdunord.github.io/discord-adblock/adblock.css"
@@ -184,11 +188,20 @@
         };
       };
 
-      themes.hide-nitro-gift = ''
-        div[class*="channelTextArea_"] div[class*="buttons__"] > div:first-child {
-          display: none;
-        }
-      '';
+      themes = {
+        hide-nitro-gift = ''
+          div[class*="channelTextArea_"] div[class*="buttons__"] > div:first-child {
+            display: none;
+          }
+        '';
+
+        huge-thumbsup = ''
+          img[data-type="emoji"][data-name="👍"] {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        '';
+      };
     };
   };
 
