@@ -190,7 +190,7 @@
 
       themes = {
         hide-nitro-gift = ''
-          div[class*="channelTextArea_"] div[class*="buttons__"] > div:first-child {
+          div[class*="channelTextArea_"] div[class*="buttons__"] div[class*="container__"] {
             display: none;
           }
         '';
