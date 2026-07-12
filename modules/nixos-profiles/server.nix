@@ -20,6 +20,7 @@
     initrd-ssh
     kubo
     matrix-tuwunel
+    miniflux
     monero
     mpd
     music-assistant
