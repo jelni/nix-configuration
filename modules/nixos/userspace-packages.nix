@@ -45,7 +45,6 @@
     parsec-bin
     parted
     pinta
-    prettier
     prismlauncher
     prusa-slicer
     python314FreeThreading
