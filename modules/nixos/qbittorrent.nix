@@ -2,7 +2,7 @@
   services.qbittorrent = {
     enable = true;
     openFirewall = true;
-    profileDir = "/srv/";
+    profileDir = "/srv";
 
     serverConfig = {
       Application.FileLogger.Enabled = false;
