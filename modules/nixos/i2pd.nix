@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+  sam = config.services.i2pd.proto.sam;
+in
 {
   services = {
     i2pd = {
@@ -19,6 +22,7 @@
       upnp.enable = true;
     };
 
+    monero.extraConfig = "tx-proxy=i2p,${sam.address}:${toString sam.port},disable_noise";
     qbittorrent.serverConfig.BitTorrent.Session.I2P.Enabled = true;
   };
 
@@ -27,7 +31,7 @@
     path = [ pkgs.netcat ];
 
     preStart = ''
-      while ! nc -z ${config.services.i2pd.proto.sam.address} ${toString config.services.i2pd.proto.sam.port}; do
+      while ! nc -z ${sam.address} ${toString sam.port}; do
         sleep 1
       done
     '';

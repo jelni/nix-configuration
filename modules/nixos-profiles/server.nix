@@ -36,6 +36,7 @@
     srvos-server
     static-client-id
     tangled
+    tor
     user-rib
     zfs-server
   ];
