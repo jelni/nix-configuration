@@ -10,6 +10,7 @@
     dataDir = "/srv/monero";
 
     extraConfig = ''
+      enable-dns-blocklist=1
       p2p-use-ipv6=1
       public-node=1
       rpc-bind-ipv6-address=::
