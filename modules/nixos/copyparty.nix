@@ -34,9 +34,7 @@
 
       volumes =
         let
-          access = {
-            A = "admin";
-          };
+          access.A = "admin";
         in
         {
           "/" = {
@@ -45,7 +43,11 @@
           };
 
           "/downloads" = {
-            inherit access;
+            access = {
+              inherit (access) A;
+              g = "*";
+            };
+
             path = "/srv/qBittorrent/downloads";
           };
 
