@@ -26,6 +26,7 @@
     music-assistant
     nepenthes
     nix-serve
+    no-temporary-addresses
     podman
     prometheus
     prosody
