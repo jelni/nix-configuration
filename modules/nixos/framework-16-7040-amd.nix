@@ -14,6 +14,7 @@
 
     kernelModules = [
       "af_packet"
+      "cdc_ncm"
       "hid_apple"
       "nft_chain_nat"
       "nft_compat"
