@@ -24,6 +24,8 @@
             "pl"
           ];
 
+          instance-expose-blocklist-web = true;
+          instance-expose-allowlist-web = true;
           instance-expose-public-timeline = true;
           instance-expose-custom-emojis = true;
           instance-inject-mastodon-version = true;
