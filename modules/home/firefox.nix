@@ -578,7 +578,6 @@
                 (bookmark "https://beta.nebula.tv/")
                 (bookmark "https://www.last.fm/user/jelnisia")
                 (bookmark "https://bsky.app/")
-                (bookmark "https://tech.lgbt/")
                 (bookmark "https://x.com/")
                 (bookmark "https://www.reddit.com/")
                 (bookmark "https://www.twitch.tv/")
