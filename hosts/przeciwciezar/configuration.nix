@@ -5,6 +5,7 @@
     base
     command-line
     family
+    utilities
   ];
 
   boot = {
