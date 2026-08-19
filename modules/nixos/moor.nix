@@ -2,6 +2,10 @@
 {
   environment = {
     systemPackages = [ pkgs.moor ];
-    variables.PAGER = "moor";
+
+    variables = {
+      MOOR = "--no-linenumbers";
+      PAGER = "moor";
+    };
   };
 }
