@@ -16,7 +16,6 @@
     ffmpeg-full
     file
     file-roller
-    fira-code
     gcompris
     gimp3
     gnome-calculator
@@ -29,8 +28,6 @@
     imagemagick
     inkscape
     insomnia
-    inter
-    iosevka-bin
     keybase-gui
     krita
     languagetool
@@ -39,7 +36,6 @@
     lucida-downloader
     nautilus
     nodejs
-    ocr-a
     olympus
     onlyoffice-desktopeditors
     parsec-bin

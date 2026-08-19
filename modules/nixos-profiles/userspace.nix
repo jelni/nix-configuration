@@ -3,6 +3,7 @@
   imports = with flake.nixosModules; [
     _1password
     flatpak
+    fonts
     gnome
     halloy
     nautilus-open-any-terminal
