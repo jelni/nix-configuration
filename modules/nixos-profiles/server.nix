@@ -27,6 +27,7 @@
     nepenthes
     nix-serve
     no-temporary-addresses
+    ntfy-sh
     podman
     prometheus
     prosody
