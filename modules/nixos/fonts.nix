@@ -5,5 +5,6 @@
     inter
     iosevka
     ocr-a
+    vista-fonts
   ];
 }
