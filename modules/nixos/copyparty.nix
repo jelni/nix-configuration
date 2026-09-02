@@ -20,7 +20,9 @@ in
     caddy.virtualHosts."https://files.jel.gay".extraConfig = "reverse_proxy localhost:3923";
 
     copyparty =
-
+      let
+        directory = "/srv/copyparty";
+      in
       {
         enable = true;
 
@@ -35,7 +37,7 @@ in
           au-vol = 100;
           e2dsa = true;
           e2ts = true;
-          hist = "/srv/copyparty/.hist";
+          hist = "${directory}/.hist";
           localtime = true;
           qdel = 1;
           rproxy = 1;
@@ -52,8 +54,12 @@ in
           in
           {
             "/" = {
-              inherit access;
-              path = "/srv/copyparty";
+              access = {
+                inherit (access) A;
+                r = "*";
+              };
+
+              path = "${directory}/public";
             };
 
             "/downloads" = {
@@ -76,25 +82,16 @@ in
                 rwmd = "@hszyr";
               };
 
-              path = "/srv/copyparty/hszyr";
+              path = "${directory}/hszyr";
             };
 
-            "/public" = {
-              access = {
-                inherit (access) A;
-                r = "*";
-              };
-
-              path = "/srv/copyparty/public";
-            };
-
-            "/public/unlisted" = {
+            "/unlisted" = {
               access = {
                 inherit (access) A;
                 g = "*";
               };
 
-              path = "/srv/copyparty/public/unlisted";
+              path = "${directory}/unlisted";
             };
           };
       };
