@@ -1,7 +1,9 @@
 {
   networking.nameservers = [
-    "194.242.2.4#base.dns.mullvad.net"
-    "2a07:e340::4#base.dns.mullvad.net"
+    "94.140.14.14#dns.adguard-dns.com"
+    "94.140.15.15#dns.adguard-dns.com"
+    "2a10:50c0::ad1:ff#dns.adguard-dns.com"
+    "2a10:50c0::ad2:ff#dns.adguard-dns.com"
   ];
 
   services.resolved = {
