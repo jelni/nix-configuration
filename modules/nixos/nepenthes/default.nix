@@ -63,7 +63,7 @@ let
     })
     (pkgs.fetchurl {
       url = "https://wolnelektury.pl/media/book/txt/pan-tadeusz.txt";
-      hash = "sha256-+QOLD5y3DvzlCQkhw6czVlJwZure7hBQwCHWVyCVBXQ=";
+      hash = "sha256-MoMrbiJKOnQpNGrqsTAzB12V5Ba/fXGRRh2RhMsVvYI=";
     })
     (pkgs.fetchurl {
       url = "https://wolnelektury.pl/media/book/txt/saint-exupery-maly-ksiaze.txt";
