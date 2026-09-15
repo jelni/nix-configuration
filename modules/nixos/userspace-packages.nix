@@ -20,6 +20,7 @@
     gimp3
     gnome-calculator
     gnome-characters
+    gnome-font-viewer
     gnome-logs
     gnome-system-monitor
     gparted
