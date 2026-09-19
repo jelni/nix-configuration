@@ -40,6 +40,7 @@
     tangled
     tor
     user-rib
+    vaultwarden
     zfs-server
   ];
 }

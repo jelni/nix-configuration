@@ -47,6 +47,7 @@ in
   "nix-serve-secret-key.age".publicKeys = server;
   "slskd-environment.age".publicKeys = server;
   "soju-jel-password.age".publicKeys = userspace;
+  "vaultwarden-environment.age".publicKeys = server;
   "wireless-networks.age".publicKeys = baremetal;
   "wsl-password.age".publicKeys = wsl;
 }
