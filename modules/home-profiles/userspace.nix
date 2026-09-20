@@ -1,6 +1,7 @@
 { flake, ... }:
 {
   imports = with flake.homeModules; [
+    bitwarden
     claude-code
     firefox
     ghostty

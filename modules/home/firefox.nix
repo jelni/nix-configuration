@@ -418,6 +418,7 @@
         install "chrome-mask@overengineer.dev"
         // install "languagetool-webextension@languagetool.org"
         // install "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
+        // install "{446900e4-71c2-419f-a6a7-df9c091e268b}" # Bitwarden Password Manager
         // install "bluelitefilter@malwaretech.com"
         // install "{5b78178f-135d-4df2-821f-1f289be7f348}" # Catppuccin Mocha - Rosewater
         // install "{74145f27-f039-47ce-a470-a662b129930a}" # ClearURLs
@@ -494,6 +495,7 @@
               "jid1-mnnxcxisbpnsxq_jetpack-browser-action"
               "sponsorblocker_ajay_app-browser-action"
               "wayback_machine_mozilla_org-browser-action"
+              "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
               "developer-button"
             ];
           };

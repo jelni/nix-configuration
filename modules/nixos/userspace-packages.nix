@@ -6,6 +6,7 @@
     baobab
     bibata-cursors
     binwalk
+    bitwarden-desktop
     comaps
     davinci-resolve-studio
     deno
