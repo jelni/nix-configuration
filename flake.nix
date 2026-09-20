@@ -79,6 +79,11 @@
       url = "git+https://tangled.org/tangled.org/core";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    website = {
+      url = "github:jelni/website";
+      flake = false;
+    };
   };
 
   outputs = inputs: inputs.blueprint { inherit inputs; };

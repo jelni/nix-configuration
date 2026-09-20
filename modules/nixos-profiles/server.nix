@@ -41,6 +41,7 @@
     tor
     user-rib
     vaultwarden
+    website
     zfs-server
   ];
 }

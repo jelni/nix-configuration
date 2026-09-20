@@ -537,14 +537,14 @@
     "ibm-plex-mono-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1731402384,
+        "lastModified": 1731402378,
         "narHash": "sha256-OwUmrPfEehLDz0fl2ChYLK8FQM2p0G1+EMrGsYEq+6g=",
         "type": "tarball",
-        "url": "https://github.com/IBM/plex/releases/download/@ibm%2Fplex-mono@1.1.0/ibm-plex-mono.zip"
+        "url": "https://github.com/IBM/plex/releases/download/@ibm/plex-mono@1.1.0/ibm-plex-mono.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/IBM/plex/releases/download/@ibm%2Fplex-mono@1.1.0/ibm-plex-mono.zip"
+        "url": "https://github.com/IBM/plex/releases/download/@ibm/plex-mono@1.1.0/ibm-plex-mono.zip"
       }
     },
     "indigo": {
@@ -873,7 +873,8 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "srvos": "srvos",
         "stylix": "stylix",
-        "tangled": "tangled"
+        "tangled": "tangled",
+        "website": "website"
       }
     },
     "rust-analyzer-src": {
@@ -1088,11 +1089,11 @@
         "tailwindcss-animated-src": "tailwindcss-animated-src"
       },
       "locked": {
-        "lastModified": 1789389423,
-        "narHash": "sha256-kQZTl70PRaSJ0ZBco0tqOFnsrcLl1XekVrLMG21l48U=",
+        "lastModified": 1789731405,
+        "narHash": "sha256-coBPFy5y841710mAEZJ2hXetSq7nEJoyGNH+vVVxloU=",
         "ref": "refs/heads/master",
-        "rev": "f53890e1e1a53561e21261eceee03f87010bb3a1",
-        "revCount": 3999,
+        "rev": "7fcec78848bfd98f3f6a05411efaca1958da0e8f",
+        "revCount": 3226,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -1162,6 +1163,22 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "website": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782170025,
+        "narHash": "sha256-HnOEQY7PryDQ41AgX7RJVF13IiHSMo73uD/pZlfU1ew=",
+        "owner": "jelni",
+        "repo": "website",
+        "rev": "dbfae7bf347272d8ad8e41156f234d0a61fe1731",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jelni",
+        "repo": "website",
         "type": "github"
       }
     }

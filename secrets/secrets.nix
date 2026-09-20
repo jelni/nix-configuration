@@ -48,6 +48,7 @@ in
   "slskd-environment.age".publicKeys = server;
   "soju-jel-password.age".publicKeys = userspace;
   "vaultwarden-environment.age".publicKeys = server;
+  "website-tor-secret-key.age".publicKeys = server;
   "wireless-networks.age".publicKeys = baremetal;
   "wsl-password.age".publicKeys = wsl;
 }
