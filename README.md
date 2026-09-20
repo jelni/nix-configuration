@@ -50,8 +50,6 @@ documents when each profile should be used for a host.
   hosts that I use
 - [`wsl`](modules/home-profiles/wsl.nix) &ndash; Windows Subsystem for Linux
   hosts
-- [`wsl-1password`](modules/home-profiles/wsl-1password.nix) &ndash; Windows
-  Subsystem for Linux hosts that run 1Password on Windows
 
 ## new host setup
 

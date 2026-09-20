@@ -406,28 +406,16 @@
       # `nur.repos.rycee.firefox-addons` is missing too many extensions
       ExtensionSettings =
         let
-          default-config = extra: id: {
+          install = id: {
             ${id} = {
               installation_mode = "normal_installed";
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/${lib.strings.escapeURL id}/latest.xpi";
-            }
-            // extra;
+            };
           };
 
-          private-browsing = {
-            private_browsing = true;
-          };
-
-          install = default-config { };
-          install-private-browsing = default-config private-browsing;
+          install-private-browsing = id: install id // { private_browsing = true; };
         in
-        default-config (
-          {
-            install_url = "https://c.1password.com/dist/1P/b5x/firefox/nightly/latest.xpi";
-          }
-          // private-browsing
-        ) "{0a75d802-9aed-41e7-8daa-24c067386e82}" # 1Password
-        // install "chrome-mask@overengineer.dev"
+        install "chrome-mask@overengineer.dev"
         // install "languagetool-webextension@languagetool.org"
         // install "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
         // install "bluelitefilter@malwaretech.com"
@@ -506,7 +494,6 @@
               "jid1-mnnxcxisbpnsxq_jetpack-browser-action"
               "sponsorblocker_ajay_app-browser-action"
               "wayback_machine_mozilla_org-browser-action"
-              "_0a75d802-9aed-41e7-8daa-24c067386e82_-browser-action"
               "developer-button"
             ];
           };
