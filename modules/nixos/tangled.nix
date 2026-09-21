@@ -15,8 +15,8 @@
     in
     {
       caddy.virtualHosts = {
-        "https://${knot}".extraConfig = "reverse_proxy localhost:5555";
-        "https://${spindle}".extraConfig = "reverse_proxy localhost:6555";
+        ${knot}.extraConfig = "reverse_proxy :5555";
+        ${spindle}.extraConfig = "reverse_proxy :6555";
       };
 
       tangled = {

@@ -13,7 +13,7 @@ in
   };
 
   services = {
-    caddy.virtualHosts."http://${domain}".extraConfig = "reverse_proxy localhost:${acme-port}";
+    caddy.virtualHosts."http://${domain}".extraConfig = "reverse_proxy :${acme-port}";
 
     soju =
       let

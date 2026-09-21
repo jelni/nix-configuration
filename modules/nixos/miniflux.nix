@@ -1,18 +1,18 @@
 let
-  domain = "https://rss.jel.gay";
-  LISTEN_ADDR = "localhost:8800";
+  domain = "rss.jel.gay";
+  port = "8800";
 in
 {
   services = {
-    caddy.virtualHosts.${domain}.extraConfig = "reverse_proxy ${LISTEN_ADDR}";
+    caddy.virtualHosts.${domain}.extraConfig = "reverse_proxy :${port}";
 
     miniflux = {
       enable = true;
 
       config = {
-        BASE_URL = domain;
+        BASE_URL = "https://${domain}";
         CREATE_ADMIN = false;
-        inherit LISTEN_ADDR;
+        LISTEN_ADDR = "localhost:${port}";
         POLLING_FREQUENCY = 24 * 60;
       };
     };

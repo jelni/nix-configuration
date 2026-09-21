@@ -28,7 +28,7 @@ in
       let
         # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-apps/ente.nix
         caddyHost = enteApp: ''
-          root * ${
+          root ${
             config.services.ente.web.package.override {
               inherit enteApp;
               enteMainUrl = "https://${domain}";
@@ -40,18 +40,18 @@ in
             }
           }
           header Access-Control-Allow-Origin "https://${api-domain}"
-          try_files {path} {path}.html /index.html
+          try_files {path}.html
           file_server
         '';
       in
       {
-        "https://${accounts-domain}".extraConfig = caddyHost "accounts";
-        "https://${albums-domain}".extraConfig = caddyHost "albums";
-        "https://${api-domain}".extraConfig =
-          "reverse_proxy localhost:${toString config.services.ente.api.settings.http.port}";
-        "https://${cast-domain}".extraConfig = caddyHost "cast";
-        "https://${domain}".extraConfig = caddyHost "photos";
-        "https://${memories-domain}".extraConfig = caddyHost "memories";
+        ${accounts-domain}.extraConfig = caddyHost "accounts";
+        ${albums-domain}.extraConfig = caddyHost "albums";
+        ${api-domain}.extraConfig =
+          "reverse_proxy :${toString config.services.ente.api.settings.http.port}";
+        ${cast-domain}.extraConfig = caddyHost "cast";
+        ${domain}.extraConfig = caddyHost "photos";
+        ${memories-domain}.extraConfig = caddyHost "memories";
       };
 
     ente.api = {

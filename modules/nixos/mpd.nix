@@ -40,10 +40,10 @@ in
       opus-port = "6603";
     in
     {
-      caddy.virtualHosts."https://radio.hszyr.space, http://radio.hszyr.space".extraConfig = ''
-        handle / { reverse_proxy localhost:${flac-port} }
-        handle /opus { reverse_proxy localhost:${opus-port} }
-        handle /sonnet { reverse_proxy localhost:${polslop-port} }
+      caddy.virtualHosts."radio.hszyr.space, http://radio.hszyr.space".extraConfig = ''
+        handle / { reverse_proxy :${flac-port} }
+        handle /opus { reverse_proxy :${opus-port} }
+        handle /sonnet { reverse_proxy :${polslop-port} }
       '';
 
       mpd = {

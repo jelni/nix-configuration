@@ -17,7 +17,7 @@ in
     };
   };
 
-  services.caddy.virtualHosts."https://${domain}".extraConfig = "reverse_proxy localhost:${port}";
+  services.caddy.virtualHosts.${domain}.extraConfig = "reverse_proxy :${port}";
 
   virtualisation.oci-containers.containers.cobalt-api = {
     environment = {

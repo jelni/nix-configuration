@@ -30,16 +30,16 @@ in
   services = {
     caddy.virtualHosts = {
       "http://${subdomain}".extraConfig = ''
-        reverse_proxy localhost:${acme-port} {
+        reverse_proxy :${acme-port} {
           header_up Host ${domain}
         }
       '';
 
       "http://${conference-subdomain}, http://${pubsub-subdomain}".extraConfig =
-        "reverse_proxy localhost:${acme-port}";
+        "reverse_proxy :${acme-port}";
 
-      "https://${subdomain}, https://${upload-subdomain}".extraConfig =
-        "reverse_proxy localhost:${toString (builtins.elemAt config.services.prosody.httpPorts 0)}";
+      "${subdomain}, ${upload-subdomain}".extraConfig =
+        "reverse_proxy :${toString (builtins.elemAt config.services.prosody.httpPorts 0)}";
     };
 
     prosody = {

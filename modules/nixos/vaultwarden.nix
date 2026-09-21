@@ -18,8 +18,8 @@ in
       domain = "vaultwarden.jel.gay";
     in
     {
-      caddy.virtualHosts."https://${domain}".extraConfig =
-        "reverse_proxy localhost:${toString config.services.vaultwarden.config.ROCKET_PORT}";
+      caddy.virtualHosts.${domain}.extraConfig =
+        "reverse_proxy :${toString config.services.vaultwarden.config.ROCKET_PORT}";
 
       vaultwarden = {
         enable = true;

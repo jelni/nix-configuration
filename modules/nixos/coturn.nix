@@ -31,7 +31,7 @@ in
   };
 
   services = {
-    caddy.virtualHosts."http://${realm}".extraConfig = "reverse_proxy localhost:${acme-port}";
+    caddy.virtualHosts."http://${realm}".extraConfig = "reverse_proxy :${acme-port}";
 
     coturn =
       let

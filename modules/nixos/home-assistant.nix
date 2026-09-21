@@ -1,8 +1,8 @@
 { config, ... }:
 {
   services = {
-    caddy.virtualHosts."https://home.jel.gay".extraConfig =
-      "reverse_proxy localhost:${toString config.services.home-assistant.config.http.server_port}";
+    caddy.virtualHosts."home.jel.gay".extraConfig =
+      "reverse_proxy :${toString config.services.home-assistant.config.http.server_port}";
 
     home-assistant = {
       enable = true;

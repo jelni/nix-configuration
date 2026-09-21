@@ -17,7 +17,7 @@ in
   nixpkgs.overlays = [ inputs.copyparty.overlays.default ];
 
   services = {
-    caddy.virtualHosts."https://files.jel.gay".extraConfig = "reverse_proxy localhost:3923";
+    caddy.virtualHosts."files.jel.gay".extraConfig = "reverse_proxy :3923";
 
     copyparty =
       let

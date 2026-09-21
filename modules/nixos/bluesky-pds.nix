@@ -23,8 +23,8 @@ in
         };
       };
 
-      caddy.virtualHosts."https://${domain}".extraConfig =
-        "reverse_proxy localhost:${toString config.services.bluesky-pds.settings.PDS_PORT}";
+      caddy.virtualHosts.${domain}.extraConfig =
+        "reverse_proxy :${toString config.services.bluesky-pds.settings.PDS_PORT}";
     };
 
   systemd.services.bluesky-pds.serviceConfig.ReadWritePaths = [ directory ];

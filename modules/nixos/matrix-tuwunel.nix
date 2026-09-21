@@ -11,11 +11,11 @@ in
   services =
     let
       server_name = "jel.gay";
-      host = "matrix.${server_name}";
+      domain = "matrix.${server_name}";
     in
     {
-      caddy.virtualHosts."https://${host}".extraConfig =
-        "reverse_proxy localhost:${toString (builtins.elemAt config.services.matrix-tuwunel.settings.global.port 0)}";
+      caddy.virtualHosts.${domain}.extraConfig =
+        "reverse_proxy :${toString (builtins.elemAt config.services.matrix-tuwunel.settings.global.port 0)}";
 
       matrix-tuwunel = {
         enable = true;
@@ -30,8 +30,8 @@ in
           delete_rooms_after_leave = true;
 
           well_known = {
-            client = "https://${host}";
-            server = "${host}:443";
+            client = "https://${domain}";
+            server = "${domain}:443";
           };
         };
       };

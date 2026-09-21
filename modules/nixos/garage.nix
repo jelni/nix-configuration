@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let
   directory = "/srv/garage";
-  api_bind_addr = "127.0.0.1:3900";
+  port = "3900";
   domain = "s3.jel.gay";
 in
 {
@@ -28,7 +28,7 @@ in
   };
 
   services = {
-    caddy.virtualHosts."https://${domain}".extraConfig = ''
+    caddy.virtualHosts.${domain}.extraConfig = ''
       header Access-Control-Allow-Origin "*"
         header Access-Control-Allow-Methods "*"
         header Access-Control-Allow-Headers "*"
@@ -39,7 +39,7 @@ in
           respond 204
         }
 
-      reverse_proxy ${api_bind_addr}
+      reverse_proxy :${port}
     '';
 
     ente.api.settings.s3 = {
@@ -66,7 +66,7 @@ in
         rpc_secret_file = config.age.secrets.garage-rpc-secret.path;
 
         s3_api = {
-          inherit api_bind_addr;
+          api_bind_addr = "127.0.0.1:${port}";
           s3_region = "garage";
         };
       };

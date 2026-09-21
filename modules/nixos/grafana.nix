@@ -11,8 +11,8 @@
       domain = "grafana.jel.gay";
     in
     {
-      caddy.virtualHosts."https://${domain}".extraConfig =
-        "reverse_proxy ${config.services.grafana.settings.server.http_addr}:${toString config.services.grafana.settings.server.http_port}";
+      caddy.virtualHosts.${domain}.extraConfig =
+        "reverse_proxy :${toString config.services.grafana.settings.server.http_port}";
 
       grafana = {
         enable = true;

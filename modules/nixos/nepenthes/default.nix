@@ -91,8 +91,7 @@ in
 {
   nixpkgs.config.problems.handlers.lua-zlib.broken = "ignore";
 
-  services.caddy.virtualHosts."https://free-data.jel.gay".extraConfig =
-    "reverse_proxy localhost:8893";
+  services.caddy.virtualHosts."free-data.jel.gay".extraConfig = "reverse_proxy :8893";
 
   systemd.services.nepenthes = {
     path = [ (pkgs.writeShellScriptBin "lua5.4" "exec ${lib.getExe lua} \"$@\"") ];

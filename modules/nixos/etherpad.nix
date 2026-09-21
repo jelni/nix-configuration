@@ -1,5 +1,5 @@
 {
-  services.caddy.virtualHosts."https://pad.jel.gay".extraConfig = "reverse_proxy localhost:9001";
+  services.caddy.virtualHosts."pad.jel.gay".extraConfig = "reverse_proxy :9001";
 
   virtualisation.oci-containers.containers.etherpad = {
     environment = {

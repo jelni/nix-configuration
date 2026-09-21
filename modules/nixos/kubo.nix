@@ -3,7 +3,7 @@ let
 in
 {
   services = {
-    caddy.virtualHosts."https://ipfs.jel.gay".extraConfig = "reverse_proxy localhost:${port}";
+    caddy.virtualHosts."ipfs.jel.gay".extraConfig = "reverse_proxy :${port}";
 
     kubo = {
       enable = true;

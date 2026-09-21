@@ -1,6 +1,6 @@
 {
   services = {
-    caddy.virtualHosts."https://gonic.jel.gay".extraConfig = "reverse_proxy localhost:4747";
+    caddy.virtualHosts."gonic.jel.gay".extraConfig = "reverse_proxy :4747";
 
     gonic = {
       enable = true;
