@@ -29,6 +29,7 @@
 
         plugins = {
           AccountPanelServerProfile.enabled = true;
+          AddAttachments.enabled = true;
           AlwaysTrust.enabled = true;
           AutomodContext.enabled = true;
           BetterRoleContext.enabled = true;
