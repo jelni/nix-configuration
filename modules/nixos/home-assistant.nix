@@ -19,6 +19,20 @@
             "::1"
           ];
         };
+
+        scrape = [
+          {
+            resource = "https://walt.is/";
+
+            sensor = [
+              {
+                name = "Walt waitlist";
+                select = "#__NEXT_DATA__";
+                value_template = "{{ (value | from_json).props.pageProps.waitlistCount }}";
+              }
+            ];
+          }
+        ];
       };
 
       extraComponents = [
