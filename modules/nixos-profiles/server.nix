@@ -23,7 +23,6 @@
     miniflux
     monero
     mpd
-    music-assistant
     nepenthes
     nix-serve
     no-temporary-addresses

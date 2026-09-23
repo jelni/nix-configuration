@@ -24,7 +24,6 @@
       extraComponents = [
         "hue"
         "ipp"
-        "music_assistant"
         "qbittorrent"
       ];
 
