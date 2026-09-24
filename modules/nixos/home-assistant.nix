@@ -29,6 +29,7 @@
                 name = "Walt waitlist";
                 select = "#__NEXT_DATA__";
                 value_template = "{{ (value | from_json).props.pageProps.waitlistCount }}";
+                state_class = "measurement";
               }
             ];
           }
