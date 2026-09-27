@@ -520,6 +520,7 @@
         "general.smoothScroll.msdPhysics.slowdownSpringConstant".Value = 5000;
         "general.smoothScroll.stopDecelerationWeighting".Value = builtins.toJSON 0.75;
         "network.IDN_show_punycode".Value = true;
+        "network.trr.mode".Value = 5;
         "print.more-settings.open".Value = true;
         "privacy.globalprivacycontrol.enabled".Value = true;
         "signon.firefoxRelay.feature".Value = "disabled";
