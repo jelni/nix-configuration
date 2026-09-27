@@ -12,7 +12,6 @@
     ente
     etherpad
     garage
-    gonic
     gotosocial
     grafana
     home-assistant

@@ -50,12 +50,12 @@ in
 
         volumes =
           let
-            access.A = "admin";
+            A = "admin";
           in
           {
             "/" = {
               access = {
-                inherit (access) A;
+                inherit A;
                 r = "*";
               };
 
@@ -64,21 +64,16 @@ in
 
             "/downloads" = {
               access = {
-                inherit (access) A;
+                inherit A;
                 g = "*";
               };
 
               path = "/srv/qBittorrent/downloads";
             };
 
-            "/gonic" = {
-              inherit access;
-              path = "/srv/gonic";
-            };
-
             "/hszyr" = {
               access = {
-                inherit (access) A;
+                inherit A;
                 rwmd = "@hszyr";
               };
 
@@ -87,7 +82,7 @@ in
 
             "/unlisted" = {
               access = {
-                inherit (access) A;
+                inherit A;
                 g = "*";
               };
 
