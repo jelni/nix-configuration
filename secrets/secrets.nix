@@ -34,8 +34,9 @@ in
   "bluesky-pds-environment.age".publicKeys = server;
   "cobalt-api-configuration.age".publicKeys = server;
   "cobalt-api-keys.age".publicKeys = server;
-  "copyparty-admin.age".publicKeys = server;
   "copyparty-bomba.age".publicKeys = server;
+  "copyparty-jel.age".publicKeys = server;
+  "copyparty-rib.age".publicKeys = server;
   "dynamic-dns-url.age".publicKeys = server;
   "ente-jwt-secret.age".publicKeys = server;
   "ente-key-encryption.age".publicKeys = server;

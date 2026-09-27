@@ -10,8 +10,9 @@ in
   imports = [ inputs.copyparty.nixosModules.default ];
 
   age.secrets = {
-    copyparty-admin = agenix-secret ../../secrets/copyparty-admin.age;
     copyparty-bomba = agenix-secret ../../secrets/copyparty-bomba.age;
+    copyparty-jel = agenix-secret ../../secrets/copyparty-jel.age;
+    copyparty-rib = agenix-secret ../../secrets/copyparty-rib.age;
   };
 
   nixpkgs.overlays = [ inputs.copyparty.overlays.default ];
@@ -27,11 +28,21 @@ in
         enable = true;
 
         accounts = {
-          admin.passwordFile = config.age.secrets.copyparty-admin.path;
           bomba.passwordFile = config.age.secrets.copyparty-bomba.path;
+          jel.passwordFile = config.age.secrets.copyparty-jel.path;
+          rib.passwordFile = config.age.secrets.copyparty-rib.path;
         };
 
-        groups.hszyr = [ "bomba" ];
+        groups = {
+          admin = [
+            "jel"
+            "rib"
+          ];
+
+          hszyr = [
+            "bomba"
+          ];
+        };
 
         settings = {
           au-vol = 100;
@@ -50,7 +61,7 @@ in
 
         volumes =
           let
-            A = "admin";
+            A = "@admin";
           in
           {
             "/" = {
@@ -64,7 +75,7 @@ in
 
             "/downloads" = {
               access = {
-                inherit A;
+                r = A;
                 g = "*";
               };
 
@@ -78,6 +89,16 @@ in
               };
 
               path = "${directory}/hszyr";
+            };
+
+            "/jel" = {
+              access = { inherit A; };
+              path = "${directory}/jel";
+            };
+
+            "/rib" = {
+              access = { inherit A; };
+              path = "${directory}/rib";
             };
 
             "/unlisted" = {
