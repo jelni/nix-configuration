@@ -8,6 +8,12 @@
   programs.firefox = {
     enable = true;
     configPath = "${config.xdg.configHome}/mozilla/firefox";
+
+    languagePacks = [
+      "en-US"
+      "pl"
+    ];
+
     package = perSystem.firefox.firefox-nightly-bin;
 
     policies = {
