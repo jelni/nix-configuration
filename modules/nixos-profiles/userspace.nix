@@ -2,6 +2,7 @@
 {
   imports = with flake.nixosModules; [
     _1password
+    dreamweaver-nfs-mount
     flatpak
     fonts
     gnome
