@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = [ pkgs.podman-compose ];
-  systemd.timers.podman-auto-update.wantedBy = [ "multi-user.target" ];
+  systemd.timers.podman-auto-update.wantedBy = [ "timers.target" ];
 
   virtualisation.podman = {
     enable = true;

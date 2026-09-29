@@ -33,6 +33,7 @@ in
     ];
 
     image = "ghcr.io/imputnet/cobalt";
+    labels."io.containers.autoupdate" = "registry";
     ports = [ "${port}:${port}" ];
     volumes = [ "${config.age.secrets.cobalt-api-keys.path}:${keys}:ro" ];
   };
