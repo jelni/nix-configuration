@@ -23,6 +23,7 @@
     monero
     mpd
     nepenthes
+    nfs
     nix-serve
     no-temporary-addresses
     ntfy-sh
