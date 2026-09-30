@@ -2,6 +2,9 @@ let
   port = "5001";
 in
 {
+  networking.firewall.allowedTCPPorts = [ 4001 ];
+  networking.firewall.allowedUDPPorts = [ 4001 ];
+
   services = {
     caddy.virtualHosts."ipfs.jel.gay".extraConfig = "reverse_proxy :${port}";
 
