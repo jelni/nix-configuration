@@ -27,6 +27,7 @@
     nix-serve
     no-temporary-addresses
     ntfy-sh
+    peergos
     podman
     prometheus
     prosody
