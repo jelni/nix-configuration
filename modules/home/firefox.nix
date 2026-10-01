@@ -37,8 +37,12 @@
           "easylist"
           "adguard-generic"
           "easyprivacy"
+          "adguard-spyware-url"
+          "block-lan"
           "urlhaus-1"
+          "curben-phishing"
           "plowe-0"
+          "dpollock-0"
           "fanboy-cookiemonster"
           "ublock-cookies-easylist"
           "adguard-cookies"
@@ -415,36 +419,27 @@
 
           install-private-browsing = id: install id // { private_browsing = true; };
         in
-        install "chrome-mask@overengineer.dev"
-        // install "languagetool-webextension@languagetool.org"
-        // install "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
+        install "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
         // install "{446900e4-71c2-419f-a6a7-df9c091e268b}" # Bitwarden Password Manager
-        // install "bluelitefilter@malwaretech.com"
         // install "{5b78178f-135d-4df2-821f-1f289be7f348}" # Catppuccin Mocha - Rosewater
-        // install "{74145f27-f039-47ce-a470-a662b129930a}" # ClearURLs
-        // install "gdpr@cavi.au.dk"
+        // install "@crw-extension-firefox" # Consumer Rights Wiki
         // install "{c3c10168-4186-445c-9c5b-63f12b8e2c87}" # Cookie-Editor
-        // install "deArrow@ajay.app"
-        // install "jid1-BoFifL9Vbdl2zQ@jetpack" # Decentraleyes
+        // install "deArrow@ajay.app" # DeArrow - Better Titles and Thumbnails on YouTube
         // install "{cb31ec5d-c49a-4e5a-b240-16c767444f62}" # Indie Wiki Buddy
-        // install-private-browsing "search@kagi.com"
+        // install-private-browsing "search@kagi.com" # Kagi Search for Firefox
         // install "{e34868ad-46dc-499c-8235-4f50950986af}" # mdBook Auto Theme
-        // install-private-browsing "@mute-sites-by-default"
-        // install "nixpkgs-pr-tracker@tahayassine.me"
-        // install "octolinker@stefanbuck.com"
+        // install-private-browsing "@mute-sites-by-default" # Mute sites by default
+        // install "nixpkgs-pr-tracker@tahayassine.me" # Nixpkgs PR Tracker
         // install "{af838dcd-be8a-4237-8835-69fca92171d3}" # Permanent Progress Bar for YouTube
-        // install-private-browsing "jid1-MnnxcxisBPnSXQ@jetpack" # Privacy Badger
-        // install "firefox-addon@pronoundb.org"
+        // install "firefox-addon@pronoundb.org" # PronounDB
         // install "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
         // install "{762f9885-5a13-4abd-9c77-433dcd38b8fd}" # Return YouTube Dislike
         // install "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}" # Search by Image
-        // install "jesse@adhdjesse.com" # SkyLink
-        // install "smart-upscale@tanalin.com"
-        // install "sponsorBlocker@ajay.app"
-        // install-private-browsing "uBlock0@raymondhill.net"
+        // install "smart-upscale@tanalin.com" # SmartUpscale
+        // install "sponsorBlocker@ajay.app" # SponsorBlock - Skip Sponsorships on YouTube
+        // install-private-browsing "uBlock0@raymondhill.net" # uBlock Origin
         // install "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" # Violentmonkey
-        // install "wayback_machine@mozilla.org"
-        // install "{799c0914-748b-41df-a25c-22d008f9e83f}" # Web Scrobbler
+        // install "wayback_machine@mozilla.org" # Wayback Machine
         // install "{169e0f20-b4d6-4670-a852-e78a56f68264}" # Youtube MrBeastify
         // install "{d8b32864-153d-47fb-93ea-c273c4d1ef17}" # YouTube Screenshot Button
         // install-private-browsing "{cf485034-0bda-470d-a027-794f3214359c}"; # YouTube Shorts Redirect
@@ -474,12 +469,11 @@
         "browser.uiCustomization.state".Value = builtins.toJSON {
           placements = {
             nav-bar = [
-              "sidebar-button"
               "back-button"
               "forward-button"
               "stop-reload-button"
-              "vertical-spacer"
               "home-button"
+              "vertical-spacer"
               "urlbar-container"
               "downloads-button"
               "unified-extensions-button"
@@ -489,10 +483,7 @@
 
             PersonalToolbar = [
               "personal-bookmarks"
-              "_799c0914-748b-41df-a25c-22d008f9e83f_-browser-action"
-              "jesse_adhdjesse_com-browser-action"
               "ublock0_raymondhill_net-browser-action"
-              "jid1-mnnxcxisbpnsxq_jetpack-browser-action"
               "sponsorblocker_ajay_app-browser-action"
               "wayback_machine_mozilla_org-browser-action"
               "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
@@ -500,7 +491,7 @@
             ];
           };
 
-          currentVersion = 23;
+          currentVersion = 28;
         };
 
         "browser.urlbar.trimURLs".Value = false;
@@ -632,7 +623,6 @@
         "devtools.webconsole.persistlog" = true;
         "devtools.webconsole.timestampMessages" = true;
         "findbar.highlightAll" = true;
-        "image.jxl.enabled" = true;
         "privacy.donottrackheader.enabled" = true;
         "sidebar.verticalTabs" = true;
       };
