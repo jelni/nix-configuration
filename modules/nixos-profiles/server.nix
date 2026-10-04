@@ -2,6 +2,7 @@
 {
   imports = with flake.nixosModules; [
     acme
+    baserow
     bluesky-pds
     caddy
     cobalt-api
