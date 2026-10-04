@@ -4,6 +4,7 @@
     fira-code
     inter
     iosevka
+    noto-fonts
     ocr-a
     vista-fonts
   ];
