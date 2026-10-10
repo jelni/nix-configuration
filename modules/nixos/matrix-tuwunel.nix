@@ -8,6 +8,16 @@ let
   database_path = "/srv/tuwunel";
 in
 {
+  age.secrets.turn-secret-tuwunel =
+    let
+      tuwunel = config.services.matrix-tuwunel;
+    in
+    {
+      file = ../../secrets/turn-secret.age;
+      inherit (tuwunel) group;
+      owner = tuwunel.user;
+    };
+
   services =
     let
       server_name = "jel.gay";
@@ -24,6 +34,17 @@ in
         settings.global = {
           inherit server_name;
           database_path = lib.mkForce database_path;
+
+          turn_uris =
+            let
+              turn-domain = "turn.${server_name}";
+            in
+            [
+              "turn:${turn-domain}:3478"
+              "turns:${turn-domain}:5349"
+            ];
+
+          turn_secret_file = config.age.secrets.turn-secret-tuwunel.path;
           rocksdb_optimize_for_spinning_disks = true;
           rocksdb_direct_io = false;
           sentry = true;

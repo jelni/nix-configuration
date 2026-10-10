@@ -4,6 +4,12 @@ let
   acme-port = "1361";
 in
 {
+  age.secrets.turn-secret-coturn = {
+    file = ../../secrets/turn-secret.age;
+    group = "turnserver";
+    owner = "turnserver";
+  };
+
   networking.firewall =
     let
       ports = [
@@ -42,6 +48,8 @@ in
         cert = "${directory}/fullchain.pem";
         pkey = "${directory}/key.pem";
         inherit realm;
+        static-auth-secret-file = config.age.secrets.turn-secret-coturn.path;
+        use-auth-secret = true;
       };
   };
 
