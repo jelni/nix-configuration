@@ -24,6 +24,8 @@ in
         settings.global = {
           inherit server_name;
           database_path = lib.mkForce database_path;
+          rocksdb_optimize_for_spinning_disks = true;
+          rocksdb_direct_io = false;
           sentry = true;
           sentry_send_server_name = true;
           sentry_attach_stacktrace = true;
