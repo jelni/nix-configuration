@@ -20,6 +20,7 @@
     initrd-ssh
     kubo
     matrix-tuwunel
+    mautrix
     miniflux
     monero
     mpd
