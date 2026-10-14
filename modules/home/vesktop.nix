@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   programs.vesktop = {
     enable = true;
@@ -17,10 +17,9 @@
       settings = {
         useQuickCss = false;
 
-        enabledThemes = [
-          "hide-nitro-gift.css"
-          "huge-thumbsup.css"
-        ];
+        enabledThemes = map (theme: "${theme}.css") (
+          builtins.attrNames config.programs.vesktop.vencord.themes
+        );
 
         themeLinks = [
           "https://croissantdunord.github.io/discord-adblock/adblock.css"
@@ -200,6 +199,17 @@
           img[data-type="emoji"][data-name="👍"] {
             width: 2.5rem;
             height: 2.5rem;
+          }
+        '';
+
+        unable-to-decrypt-message = ''
+          [class*="repliedTextPreview_"]:last-child > [class*="repliedTextPlaceholder_"] {
+            font-size: 0;
+
+            &::after {
+              font-size: 14px;
+              content: "Unable to decrypt message";
+            }
           }
         '';
       };
