@@ -12,5 +12,6 @@
     lix
     nix
     openssh
+    pki
   ];
 }
