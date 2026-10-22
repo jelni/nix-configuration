@@ -3,6 +3,7 @@
     caddy = {
       enable = true;
       email = "letsencrypt@jel.gay";
+      openFirewall = true;
       virtualHosts."http://".extraConfig = "respond \"hello from {system.hostname}!\"";
     };
 

@@ -4,12 +4,12 @@
     baremetal-packages
     boot
     dns
-    firewall
     fwupd
     hardware
     kmscon
     limine
     networkmanager
+    nftables
     ntp
     plymouth
     postgresql
