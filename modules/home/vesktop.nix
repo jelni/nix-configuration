@@ -197,8 +197,8 @@
 
         huge-thumbsup = ''
           img[data-type="emoji"][data-name="👍"] {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2em;
+            height: 2em;
           }
         '';
 
