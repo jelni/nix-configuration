@@ -12,6 +12,10 @@
         inherit port;
       };
 
-      caddy.virtualHosts."88x31.jel.gay".extraConfig = "reverse_proxy :${toString port}";
+      caddy.virtualHosts."88x31.jel.gay".extraConfig = ''
+        reverse_proxy :${toString port} {
+          flush_interval -1
+        }
+      '';
     };
 }

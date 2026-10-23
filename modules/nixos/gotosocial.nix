@@ -7,8 +7,11 @@
       data-path = "/srv/gotosocial";
     in
     {
-      caddy.virtualHosts.${host}.extraConfig =
-        "reverse_proxy :${toString config.services.gotosocial.settings.port}";
+      caddy.virtualHosts.${host}.extraConfig = ''
+        reverse_proxy :${toString config.services.gotosocial.settings.port} {
+          flush_interval -1
+        }
+      '';
 
       gotosocial = {
         enable = true;
