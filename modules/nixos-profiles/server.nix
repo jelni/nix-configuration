@@ -39,6 +39,7 @@
     soju
     srvos-server
     static-client-id
+    streamed-88x31
     tangled
     tor
     user-rib
