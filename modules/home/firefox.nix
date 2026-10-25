@@ -624,6 +624,7 @@
         "devtools.webconsole.timestampMessages" = true;
         "findbar.highlightAll" = true;
         "privacy.donottrackheader.enabled" = true;
+        "sidebar.main.tools" = "";
         "sidebar.verticalTabs" = true;
       };
     };
