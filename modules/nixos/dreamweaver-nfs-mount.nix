@@ -1,4 +1,9 @@
 {
+  boot = {
+    kernelModules = [ "nfsv4" ];
+    supportedFilesystems = [ "nfs" ];
+  };
+
   fileSystems."/dreamweaver" = {
     device = "dreamweaver:/";
     fsType = "nfs";
