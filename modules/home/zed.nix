@@ -93,7 +93,7 @@
         Rust.formatter = "language_server";
       };
 
-      lsp.nil.settings.flake.autoArchive = true;
+      lsp.nil.settings.nix.flake.autoArchive = true;
       middle_click_paste = false;
       outline_panel.dock = "left";
       prettier.allowed = true;
