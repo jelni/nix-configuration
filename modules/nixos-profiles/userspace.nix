@@ -9,6 +9,7 @@
     nautilus-open-any-terminal
     obs-studio
     ollama
+    pl-workman
     plymouth-hackerspace-zyrardow
     podman
     steam
