@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, lib, ... }:
 let
   database_path = "/srv/tuwunel";
 in
@@ -29,7 +24,6 @@ in
 
       matrix-tuwunel = {
         enable = true;
-        package = pkgs.unstable.matrix-tuwunel;
 
         settings.global = {
           inherit server_name;
