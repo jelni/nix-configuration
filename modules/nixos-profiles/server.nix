@@ -43,6 +43,7 @@
     streamed-88x31
     tangled
     tor
+    user-remotebuild
     user-rib
     vaultwarden
     website
