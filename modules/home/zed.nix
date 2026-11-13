@@ -79,6 +79,7 @@
       current_line_highlight = "gutter";
       diagnostics.inline.enabled = true;
       disable_ai = true;
+      format_on_save = "on";
       git.inline_blame.enabled = false;
       git_panel.dock = "left";
 
