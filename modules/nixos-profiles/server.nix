@@ -38,6 +38,7 @@
     snowflake-proxy
     soju
     srvos-server
+    starla
     static-client-id
     streamed-88x31
     tangled

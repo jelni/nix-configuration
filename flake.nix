@@ -73,6 +73,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    starla = {
+      url = "github:ananthb/starla";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     streamed-88x31 = {
       url = "github:jelni/88x31";
       inputs.nixpkgs.follows = "nixpkgs";
