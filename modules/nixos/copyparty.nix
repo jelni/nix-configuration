@@ -96,6 +96,15 @@ in
               path = "${directory}/jel";
             };
 
+            "/music" = {
+              access = {
+                r = A;
+                g = "*";
+              };
+
+              path = "/srv/music";
+            };
+
             "/rib" = {
               access = { inherit A; };
               path = "${directory}/rib";
