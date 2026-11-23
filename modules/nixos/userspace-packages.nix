@@ -3,13 +3,10 @@
   environment.systemPackages = with pkgs; [
     android-tools
     audacity
-    baobab
     bibata-cursors
     binwalk
     bitwarden-desktop
-    comaps
     davinci-resolve-studio
-    deno
     espeak
     exiftool
     famistudio
@@ -22,46 +19,29 @@
     gnome-calculator
     gnome-characters
     gnome-font-viewer
-    gnome-logs
     gnome-system-monitor
     gparted
-    handbrake
-    heroic
     imagemagick
     inkscape
-    insomnia
-    keybase-gui
-    krita
-    languagetool
-    libreoffice-fresh
     loupe
     lucida-downloader
     nautilus
     nodejs
-    olympus
     onlyoffice-desktopeditors
-    parsec-bin
     parted
     pinta
-    prismlauncher
-    prusa-slicer
     python314FreeThreading
     quodlibet-full
-    reaper
-    signal-desktop
-    slack
     snapshot
     sparrow
     sqlitebrowser
     supertuxkart
     tlrc
-    tor
     tor-browser
     trezor-suite
     tutanota-desktop
     ungoogled-chromium
     unstable.telegram-desktop
     usbutils
-    yubikey-manager
   ];
 }

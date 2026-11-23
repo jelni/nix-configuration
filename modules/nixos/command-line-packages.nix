@@ -6,7 +6,6 @@
     doggo
     duf
     dust
-    google-cloud-sdk
     hyperfine
     magic-wormhole-rs
     nil
@@ -14,6 +13,5 @@
     nixfmt
     procs
     pv
-    stripe-cli
   ];
 }
