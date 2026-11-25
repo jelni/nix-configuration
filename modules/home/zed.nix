@@ -7,7 +7,7 @@
 
     extensions = [
       "catppuccin"
-      "dependi"
+      "depsy-lsp"
       "html"
       "nix"
       "toml"
